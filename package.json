@@ -1,0 +1,47 @@
+{
+	"name": "builderall-vue-ui",
+	"version": "0.1.1",
+	"private": false,
+	"main": "dist/builderall-vue-ui.umd.min.js",
+	"author": "Mauricio Testa",
+	"license": "MIT",
+	"description": "",
+	"files": [
+		"dist/*",
+		"src/*"
+	],
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": "https://.git"
+	},
+	"bugs": {
+		"url": "https://issues"
+	},
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build --target lib --name builderall-vue-ui src/main.js",
+		"prepublishOnly": "npm run build",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs"
+	},
+	"dependencies": {
+		"bootstrap-vue": "^2.21.2",
+		"core-js": "^3.6.5",
+		"vue": "^2.6.12",
+		"vue-select": "^3.11.2"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "~4.5.0",
+		"@vue/cli-service": "~4.5.0",
+		"sass-loader": "^10.1.1",
+		"vue-template-compiler": "^2.6.12",
+		"vuepress": "^1.8.0",
+		"node-sass": "^4.12.0"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
+}

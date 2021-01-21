@@ -1,0 +1,19 @@
+.bui-sidebar {
+	position: unset !important;
+	min-height: 300px !important;
+}
+.fake-container {
+	position: relative;
+}
+.fake-navbar {
+	height: 50px;
+	height: 60px;
+    margin-bottom: -60px;
+	background: darkgray;
+}
+.bui-container {
+	background: gray;
+}
+.bui-container .bui-main {
+	background: lightgray;
+}
