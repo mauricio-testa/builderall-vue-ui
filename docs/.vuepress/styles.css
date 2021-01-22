@@ -1,38 +1,54 @@
-.bui-sidebar {
+@import 'https://fonts.googleapis.com/css?family=Muli:400,500,600,700,800,900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap';
+
+.demo-components-bui *, .tabs * {
+	font-family: Muli,Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.demo-components-bui .bui-sidebar {
 	position: unset !important;
 	min-height: 300px !important;
 }
-.fake-container {
+.demo-components-bui .fake-container {
 	position: relative;
 }
-.fake-navbar {
+.demo-components-bui .fake-navbar {
 	height: 50px;
 	height: 60px;
     margin-bottom: -60px;
 	background: darkgray;
 }
-.bui-container {
+.demo-components-bui .bui-container {
 	background: gray;
 }
-.bui-container .bui-main {
+.demo-components-bui .bui-container .bui-main {
 	background: lightgray;
 }
-.bui-navbar {
+.demo-components-bui .bui-navbar {
 	position: relative !important;
     height: 60px !important;
     padding: 0 !important;
 }
-.bui-navbar .bui-toggle-icon .bui-icon {
+.demo-components-bui .bui-navbar .bui-toggle-icon .bui-icon {
 	display: flex;
 }
 
-.tabs .nav-tabs .nav-item a:hover {
+.demo-components-bui .tabs .nav-tabs .nav-item a:hover {
 	text-decoration: none !important;
 }
 
-.bui-sidebar .nav .nav-item .nav-link, .bui-sidebar-mobile .nav .nav-item .nav-link:hover {
+.demo-components-bui .bui-sidebar .nav .nav-item .nav-link, .bui-sidebar-mobile .nav .nav-item .nav-link:hover {
 	border-left-width: 3px !important;
 	border-bottom-width: 0 !important;
 	margin: 0 !important;
 	text-decoration: none !important;
+}
+
+.theme-default-content:not(.custom) a:hover {
+	text-decoration: none !important;
+}
+
+.demo-components-bui .nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
+	border-bottom-width: 0 !important;
+	margin: 0 !important;
 }

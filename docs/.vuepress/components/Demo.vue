@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="demo-components-bui">
     <component :is="componentName" class="mt-2"/>
   </div>
 </template>
