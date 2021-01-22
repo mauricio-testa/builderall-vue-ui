@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="47" viewBox="0 0 70 47">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Rounded_Rectangle_7_copy" data-name="Rounded Rectangle 7 copy" d="M1056.364,466h57.273a6.387,6.387,0,0,1,6.364,6.409v34.182a6.387,6.387,0,0,1-6.364,6.409h-57.273a6.386,6.386,0,0,1-6.364-6.409V472.409A6.386,6.386,0,0,1,1056.364,466Z" fill="#f5f7fa"/>
+    </clipPath>
+  </defs>
+  <g id="United_Arab_Emirates" data-name="United Arab Emirates" transform="translate(-1050 -466)">
+    <g id="Rounded_Rectangle_7_copy-2" data-name="Rounded Rectangle 7 copy">
+      <path id="Rounded_Rectangle_7_copy-3" data-name="Rounded Rectangle 7 copy" d="M1056.364,466h57.273a6.387,6.387,0,0,1,6.364,6.409v34.182a6.387,6.387,0,0,1-6.364,6.409h-57.273a6.386,6.386,0,0,1-6.364-6.409V472.409A6.386,6.386,0,0,1,1056.364,466Z" fill="#f5f7fa"/>
+      <g id="Clip" clip-path="url(#clip-path)">
+        <rect id="Rectangle_1_copy_18" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(1050 466)" fill="#57a863"/>
+        <rect id="Rectangle_1_copy_18-2" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(1050 498)" fill="#434a54"/>
+        <path id="Rectangle_4" data-name="Rectangle 4" d="M1050,466h21v48.145L1050,513Z" fill="#ed5565"/>
+      </g>
+    </g>
+  </g>
+</svg>

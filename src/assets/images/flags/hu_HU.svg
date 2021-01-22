@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="47" viewBox="0 0 70 47">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Rounded_Rectangle_7_copy" data-name="Rounded Rectangle 7 copy" d="M496.364,67h57.273A6.387,6.387,0,0,1,560,73.409v34.182A6.387,6.387,0,0,1,553.636,114H496.364A6.386,6.386,0,0,1,490,107.591V73.409A6.387,6.387,0,0,1,496.364,67Z" fill="#f5f7fa"/>
+    </clipPath>
+  </defs>
+  <g id="Hungary" transform="translate(-490 -67)">
+    <g id="Rounded_Rectangle_7_copy-2" data-name="Rounded Rectangle 7 copy">
+      <path id="Rounded_Rectangle_7_copy-3" data-name="Rounded Rectangle 7 copy" d="M496.364,67h57.273A6.387,6.387,0,0,1,560,73.409v34.182A6.387,6.387,0,0,1,553.636,114H496.364A6.386,6.386,0,0,1,490,107.591V73.409A6.387,6.387,0,0,1,496.364,67Z" fill="#f5f7fa"/>
+      <g id="Clip" clip-path="url(#clip-path)">
+        <rect id="Rectangle_1_copy" data-name="Rectangle 1 copy" width="70" height="16" transform="translate(490 67)" fill="#ed5565"/>
+        <rect id="Rectangle_1_copy_8" data-name="Rectangle 1 copy 8" width="70" height="16" transform="translate(490 99)" fill="#57a863"/>
+      </g>
+    </g>
+  </g>
+</svg>

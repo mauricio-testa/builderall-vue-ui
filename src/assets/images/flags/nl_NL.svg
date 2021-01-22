@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="47" viewBox="0 0 70 47">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Rounded_Rectangle_7_copy" data-name="Rounded Rectangle 7 copy" d="M816.364,238h57.273A6.387,6.387,0,0,1,880,244.409v34.182A6.387,6.387,0,0,1,873.636,285H816.364A6.386,6.386,0,0,1,810,278.591V244.409A6.386,6.386,0,0,1,816.364,238Z" fill="#f5f7fa"/>
+    </clipPath>
+  </defs>
+  <g id="Netherlands" transform="translate(-810 -238)">
+    <g id="Rounded_Rectangle_7_copy-2" data-name="Rounded Rectangle 7 copy">
+      <path id="Rounded_Rectangle_7_copy-3" data-name="Rounded Rectangle 7 copy" d="M816.364,238h57.273A6.387,6.387,0,0,1,880,244.409v34.182A6.387,6.387,0,0,1,873.636,285H816.364A6.386,6.386,0,0,1,810,278.591V244.409A6.386,6.386,0,0,1,816.364,238Z" fill="#f5f7fa"/>
+      <g id="Clip" clip-path="url(#clip-path)">
+        <rect id="Rectangle_1_copy_18" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(810 238)" fill="#ed5565"/>
+        <rect id="Rectangle_1_copy_18-2" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(810 269)" fill="#4a89dc"/>
+      </g>
+    </g>
+  </g>
+</svg>

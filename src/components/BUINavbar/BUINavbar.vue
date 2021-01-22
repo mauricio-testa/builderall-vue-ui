@@ -71,12 +71,16 @@
 						:reduce="(value) => value.key"
 					>
 						<template #selected-option="{ key, desc }">
-							<img height="24" class="mx-3" :src="`/images/flags/${key}.svg`"/>
+							<div class="d-flex">
+							<span :class="`bui-flag bui-flag-${key}`"></span>
 							{{ desc }}
+							</div>
 						</template>
 						<template #option="{ key, desc }">
-							<img height="24" class="mx-2" :src="`/images/flags/${key}.svg`"/>
+							<div class="d-flex">
+							<span :class="`bui-flag bui-flag-${key}`"></span>
 							{{ desc }}
+							</div>
 						</template>
 					</v-select>
 
@@ -202,6 +206,8 @@ export default {
 <style lang="scss">
 
 @import "../../assets/scss/variables";
+
+@import "../../assets/scss/flags.scss";
 
 .bui-navbar {
 	box-shadow: 0 1px 2px rgba(38, 36, 36, 0.14);

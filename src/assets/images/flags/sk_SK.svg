@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="47" viewBox="0 0 70 47">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Rounded_Rectangle_7_copy" data-name="Rounded Rectangle 7 copy" d="M1056.364,10h57.273A6.387,6.387,0,0,1,1120,16.409V50.591A6.387,6.387,0,0,1,1113.636,57h-57.273A6.386,6.386,0,0,1,1050,50.591V16.409A6.386,6.386,0,0,1,1056.364,10Z" fill="#4758a9"/>
+    </clipPath>
+  </defs>
+  <g id="Slovakia" transform="translate(-1050 -10)">
+    <g id="Rounded_Rectangle_7_copy-2" data-name="Rounded Rectangle 7 copy">
+      <path id="Rounded_Rectangle_7_copy-3" data-name="Rounded Rectangle 7 copy" d="M1056.364,10h57.273A6.359,6.359,0,0,1,1120,16.355V50.247a6.359,6.359,0,0,1-6.364,6.355h-57.273A6.359,6.359,0,0,1,1050,50.247V16.355A6.359,6.359,0,0,1,1056.364,10Z" transform="translate(0 0.398)" fill="#4758a9"/>
+      <g id="Clip" clip-path="url(#clip-path)">
+        <rect id="Rectangle_1_copy_18" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(1050 10)" fill="#f5f7fa"/>
+        <rect id="Rectangle_1_copy_18-2" data-name="Rectangle 1 copy 18" width="70" height="16" transform="translate(1050 41)" fill="#ed5565"/>
+        <path id="Shape_8" data-name="Shape 8" d="M1072.012,23.253a6.682,6.682,0,0,0-10.006,0A7.96,7.96,0,0,1,1057,21.382V33.614C1057.091,41.67,1067,45,1067,45s10-3.33,10-11.386V21.382A7.882,7.882,0,0,1,1072.012,23.253Z" fill="#f5f7fa"/>
+        <path id="Shape_8_copy_4" data-name="Shape 8 copy 4" d="M1071.01,24.877a5.205,5.205,0,0,0-8,0A6.244,6.244,0,0,1,1059,23.318V33.512c.073,6.714,8,9.488,8,9.488s8-2.775,8-9.488V23.318A6.182,6.182,0,0,1,1071.01,24.877Z" fill="#ed5565"/>
+      </g>
+    </g>
+  </g>
+</svg>
