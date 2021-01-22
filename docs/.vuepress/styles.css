@@ -30,8 +30,8 @@
 	text-decoration: none !important;
 }
 
-.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
-	border-left-width: 3 !important;
+.bui-sidebar .nav .nav-item .nav-link, .bui-sidebar-mobile .nav .nav-item .nav-link:hover {
+	border-left-width: 3px !important;
 	border-bottom-width: 0 !important;
 	margin: 0 !important;
 	text-decoration: none !important;
