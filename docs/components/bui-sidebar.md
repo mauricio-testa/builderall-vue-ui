@@ -28,7 +28,7 @@ O menu será considerado ativo quando a sua propriedade `name` for igual á prop
 
 ### Code
 <SourceCode>
-<<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue{3,20}
+<<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue{3,22}
 </SourceCode>
 
 ::: tip

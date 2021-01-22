@@ -1,6 +1,6 @@
 <template>
 	<bui-navbar
-		sidebar-state="mini"
+		:sidebar-state="sidebarState"
 		logo="https://booking.builderall.com/images/images/meta/logo.png"
 		logo-sm="https://booking.builderall.com/images/images/meta/logo-icon.png"
 		label-favorite-lang="Idioma preferido"
@@ -13,17 +13,20 @@
 		@change-language="doSomething"
 		@toggle-sidebar="doSomething"
 		>
+		<template #items-right>
+			#items-right
+		</template>
 		<template #dropdown-item-before>
 			<b-dropdown-item tabindex="-1" link-class="py-2">
 				<bui-icon name="plus" class="mx-3"></bui-icon>
-				Custom item before
+				#dropdown-item-before
 			</b-dropdown-item>
 			<b-dropdown-divider></b-dropdown-divider>
 		</template>
 		<template #dropdown-item-after>
 			<b-dropdown-item tabindex="-1" link-class="py-2">
 				<bui-icon name="gear" class="mx-3"></bui-icon>
-				Custom item after
+				#dropdown-item-after
 			</b-dropdown-item>
 		</template>
 	</bui-navbar>
@@ -33,6 +36,7 @@
 export default {
 	data() {
 		return {
+			sidebarState: 'expanded',
 			user: {
 				name: "Mauricio Testa",
 				email: "mauriciotesta@gmail.com",
@@ -49,7 +53,7 @@ export default {
 	},
 	methods: {
 		doSomething(arg) {
-			alert(arg);
+			this.sidebarState = arg
 		}
 	}
 }

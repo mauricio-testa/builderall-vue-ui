@@ -2,14 +2,20 @@
 
 Cabeçalho da aplicação e popup de perfil do usuário.
 
+### Demo
+<Demo componentName="examples-bui-navbar-doc" />
+
 ## Code
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/bui-navbar-doc.vue
 </SourceCode>
 
-@todo colocar um exemplo do jsfiddle futuramente
-
 ## All options
+
+### Demo
+<Demo componentName="examples-bui-navbar-complete-doc" />
+
+### Code
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/bui-navbar-complete-doc.vue
 </SourceCode>
@@ -40,5 +46,6 @@ Cabeçalho da aplicação e popup de perfil do usuário.
 ### Slots
 | Name | Description |
 | -------- | ---- | ------- | ----------- |
+| `items-right` | Espaço para ícones no header |
 | `dropdown-item-before` | Espaço antes do select de idiomas para itens personalizados |
 | `dropdown-item-after` | Espaço depois do select de idiomas para itens personalizados |

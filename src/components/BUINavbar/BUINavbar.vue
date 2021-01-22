@@ -27,6 +27,8 @@
 
 		<span class="flex-fill"></span>
 
+		<slot name="items-right"/>
+
 		<div class="mx-3 mx-sm-4 d-flex align-items-center">
 			<b-navbar-nav>
 				<b-nav-item-dropdown :right="!rtl" no-caret class="bui-dropdown-user">

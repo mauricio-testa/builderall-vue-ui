@@ -17,3 +17,22 @@
 .bui-container .bui-main {
 	background: lightgray;
 }
+.bui-navbar {
+	position: relative !important;
+    height: 60px !important;
+    padding: 0 !important;
+}
+.bui-navbar .bui-toggle-icon .bui-icon {
+	display: flex;
+}
+
+.tabs .nav-tabs .nav-item a:hover {
+	text-decoration: none !important;
+}
+
+.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
+	border-left-width: 3 !important;
+	border-bottom-width: 0 !important;
+	margin: 0 !important;
+	text-decoration: none !important;
+}

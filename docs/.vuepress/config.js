@@ -32,22 +32,31 @@ module.exports = {
 					{ text: 'Components', link: '/components/' },
 					{ text: 'GitHub', link: '' }
 				],
-				sidebar: {
-					'/components/': [
-						{
-							title: 'Components',
-							collapsable: false,
-							children: [
-								'bui-container',
-								'bui-page',
-								'bui-sidebar',
-								'bui-navbar',
-								'bui-alert',
-								'bui-icon',
-							]
-						}
-					]
-				}
+				sidebar: [
+					{
+						title: 'Getting started',
+						path: '/guide'
+					},
+					{
+						title: 'Components',
+						collapsable: false,
+						children: [
+							['/components/bui-container', 'Container'],
+							['/components/bui-page', 'Page'],
+							['/components/bui-sidebar', 'Sidebar'],
+							['/components/bui-navbar', 'Navbar'],
+							['/components/bui-alert', 'Alert'],
+							['/components/bui-icon', 'Icon'],
+						]
+					},
+					{
+						title: 'Bootstrap components',
+						collapsable: false,
+						children: [
+							['/bootstrap/b-tabs', 'Tabs']
+						]
+					}
+				]
 			}
 		}
 	},
