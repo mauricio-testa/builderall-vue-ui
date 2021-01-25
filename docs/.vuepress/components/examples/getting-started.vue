@@ -1,6 +1,8 @@
 <template>
 	<div>
 		<bui-sidebar
+			:menus="menus"
+			:menus-bottom="menus"
 			:sidebar-state="sidebarState">
 		</bui-sidebar>
 
@@ -39,6 +41,7 @@ export default {
 			 * and recover it on page reloads
 			 */
 			sidebarState: 'expanded',
+			menus: [{ title: 'Item', name: 'item1', icon: 'gear', href: '#'}],
 		}
 	},
 	methods: {

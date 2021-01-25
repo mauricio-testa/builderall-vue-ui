@@ -1,8 +1,14 @@
 @import 'https://fonts.googleapis.com/css?family=Muli:400,500,600,700,800,900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap';
 
-.demo-components-bui *, .tabs * {
+.demo-components-bui, .tabs{
 	font-family: Muli,Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+	line-height: 1.4;
+	font-size: .9rem;
+}
+
+.demo-components-bui .vs__selected{
+	display: flex !important;
 }
 
 .demo-components-bui .bui-sidebar {
@@ -51,4 +57,8 @@
 .demo-components-bui .nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
 	border-bottom-width: 0 !important;
 	margin: 0 !important;
+}
+
+.demo-bg-body {
+	background: #e9edf2;
 }

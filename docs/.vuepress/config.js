@@ -47,13 +47,16 @@ module.exports = {
 							['/components/bui-navbar', 'Navbar'],
 							['/components/bui-alert', 'Alert'],
 							['/components/bui-icon', 'Icon'],
+							['/components/bui-form-group', 'Form group'],
+							['/components/bui-language-selector', 'Language Selector'],
 						]
 					},
 					{
 						title: 'Bootstrap components',
 						collapsable: false,
 						children: [
-							['/bootstrap/b-tabs', 'Tabs']
+							['/bootstrap/b-tabs', 'Tabs'],
+							['/bootstrap/b-inputs', 'Inputs']
 						]
 					}
 				]

@@ -86,8 +86,9 @@ let item = {
 | `rtl` | `Boolean` | `false` | Se a aplicação está em RTL ou não |
 | `sidebar-state` | `String` | `'expanded'` | Estado do sidebar. Utilizado para exibir o menu hamburguer aberto ou fechado. Possíveis valores: `'expanded'`, `'mini'`, `'disabled'` |
 | `active-menu` | `String` | `null` | O menu que está ativo com base em `menu.name`|
-| `menus` | `Array` | `[{title  : 'Menu item', name: 'item', href: '/', icon: 'gear'}]` | Menus sidebar e mobile |
-| `menus-bottom` | `Array` | `[{title  : 'Menu item', name: 'item', href: '/', icon: 'gear'}]` | Menus adicionar para o footer do sidebar |
+| `menus` | `Array` | `[]` | Menus sidebar |
+| `menus-bottom` | `Array` | `[]` | Menus adicionar para o footer do sidebar |
+| `menus-mobile` | `Array` | `menus.concat(menusBottom)` | Menus mobile. Se nada for passado, será exibido uma concatenação entre `menus` e `menus-bottom`
 
 
 ### Slots

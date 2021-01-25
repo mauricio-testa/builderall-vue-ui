@@ -28,14 +28,7 @@ export const menusProp = {
 	type: Array,
 	required: false,
 	default: () => {
-		return [
-			{
-				title  : 'Menu item',
-				name   : 'item',
-				href   : '/',
-				icon   : 'gear',
-			}
-		]
+		return []
 	},
 }
 

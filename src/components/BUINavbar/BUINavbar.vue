@@ -59,30 +59,13 @@
 						{{ labelFavoriteLang }}
 					</b-dropdown-item>
 
-					<v-select
-						:dir="rtl ? 'rtl': 'ltr'"
-						style="background-color: #f2f2f2"
+					<bui-form-countries
 						class="mt-1 mx-3 mb-3"
-						:clearable="false"
+						:rtl="rtl"
 						:options="languages"
-						label="desc"
 						@input="changeLanguage()"
 						v-model="user.locale"
-						:reduce="(value) => value.key"
-					>
-						<template #selected-option="{ key, desc }">
-							<div class="d-flex">
-							<span :class="`bui-flag bui-flag-${key}`"></span>
-							{{ desc }}
-							</div>
-						</template>
-						<template #option="{ key, desc }">
-							<div class="d-flex">
-							<span :class="`bui-flag bui-flag-${key}`"></span>
-							{{ desc }}
-							</div>
-						</template>
-					</v-select>
+					></bui-form-countries>
 
 					<b-dropdown-divider></b-dropdown-divider>
 
@@ -101,7 +84,6 @@
 
 <script>
 
-import vSelect from "vue-select";
 import BUIIcon from "../BUIIcon/BUIIcon";
 import { userProp, sidebarStateProp, rtlProp, languagesProp } from '../../assets/js/props'
 
@@ -111,7 +93,6 @@ export default {
 
 	components: {
 		BUIIcon,
-		vSelect,
 	},
 
 	props: {
@@ -206,8 +187,6 @@ export default {
 <style lang="scss">
 
 @import "../../assets/scss/variables";
-
-@import "../../assets/scss/flags.scss";
 
 .bui-navbar {
 	box-shadow: 0 1px 2px rgba(38, 36, 36, 0.14);

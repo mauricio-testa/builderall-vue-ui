@@ -7,6 +7,7 @@ const BUIGear = '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="1
 const BUIPlus = '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 17.405 17.405"><path id="Caminho_436" data-name="Caminho 436" d="M7.894,6.154,11.947,2.1A1.231,1.231,0,1,0,10.206.36L6.154,4.413,2.1.36A1.231,1.231,0,1,0,.36,2.1L4.413,6.154.36,10.206a1.231,1.231,0,1,0,1.74,1.74L6.154,7.894l4.053,4.053a1.231,1.231,0,1,0,1.74-1.74Z" transform="translate(8.702) rotate(45)" fill="#0080fc"/></svg>';
 const BUIMenuBurger = '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 29.399 17.676"> <path id="list" d="M1.291,17.676a1.692,1.692,0,0,1,0-3.383H26.909a1.692,1.692,0,0,1,0,3.383Zm.4-7.147a1.691,1.691,0,1,1,0-3.382H27.309a1.691,1.691,0,1,1,0,3.382Zm0-7.147A1.691,1.691,0,1,1,1.692,0H27.309a1.691,1.691,0,1,1,0,3.382Z" transform="translate(0.4)" fill="#2c6bfe"/></svg>';
 const BUIMenuBurgerOpen = '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 29 17.676"><path id="list" d="M13.291,17.676a1.692,1.692,0,0,1,0-3.383H27.309a1.692,1.692,0,0,1,0,3.383Zm-11.6-7.147a1.691,1.691,0,1,1,0-3.382H27.309a1.691,1.691,0,1,1,0,3.382Zm0-7.147A1.691,1.691,0,1,1,1.692,0H15.709a1.691,1.691,0,1,1,0,3.382Z" fill="#2c6bfe"/></svg>';
+const BUIInfo = '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 22 22"><circle id="Elipse_161" data-name="Elipse 161" cx="10.5" cy="10.5" r="10.5" transform="translate(0.5 0.5)" fill="rgba(222,222,222,0.13)" stroke="#707070" stroke-width="1" opacity="0.999"/><path id="Caminho_394" data-name="Caminho 394" d="M1,6A1,1,0,0,1,0,5V1A1,1,0,0,1,2,1V5A1,1,0,0,1,1,6Z" transform="translate(12 16) rotate(180)" fill="#707070"/><path id="Caminho_395" data-name="Caminho 395" d="M1,6A1,1,0,0,1,0,5H0A1,1,0,0,1,2,5H2A1,1,0,0,1,1,6Z" transform="translate(12 12) rotate(180)" fill="#707070"/></svg>';
 
 export default {
 	"BUIExit" : BUIExit,
@@ -17,5 +18,6 @@ export default {
 	"BUIGear" : BUIGear,
 	"BUIPlus" : BUIPlus,
 	"BUIMenuBurger" : BUIMenuBurger,
-	"BUIMenuBurgerOpen" : BUIMenuBurgerOpen
+	"BUIMenuBurgerOpen" : BUIMenuBurgerOpen,
+	"BUIInfo" : BUIInfo
 }

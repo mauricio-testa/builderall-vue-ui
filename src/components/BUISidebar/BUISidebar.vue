@@ -52,7 +52,7 @@
 			<div class="pt-2">
 				<b-nav vertical sticky>
 					<bui-sidebar-item
-						v-for="(menu, k) in menusComputed"
+						v-for="(menu, k) in menusMobileComputed"
 						:key="k"
 						:menu="menu"
 						:show-tooltip="false">
@@ -112,9 +112,14 @@ export default {
 		menus: menusProp,
 
 		/* 
-		 * Menus da parte de baixo do
+		 * Menus da parte de baixo
 		 */
 		menusBottom: menusProp,
+
+		/* 
+		 * Menus mobile
+		 */
+		menusMobile: menusProp,
 	},
 
 	computed: {
@@ -135,6 +140,17 @@ export default {
 				...menu,
 				active: menu.name == this.activeMenu,
 			}));
+		},
+
+		menusMobileComputed() {
+			if (this.menusMobile.length) {
+				return this.menusMobile.map((menu) => ({
+					...menu,
+					active: menu.name == this.activeMenu,
+				}));
+			} else {
+				return this.menusComputed.concat(this.menusBottomComputed)
+			}
 		}
 	},
 }
