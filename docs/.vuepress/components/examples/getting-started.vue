@@ -14,7 +14,7 @@
 
 		<bui-container :sidebar-state="sidebarState">
 
-			<!-- <router-view> </router-view> -->
+			<!-- <router-view> -->
 
 			<bui-page title="Dashboard" subtitle="Working!">
 				<bui-alert
@@ -26,6 +26,9 @@
 				Content here
 
 			</bui-page>
+
+			<!-- </router-view> -->
+
 		</bui-container>
 	</div>
 </template>
