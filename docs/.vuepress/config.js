@@ -55,6 +55,7 @@ module.exports = {
 							['/components/bui-icon', 'Icon'],
 							['/components/bui-form-group', 'Form group'],
 							['/components/bui-language-selector', 'Language Selector'],
+							['/components/bui-modal-confirm', 'Confirmation modal'],
 						]
 					},
 					{
@@ -62,7 +63,8 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/bootstrap/b-tabs', 'Tabs'],
-							['/bootstrap/b-inputs', 'Inputs']
+							['/bootstrap/b-inputs', 'Inputs'],
+							['/bootstrap/b-modal', 'Modal'],
 						]
 					}
 				]

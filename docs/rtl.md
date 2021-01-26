@@ -23,7 +23,7 @@ Para evitar redundância de código, é aconselhável criar um `prototype` vue e
 
 ```js
 // is RTL?
-Vue.prototype.$rtl = false
+Vue.prototype.$rtl = document.documentElement.dir == 'rtl'
 ```
 
 ```html

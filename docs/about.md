@@ -12,4 +12,4 @@ Componentes nativos do BootstrapVue são prefixados por `b-`<br>
 
 ## Dependências
 - [BootstrapVue](https://bootstrap-vue.org/)
-- [VueSelect](https://vue-select.org/) - para utilizá-lo, você deve fazer sua importação
+- [VueSelect](https://vue-select.org/) - para utilizá-lo, você deve fazer sua importação local. Somente seu CSS é importado globalmente
