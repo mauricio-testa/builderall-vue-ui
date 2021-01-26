@@ -16,10 +16,10 @@
 
 			<!-- <router-view> -->
 
-			<bui-page title="Dashboard" subtitle="Working!">
+			<bui-page title="Dashboard" subtitle="Welcome to a Builderall application!">
 				<bui-alert
 					index="alert-01"
-					title="Builderall VUE Library!"
+					title="Builderall VUE UI Library!"
 					content="Lorem ipsum Lorem ipsum dolor">
 				></bui-alert>
 

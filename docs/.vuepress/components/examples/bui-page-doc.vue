@@ -1,7 +1,7 @@
 <template>
 	<bui-page
 		title="Dashboard"
-		subtitle="Welcome to a Builderall app!">
+		subtitle="Welcome to a Builderall application!">
 		<template #page-header-right>
 			<b-button variant="primary" class="ml-auto">
 				<bui-icon name="plus" white :size="18"></bui-icon>
