@@ -19,7 +19,7 @@
 				</bui-sidebar-item>
 			</b-nav>
 
-			<b-nav vertical class="pb-4 pt-3 mt-3 bui-sidebar-bottom" v-if="menusBottom.length">
+			<b-nav vertical class="pb-4 pt-3 mt-3 bui-sidebar-bottom" v-if="menusBottomComputed.length">
 				<bui-sidebar-item
 					v-for="(menu, k) in menusBottomComputed"
 					:key="k"
@@ -129,22 +129,22 @@ export default {
 		},
 
 		menusComputed() {
-			return this.menus.map((menu) => ({
+			return (this.menus || []).map((menu) => ({
 				...menu,
 				active: menu.name == this.activeMenu,
 			}));
 		},
 
 		menusBottomComputed() {
-			return this.menusBottom.map((menu) => ({
+			return (this.menusBottom || []).map((menu) => ({
 				...menu,
 				active: menu.name == this.activeMenu,
 			}));
 		},
 
 		menusMobileComputed() {
-			if (this.menusMobile.length) {
-				return this.menusMobile.map((menu) => ({
+			if (Array.isArray(this.menusMobile) && this.menusMobile.length) {
+				return (this.menusMobile || []).map((menu) => ({
 					...menu,
 					active: menu.name == this.activeMenu,
 				}));
@@ -216,14 +216,14 @@ html[dir="rtl"] {
 			margin-left: 20px;
 			margin-right: 0;
 		}
-		&:hover, &.active {
+		&:hover, &.active, &.router-link-exact-active {
 			background-color: #F4F7FC;
 			color: var(--primary);
 			.bui-icon {
 				filter: unset;
 			}
 		}
-		&.active {
+		&.active, &.router-link-exact-active {
 			border-left: 3px solid #1D5EF5;
 		}
 		.sidebar-badge {

@@ -59,13 +59,13 @@
 						{{ labelFavoriteLang }}
 					</b-dropdown-item>
 
-					<bui-form-countries
+					<bui-language-selector
 						class="mt-1 mx-3 mb-3"
 						:rtl="rtl"
 						:options="languages"
 						@input="changeLanguage()"
 						v-model="user.locale"
-					></bui-form-countries>
+					></bui-language-selector>
 
 					<b-dropdown-divider></b-dropdown-divider>
 

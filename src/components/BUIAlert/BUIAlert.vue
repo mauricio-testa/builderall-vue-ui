@@ -1,5 +1,5 @@
 <template>
-	<b-alert :show="show" dismissible fade class="bui-alert">
+	<b-alert :show="show" :dismissible="dismissible" fade class="bui-alert">
 		<h5 v-text="title" v-if="title"></h5>
 		<p v-text="content" v-if="content"></p>
 		<div class="d-flex justify-content-end mt-n1 flex-md-row flex-column">
@@ -94,6 +94,12 @@ export default {
 			localStorage.setItem(prefix + this.index, 1);
 		},
 	},
+	
+	computed: {
+		dismissible() {
+			return this.labelHide !== false || this.labelNoShowAgain !== false
+		}
+	}
 };
 </script>
 

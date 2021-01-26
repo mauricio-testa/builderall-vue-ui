@@ -3,7 +3,6 @@
 import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'vue-select/src/scss/vue-select.scss'
 import './styles.css'
 
 // Isso permite que o plugin esteja disponível no site

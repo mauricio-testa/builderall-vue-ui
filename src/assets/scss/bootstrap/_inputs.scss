@@ -51,6 +51,10 @@ input[type=search].form-control {
 // label
 label {
 	color: $secondary;
+	display: flex;
+	.bui-icon {
+		display: flex !important;
+	}
 }
 
 // switch
@@ -114,7 +118,8 @@ label {
     border: 1px solid #DFE7EF;
     border-radius: 6px;
     .custom-control-label {
-        display: flex;
+		display: flex;
+		align-items: center;
         padding-left: 0.7rem;
         color: #6E6E6E;
         font-size: 15px;

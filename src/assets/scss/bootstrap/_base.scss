@@ -1,0 +1,12 @@
+@import '../variables'; 
+
+body {
+	margin: 0;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $line-height-base;
+    color: $color-base;
+    text-align: left;
+    background-color: $body-bg;
+}

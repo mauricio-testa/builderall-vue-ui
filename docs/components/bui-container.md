@@ -3,7 +3,7 @@
 BUIContainer deve ser utilizado em conjunto com [BUINavbar](/components/bui-navbar.html) e [BUISidebar](/components/bui-sidebar.html). 
 Ele é necessário para estabelecer os espaçamentos necessários para estes componentes conforme o estado do sidebar, para fornecer responsividade e dar suporte ao RTL.
 <br>
-Por favor, visite a página [Guide](/guide.html) para ver como esses componentes trabalham em conjunto
+Por favor, visite a página [Layout](/layout.html) para ver como esses componentes trabalham em conjunto
 
 ## Basic usage
 ```html

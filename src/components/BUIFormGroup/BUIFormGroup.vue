@@ -9,7 +9,7 @@
 					*
 				</span>
 				<bui-icon
-					class="mx-1"
+					class="mx-2"
 					v-if="help"
 					name="info"
 					:size="18"

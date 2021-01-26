@@ -21,7 +21,8 @@ Menu lateral e menu mobile
 </SourceCode>
 
 ## Active menu
-O menu será considerado ativo quando a sua propriedade `name` for igual á propriedade `active-menu`
+O menu será considerado ativo quando a sua propriedade `name` for igual á propriedade `active-menu`.
+Em caso de utilizar [Vue Router](https://router.vuejs.org/), não é necessário passar a prop `active-menu`, pois ele é ativado automaticamente através da classe `router-link-exact-active`
 
 ### Demo
 <Demo componentName="examples-bui-sidebar-doc-active" />
@@ -30,10 +31,6 @@ O menu será considerado ativo quando a sua propriedade `name` for igual á prop
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue{3,22}
 </SourceCode>
-
-::: tip
-Para não exibir nenhum menu no footer do sidebar, apenas passe `menus-bottom` como um array vazio `[]`
-:::
 
 ## Links suportados
 Href, `<inertia-link>` & `<router-link>` support
@@ -87,7 +84,7 @@ let item = {
 | `sidebar-state` | `String` | `'expanded'` | Estado do sidebar. Utilizado para exibir o menu hamburguer aberto ou fechado. Possíveis valores: `'expanded'`, `'mini'`, `'disabled'` |
 | `active-menu` | `String` | `null` | O menu que está ativo com base em `menu.name`|
 | `menus` | `Array` | `[]` | Menus sidebar |
-| `menus-bottom` | `Array` | `[]` | Menus adicionar para o footer do sidebar |
+| `menus-bottom` | `Array` | `[]` | Menus do footer do sidebar |
 | `menus-mobile` | `Array` | `menus.concat(menusBottom)` | Menus mobile. Se nada for passado, será exibido uma concatenação entre `menus` e `menus-bottom`
 
 

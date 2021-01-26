@@ -35,7 +35,11 @@ module.exports = {
 				sidebar: [
 					{
 						title: 'Getting started',
-						path: '/guide'
+						path: '/guide',
+						collapsable: false,
+						children: [
+							['/layout', 'Layout']
+						]
 					},
 					{
 						title: 'Components',

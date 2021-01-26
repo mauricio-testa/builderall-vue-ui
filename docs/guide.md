@@ -17,5 +17,5 @@ Vue.use(BuilderallVueUi)
 ### Step 3: Build the base layout
 
 <SourceCode>
-<<< @/docs/.vuepress/components/examples/getting-started.vue
+<<< @/docs/.vuepress/components/examples/getting-started-doc.vue
 </SourceCode>
