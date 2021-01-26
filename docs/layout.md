@@ -1,6 +1,6 @@
-## Layout
+## Arquitetura do layout
 
-Existem várias formas de organizar um aplicativo desenvolvido com builderall-vue-ui. Mas todas elas devem possuir um [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) e [BUIContainer](/components/bui-container.html) no mesmo nível hierárquico e compartilhando da mesma variável `sidebar-state`. Dentro do [BUIContainer](/components/bui-container.html) é o lugar em que suas páginas devem ser exibidas.
+Existem várias formas de organizar um aplicativo desenvolvido com BuilderallVueUI. Mas todas elas devem possuir um [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) e [BUIContainer](/components/bui-container.html) no mesmo nível hierárquico e compartilhando da mesma variável `sidebar-state`. Dentro do [BUIContainer](/components/bui-container.html) é o lugar em que suas páginas devem ser contruídas.
 
 ## Exemplo base funcional
 
@@ -21,12 +21,12 @@ Para desabilitar o `sidebar`, defina a propriedade `sidebarState` como `disabled
 Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e abrir a aplicação novamente podemos usar o localStorage
 
 <SourceCode>
-<<< @/docs/.vuepress/components/examples/layout-doc.vue
+<<< @/docs/.vuepress/components/examples/layout-doc.vue{23,34,40}
 </SourceCode>
 
 ## Usando Vuex
 
-Para uma melhor organização de código, você pode modificar o estado do sidebar através do [Vuex](https://vuex.vuejs.org/), mapeando o `sidebarState` como uma variável do state e transformando o `toggleSidebar` em uma action
+Para uma melhor organização de código, você pode querer armazenar o estado do sidebar em uma store do [Vuex](https://vuex.vuejs.org/), mapeando o `sidebarState` como uma variável do state e transformando o `toggleSidebar` em uma action
 
 ``` javascript
 import { mapState } from 'vuex'
@@ -47,7 +47,7 @@ export default {
 
 ## Usando um arquivo de Layout
 
-Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portando, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue dentro do Laravel ou com Laravel + Inertia. Nesses casos, uma boa opção é a criação de arquivos de layout. Neste caso, você apenas disponibiliza um `slot` no lugar do `router-view` e herda este componente em todas as páginas da aplicação.
+Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portanto, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue em conjunto com [Laravel](http://laravel.com/) ou [InertiaJs](https://inertiajs.com/). Nesses casos, uma boa opção é a criação de arquivos de layout: você apenas disponibiliza um `slot` ao invés do `router-view` e herda este componente em todas as páginas da aplicação.
 
 MyLayout.vue
 ``` html

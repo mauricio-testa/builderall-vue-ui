@@ -34,11 +34,13 @@ module.exports = {
 				],
 				sidebar: [
 					{
-						title: 'Getting started',
-						path: '/guide',
+						title: 'Docs',
 						collapsable: false,
 						children: [
-							['/layout', 'Layout']
+							['/guide', 'Getting Started'],
+							['/layout', 'Layout'],
+							['/rtl', 'RTL Support'],
+							['/about', 'About']
 						]
 					},
 					{

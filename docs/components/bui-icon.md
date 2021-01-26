@@ -1,5 +1,5 @@
 # BUIIcon
-Biblioteca de ícones para builderall-vue-ui. Todos os ícones são renderizados em svg injetado no html e permitem customização de cores e tamanho.
+Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados em svg injetado no html e permitem customização de cores e tamanho.
 
 ## Demo
 <Demo componentName="examples-bui-icon-doc" />
