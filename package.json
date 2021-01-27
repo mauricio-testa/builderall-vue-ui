@@ -1,6 +1,6 @@
 {
 	"name": "builderall-vue-ui",
-	"version": "0.1.1",
+	"version": "0.0.1",
 	"private": false,
 	"main": "dist/builderall-vue-ui.umd.min.js",
 	"author": "Builderall",
@@ -10,7 +10,7 @@
 		"dist/*",
 		"src/*"
 	],
-	"homepage": "",
+	"homepage": "https://builderall-vue-ui.netlify.app/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mauricio-testa/builderall-vue-ui.git"
