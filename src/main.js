@@ -1,5 +1,7 @@
 import './assets/scss/main.scss'
 
+import './assets/css/fonts.css'
+
 import * as components from './components'
 
 export const BuilderallVueUi = {
