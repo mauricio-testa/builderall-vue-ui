@@ -1,5 +1,9 @@
 # Getting Started
 
+::: warning
+Esta documentação e biblioteca estão em fase de desenvolvimento e os textos ainda não foram revisados e traduzidos completamente.
+:::
+
 ### Step 1: Install
 
 ```bash
