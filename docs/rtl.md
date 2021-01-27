@@ -1,8 +1,8 @@
-## RTL Support
+# RTL Support
 
 O BootstrapVue não possui suporte a RTL, mas é possível adicionar o suporte RTL em sua aplicação BuilderallVueUi com 2 passos simples:
 
-### 1 - Informe a direção ao documento
+## 1 - Informe a direção ao documento
 
 Você deve inserir na tag `html` do documento a direção dele para que os seletores CSS trabalhem corretamente
 
@@ -11,7 +11,7 @@ Você deve inserir na tag `html` do documento a direção dele para que os selet
 <html dir="ltr">
 ```
 
-### 2 - Informar a direção aos componentes
+## 2 - Informar a direção aos componentes
 
 Você deve informar a propriedade `rtl` para todos os componentes que ela é necessária
 

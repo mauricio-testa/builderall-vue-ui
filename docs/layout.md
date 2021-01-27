@@ -1,8 +1,8 @@
-## Arquitetura do layout
+# Layout
 
 Existem várias formas de organizar um aplicativo desenvolvido com BuilderallVueUI. Mas todas elas devem possuir um [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) e [BUIContainer](/components/bui-container.html) no mesmo nível hierárquico e compartilhando da mesma variável `sidebar-state`. Dentro do [BUIContainer](/components/bui-container.html) é o lugar em que suas páginas devem ser contruídas.
 
-## Exemplo base funcional
+## Basic example
 
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/getting-started-doc.vue
@@ -16,7 +16,7 @@ A única propriedade necessária para o funcionamento do layout base é a `logo`
 Para desabilitar o `sidebar`, defina a propriedade `sidebarState` como `disabled`
 ::: 
 
-## Exemplo base com localStorage
+## Basic example with localStorage
 
 Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e abrir a aplicação novamente podemos usar o localStorage
 
@@ -24,7 +24,7 @@ Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e ab
 <<< @/docs/.vuepress/components/examples/layout-doc.vue{23,34,40}
 </SourceCode>
 
-## Usando Vuex
+## Using Vuex
 
 Para uma melhor organização de código, você pode querer armazenar o estado do sidebar em uma store do [Vuex](https://vuex.vuejs.org/), mapeando o `sidebarState` como uma variável do state e transformando o `toggleSidebar` em uma action
 
@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-## Usando um arquivo de Layout
+## Using a Layout file
 
 Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portanto, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue em conjunto com [Laravel](http://laravel.com/) ou [InertiaJs](https://inertiajs.com/). Nesses casos, uma boa opção é a criação de arquivos de layout: você apenas disponibiliza um `slot` ao invés do `router-view` e herda este componente em todas as páginas da aplicação.
 

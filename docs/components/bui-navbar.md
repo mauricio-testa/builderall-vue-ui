@@ -2,7 +2,7 @@
 
 Cabeçalho da aplicação e popup de perfil do usuário.
 
-### Demo
+## Demo
 <Demo componentName="examples-bui-navbar-doc" />
 
 ## Code

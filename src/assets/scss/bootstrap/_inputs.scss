@@ -14,6 +14,13 @@ select.custom-select, .form-control {
     }
 }
 
+select.custom-select {
+    background: #fff url("../../assets/images/select-arrow-down.svg") no-repeat right 0.75rem center/8px 10px;
+    &:focus {
+        background: #FAFBFC url("../../assets/images/select-arrow-up.svg") no-repeat right 0.75rem center/8px 10px;
+    }
+}
+
 // search
 input[type=search].form-control {
     background-position: 20px center;
@@ -22,7 +29,7 @@ input[type=search].form-control {
     background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.997' height='15' viewBox='0 0 14.997 15'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23434343;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M14.793,12.968l-2.921-2.921a.7.7,0,0,0-.5-.205H10.9A6.09,6.09,0,1,0,9.843,10.9v.477a.7.7,0,0,0,.205.5l2.921,2.921a.7.7,0,0,0,.993,0l.829-.829A.706.706,0,0,0,14.793,12.968Zm-8.7-3.126a3.75,3.75,0,1,1,3.75-3.75A3.747,3.747,0,0,1,6.093,9.843Z'/%3E%3C/svg%3E");
 }
 
-// label
+// form group
 .form-group {
 	.bui-form-required {
 		color: red !important;
@@ -111,7 +118,7 @@ label {
 	}
 }
 
-
+// switch box
 .custom-checkbox.bui-checkbox-boxed {
     padding: 0.9rem 0.9rem 0.9rem 3rem;
     background-color: #FAFCFF;
@@ -141,6 +148,8 @@ label {
         border-radius: 100% !important;
     }
 }
+
+// rtl
 
 html[dir="rtl"] {
 	.bui-checkbox-boxed {

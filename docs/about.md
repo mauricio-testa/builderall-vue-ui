@@ -1,4 +1,4 @@
-## About docs
+# About docs
 
 Esta biblioteca foi construída sobre a biblioteca [BootstrapVue](https://bootstrap-vue.org/).
 Dessa forma, você possui disponíveis 3 tipos de componentes:

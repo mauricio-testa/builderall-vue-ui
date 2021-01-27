@@ -1,4 +1,4 @@
-# BTabs
+# Modal
 
 [BootstrapVue Modal Reference](https://bootstrap-vue.org/docs/components/modal)
 

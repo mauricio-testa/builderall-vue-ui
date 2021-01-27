@@ -1,4 +1,4 @@
-## Inputs
+# Inputs
 
 Componentes de input do bootstrap-vue customizados
 <br>

@@ -1,7 +1,7 @@
 <template>
 	<b-card>
 		<bui-form-group
-			label="Label"
+			label="Label with help"
 			help="Help text">
 			<b-form-input
 				type="text"
@@ -10,7 +10,27 @@
 		</bui-form-group>
 
 		<bui-form-group
-			label="Label"
+			label="Label with error"
+			error="error text">
+			<b-form-input
+				type="text"
+				value="Form input error"
+			></b-form-input>
+		</bui-form-group>
+
+		<bui-form-group
+			label="Textarea"
+			help="Help text">
+			<b-form-textarea
+				required
+				value="Textarea"
+				rows="3"
+			></b-form-textarea>
+		</bui-form-group>
+
+		<bui-form-group
+			label="Textarea error"
+			error="Wrong!"
 			help="Help text">
 			<b-form-textarea
 				required
@@ -21,6 +41,28 @@
 
 		<bui-form-group label="Search">
 			<b-form-input type="search"></b-form-input>
+		</bui-form-group>
+
+		<bui-form-group label="Select">
+			<b-form-select :options="['one', 'two']"></b-form-select>
+		</bui-form-group>
+
+		<bui-form-group
+			label="Radios"
+			help="I need help"
+			required>
+			<b-form-radio-group
+				:options="['one', 'two']"
+				name="radio-options"
+			></b-form-radio-group>
+		</bui-form-group>
+
+		<bui-form-group
+			label="Select complete"
+			help="I need help"
+			required
+			error="Error!">
+			<b-form-select :options="['one', 'two']"></b-form-select>
 		</bui-form-group>
 
 		<bui-form-group label="Switches" required help="oi!!!!">

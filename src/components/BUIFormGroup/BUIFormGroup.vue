@@ -1,5 +1,5 @@
 <template>
-	<b-form-group ref="group" :invalid-feedback="error">
+	<b-form-group ref="group">
 		<slot name="label">
 			<label v-if="label">
 				{{ label }}
@@ -24,6 +24,9 @@
 			v-if="value && maxChars"> 
 			{{ countStrLength(value) }}
 		</span>
+		<b-form-invalid-feedback :state="!error">
+			{{ error }}
+		</b-form-invalid-feedback>
 	</b-form-group>
 </template>
 
@@ -96,7 +99,7 @@ export default {
 	async mounted() {
 
 		await this.$refs.group.$children.forEach(element => {
-			if (element.$el.tagName == 'INPUT' || element.$el.tagName == 'TEXTAREA') {
+			if (['INPUT', 'TEXTAREA', 'SELECT'].includes(element.$el.tagName)) {
 				this.element = element.$el
 			}
 		})

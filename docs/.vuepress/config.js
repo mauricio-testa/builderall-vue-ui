@@ -2,8 +2,8 @@ module.exports = {
 	locales: {
 		'/': {
 			lang: 'en-US',
-			title: 'builderall-vue-ui',
-			description: 'Documentation builderall-vue-ui plugin'
+			title: 'Builderall Vue UI',
+			description: 'Vue UI Library for Builderall Apps'
 		}
 	},
 
@@ -13,24 +13,25 @@ module.exports = {
 		docsDir: 'docs',
 		editLinks: true,
 		docsBranch: 'dev',
-		editLinkText: 'Ajude ou reporte essa pagina!',
-		search: false,
+		editLinkText: 'Edit!',
+		search: true,
 		locales: {
 			'/': {
 				label: 'English',
 				selectText: 'Languages',
 				lastUpdated: 'Last Updated',
-				// service worker is configured but will only register in production
+				/* service worker is configured but will only register in production
 				serviceWorker: {
 					updatePopup: {
 						message: 'New content is available.',
 						buttonText: 'Refresh'
 					}
 				},
+				*/
 				nav: [
 					{ text: 'Getting Started', link: '/guide' },
 					{ text: 'Components', link: '/components/' },
-					{ text: 'GitHub', link: '' }
+					{ text: 'GitHub', link: 'https://github.com/mauricio-testa/builderall-vue-ui' }
 				],
 				sidebar: [
 					{
@@ -65,6 +66,7 @@ module.exports = {
 							['/bootstrap/b-tabs', 'Tabs'],
 							['/bootstrap/b-inputs', 'Inputs'],
 							['/bootstrap/b-modal', 'Modal'],
+							['/bootstrap/b-alert', 'Alert'],
 						]
 					}
 				]

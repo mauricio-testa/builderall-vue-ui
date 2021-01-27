@@ -1,0 +1,15 @@
+.alert:not(.bui-alert) {
+    border-radius: 4px;
+    color: #5a5555;
+    font-weight: 500;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    border: none;
+    &.alert-info {
+        background-color: #F5F9FF;
+        border: 1px solid #CFE7FC;
+    }
+    &.alert-warning {
+        border: 1px solid #fcdcb1;
+    }
+}

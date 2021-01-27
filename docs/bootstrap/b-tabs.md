@@ -1,4 +1,4 @@
-# BTabs
+# Tabs
 
 [BootstrapVue Tabs Reference](https://bootstrap-vue.org/docs/components/tabs)
 

@@ -10,11 +10,11 @@ Modal de confirmação genérico
 <<< @/docs/.vuepress/components/examples/bui-modal-confirm-doc.vue
 </SourceCode>
 
-## Como usar
+## How to use
 Você deve adicionar um `<bui-modal-confirm ref="modal"></bui-modal-confirm>` ao seu aplicativo e definir um ref para ele.
 Após isso é só abri-lo utilizando `this.$refs.modal.show({})` enviando as opções desejadas como parâmetro.
 
-### Opções disponíveis:
+### Available options:
 | Key | Default | Description |
 | -------- | ---- | ------- | 
 | `title` | `'Title'` | Título do modal |
@@ -27,6 +27,7 @@ Após isso é só abri-lo utilizando `this.$refs.modal.show({})` enviando as op�
 | `data` | `{}` | Dados necessários para executar callbacks. Essa mesma variável será enviada por parâmetro nas funções `onSuccess` e `onCancel` |
 | `onSuccess` | `(data) => ({})` | Callback executado ao confirmar |
 | `onCancel` | `(data) => ({})` | Callback executado ao cancelar |
+
 ## Slot
 
 ### Demo
