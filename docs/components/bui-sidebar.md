@@ -80,7 +80,6 @@ let item = {
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
 | `user` | `Object` | `{name: 'The user name',email: 'mail@builderall.com', gravatar: '...', locale: 'pt_BR'}` | Dados do usuário logado. Um objeto que deve obrigatoriamente possuir as chaves `name`, `email`, `gravatar`, `locale`  |
-| `rtl` | `Boolean` | `false` | Se a aplicação está em RTL ou não |
 | `sidebar-state` | `String` | `'expanded'` | Estado do sidebar. Utilizado para exibir o menu hamburguer aberto ou fechado. Possíveis valores: `'expanded'`, `'mini'`, `'disabled'` |
 | `active-menu` | `String` | `null` | O menu que está ativo com base em `menu.name`|
 | `menus` | `Array` | `[]` | Menus sidebar |

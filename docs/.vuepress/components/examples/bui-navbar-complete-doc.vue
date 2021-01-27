@@ -6,7 +6,6 @@
 		label-favorite-lang="Idioma preferido"
 		label-logout="Exit"
 		home-link="/home"
-		:rtl="false"
 		:user="user"
 		:languages="languages"
 		@logout="doSomething"

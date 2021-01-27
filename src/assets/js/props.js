@@ -7,12 +7,6 @@ export const sidebarStateProp = {
 	validator: value => ['disabled', 'mini', 'expanded'].includes(value)
 }
 
-export const rtlProp = {
-	type: Boolean,
-	required: false,
-	default: false,
-}
-
 export const languagesProp = {
 	type: Array,
 	required: false,

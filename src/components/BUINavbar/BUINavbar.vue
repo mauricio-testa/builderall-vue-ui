@@ -4,7 +4,7 @@
 		type="light"
 		fixed="top"
 		class="bui-navbar"
-		:class="{'bui-navbar-rtl' : rtl}">
+		:class="{'bui-navbar-rtl' : $buiOptions.isRtl}">
 
 		<div
 			v-b-toggle.sidebar-mobile
@@ -31,7 +31,7 @@
 
 		<div class="mx-3 mx-sm-4 d-flex align-items-center">
 			<b-navbar-nav>
-				<b-nav-item-dropdown :right="!rtl" no-caret class="bui-dropdown-user">
+				<b-nav-item-dropdown :right="!$buiOptions.isRtl" no-caret class="bui-dropdown-user">
 					<template v-slot:button-content>
 						<b-avatar variant="default" :src="user.gravatar"></b-avatar>
 					</template>
@@ -61,7 +61,7 @@
 
 					<bui-language-selector
 						class="mt-1 mx-3 mb-3"
-						:rtl="rtl"
+						:rtl="$buiOptions.isRtl"
 						:options="languages"
 						@input="changeLanguage()"
 						v-model="user.locale"
@@ -85,7 +85,7 @@
 <script>
 
 import BUIIcon from "../BUIIcon/BUIIcon";
-import { userProp, sidebarStateProp, rtlProp, languagesProp } from '../../assets/js/props'
+import { userProp, sidebarStateProp, languagesProp } from '../../assets/js/props'
 
 export default {
 
@@ -102,11 +102,6 @@ export default {
 		 * Deve conter 4 propriedades: email, name, language e gravatar
 		 */
 		user: userProp,
-
-		/* 
-		 * Se a aplicação está em RTL
-		 */
-		rtl: rtlProp,
 
 		/* 
 		 * Estado do sidebar: 

@@ -33,7 +33,7 @@
 			</b-nav>
 		</div>
 
-		<b-sidebar id="sidebar-mobile" class="bui-sidebar-mobile" shadow backdrop no-header :right="rtl">
+		<b-sidebar id="sidebar-mobile" class="bui-sidebar-mobile" shadow backdrop no-header :right="$buiOptions.isRtl">
 
 			<div class="bui-sidebar-mobile-header">
 				<div class="d-flex justify-content-end">
@@ -72,7 +72,7 @@
 <script>
 
 import BuiSidebarItem from './BUISidebarItem'
-import { userProp, sidebarStateProp, rtlProp, menusProp } from '../../assets/js/props'
+import { userProp, sidebarStateProp, menusProp } from '../../assets/js/props'
 
 export default {
 
@@ -88,11 +88,6 @@ export default {
 		 * Estado do sidebar
 		 */
 		sidebarState: sidebarStateProp,
-
-		/* 
-		 * Se a aplicação está em RTL
-		 */
-		rtl: rtlProp,
 
 		/* 
 		 * Objeto do usuário necessário para sidebar mobile.

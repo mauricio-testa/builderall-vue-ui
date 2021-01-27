@@ -3,7 +3,6 @@
 		<bui-sidebar
 			sidebar-state="expanded"
 			active-menu="sites"
-			:rtl="false"
 			:menus="menus"
 			:menus-bottom="menus_bottom">
 			<template #item="{ menu }">

@@ -3,7 +3,6 @@
 		<bui-sidebar
 			:sidebar-state="sidebarState"
 			active-menu="sites"
-			:rtl="false"
 			:menus="menus"
 			:menus-bottom="menus_bottom">
 		</bui-sidebar>

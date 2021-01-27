@@ -1,6 +1,6 @@
 <template>
 	<v-select
-		:dir="rtl ? 'rtl': 'ltr'"
+		:dir="$buiOptions.isRtl ? 'rtl': 'ltr'"
 		style="background-color: #f2f2f2"
 		:clearable="false"
 		:options="options"
@@ -27,7 +27,7 @@
 <script>
 
 import vSelect from "vue-select";
-import { languagesProp, rtlProp } from '../../assets/js/props'
+import { languagesProp } from '../../assets/js/props'
 
 export default {
 
@@ -45,11 +45,6 @@ export default {
 
 	props: {
 		value: String,
-
-		/* 
-		 * Se a aplicação está em RTL
-		 */
-		rtl: rtlProp,
 
 		/* 
 		 * Dataset com os idiomas suportados.

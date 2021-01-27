@@ -1,16 +1,20 @@
+import './assets/scss/main.scss'
+
 import * as components from './components'
 
-const BuilderallVueUi = {
+export const BuilderallVueUi = {
     install(Vue, options = {}) {
         // components
         for (const componentName in components) {
             const component = components[componentName]
             Vue.component(component.name, component)
-        }
+		}
+		// prototypes
+		Vue.prototype.$buiOptions = {
+			isRtl: document.documentElement.dir == 'rtl'
+		}
     }
 }
-
-export default BuilderallVueUi
 
 if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(BuilderallVueUi)
