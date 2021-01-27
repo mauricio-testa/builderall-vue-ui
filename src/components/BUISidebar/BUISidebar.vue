@@ -57,7 +57,7 @@
 						:menu="menu"
 						:show-tooltip="false">
 						<slot name="item-mobile" :menu="menu">
-							<bui-icon :name="menu.icon" :size="20"/>
+							<bui-icon :name="menu.icon" :size="menu.icon == 'logo' ? 25 : 20"/>
 							<span v-text="menu.title"></span>
 						</slot>
 					</bui-sidebar-item>

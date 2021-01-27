@@ -1,11 +1,17 @@
 
 <template>
-	<div class="bui-icon" :class="`bui-icon-${name}`" v-html="icon" :style="style"></div>
+	<div
+		class="bui-icon"
+		:class="`bui-icon-${name}`"
+		v-html="icon"
+		:style="style"
+	></div>
 </template>
 
 <script>
 
 import icons from "../../assets/js/icons";
+
 import { camelCase, startCase } from 'lodash';
 
 const makeIconName = icon => `BUI${startCase(camelCase(icon)).replace(/ /g, '')}`
@@ -31,6 +37,11 @@ export default {
 			type: Boolean,
 			required: false,
 			default: false
+		},
+		rotate: {
+			type: Number,
+			required: false,
+			default: 0
 		}
 	},
 
@@ -43,13 +54,17 @@ export default {
 			let styles = {
 				'width' : this.size + 'px',
 				'height': this.size + 'px',
+				'transform' : `rotate(${this.rotate}deg)`,
 			};
 			if (this.white) {
 				styles['filter'] = 'brightness(0) invert(1)'
 			}
+			/*
 			if (this.size < 22) {
-				styles['margin-bottom'] = 0.9 + (0.5 * (22 - this.size)) + 'px'
+				styles['margin-bottom'] = 0.9 + (0.5 * (22 - this.size)) + 'px';
+				styles['margin-top'] = '-' + styles['margin-bottom'];
 			}
+			*/
 			return styles
 		},
 	}
@@ -58,6 +73,6 @@ export default {
 
 <style scoped>
 .bui-icon {
-	display: inline-block;
+	display: inline-flex;
 }
 </style>

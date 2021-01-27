@@ -1,6 +1,6 @@
 <template>
 	<bui-sidebar
-		active-menu="sites"
+		active-menu="configs"
 		:menus-bottom="[]"
 		:menus="menus">
 	</bui-sidebar>
@@ -14,14 +14,14 @@ export default {
 				{
 					title: 'Dashboard',
 					name: 'home',
-					icon: 'upload',
+					icon: 'dashboard',
 					href: '/'
 				},
 				{
-					title: 'Sites',
-					name: 'sites',
+					title: 'Configs',
+					name: 'configs',
 					icon: 'gear',
-					to: '/sites'
+					to: '/'
 				},
 			],
 		}

@@ -11,7 +11,7 @@
 					Este é o menu config
 				</template>
 				<template v-else>
-					{{ menu.title }} <b-badge class="mr-1"> {{ menu.icon }}</b-badge> Active: {{ menu.active }}
+					{{ menu.title }} <b-badge class="mr-1"> {{ menu.icon }}</b-badge>
 				</template>
 			</template>
 			<template #item-bottom="{ menu }">
@@ -29,12 +29,12 @@ export default {
 	data() {
 		return {
 			menus: [
-				{ title: 'Dash', name: 'home', icon: 'upload', href: '/'},
-				{ title: 'Sites', name: 'sites', icon: 'gear', to: '/sites' },
-				{ title: 'Configs', name: 'config', icon: 'lang', href: '/'},
+				{ title: 'Dashbard', name: 'home', icon: 'dashboard', href: '/'},
+				{ title: 'Contacts', name: 'contact', icon: 'person', to: '/sites' },
+				{ title: 'Configs', name: 'config', icon: 'gear', href: '/'},
 			],
 			menus_bottom: [
-				{ title: 'Office', name: 'backoffice', icon: 'upload', href: '#', target: '_blank'}
+				{ title: 'Office', name: 'backoffice', icon: 'logo', href: '#', target: '_blank'}
 			],
 		}
 	}

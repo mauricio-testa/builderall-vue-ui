@@ -22,6 +22,32 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 <<< @/docs/.vuepress/components/examples/bui-icon-doc-sizing.vue
 </SourceCode>
 
+## Rotate
+
+### Demo
+<template>
+	<bui-icon
+		name="arrow-right"
+		v-for="r in [0, 90, 180, 270]"
+		:key="r"
+		:rotate="r"
+		class="m-3"
+	/>
+</template>
+
+### Code
+```html
+<template>
+	<bui-icon
+		name="arrow-right"
+		v-for="r in [0, 90, 180, 270]"
+		:key="r"
+		:rotate="r"
+		class="m-3"
+	/>
+</template>
+```
+
 ## Dark
 
 ### Demo
@@ -41,3 +67,4 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 | `name` | `String` | `null` | Nome do ícone |
 | `size` | `Number` | `22` | Tamanho do ícone em px |
 | `white` | `Boolean` | `false` | Utiliza-se para tornar o ícone branco e exibir acima de um fundo escuro |
+| `rotate` | `Number` | `0` | Rotação do ícone

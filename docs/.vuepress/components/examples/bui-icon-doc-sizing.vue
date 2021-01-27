@@ -11,7 +11,7 @@
 	</div>
 
 	<b-button
-		class="m-2 border-0"
+		class="my-4 mx-1 border-0"
 		v-for="(color, key) in colors"
 		:key="key"
 		:style="{background: color}"
