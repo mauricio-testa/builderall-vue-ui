@@ -141,3 +141,43 @@ label {
         border-radius: 100% !important;
     }
 }
+
+html[dir="rtl"] {
+	.bui-checkbox-boxed {
+		padding: 0.9rem 3rem 0.9rem 0.9rem;
+		margin-left: 0;
+		margin-right: 0;
+		.custom-control-label {
+			padding-right: 0.7rem;
+			padding-left: unset;
+		}
+    }
+	.custom-switch {
+		padding: 0px 2.5rem 0px 0px;
+		.custom-control-label {
+			&::before {
+				right: -2.25rem;
+				left: unset;
+			}
+			&::after {
+				right: -22px;
+				left: unset;
+			}
+			label {
+				margin-right: .5rem;
+			}
+		}
+	}
+	.custom-checkbox {
+		.custom-control-label {
+			&::before {
+				right: -2.25rem;
+				left: unset;
+			}
+			&::after {
+				right: -36px;
+				left: unset;
+			}
+		}
+    }
+}

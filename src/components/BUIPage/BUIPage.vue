@@ -7,7 +7,7 @@
 					<span class="bui-page-subtitle" v-text="subtitle" v-if="subtitle"></span>
 				</slot>
 			</b-col>
-			<b-col lg="6" md="6" class="d-flex">
+			<b-col lg="6" md="6" class="page-header-right">
 				<slot name="page-header-right"/>
 			</b-col>
 		</b-row>
@@ -48,5 +48,15 @@ export default {
     letter-spacing: 0.45px;
     color: $secondary;
     opacity: 0.7;
+}
+
+.page-header-right {
+	text-align: right;
+}
+
+html[dir="rtl"] {
+	.page-header-right {
+		text-align: left;
+	}
 }
 </style>

@@ -39,3 +39,11 @@
 		margin: 0px 15px 0px -5px;
 	}
 }
+
+html[dir="rtl"] {
+	.btn {
+		.bui-icon {
+			margin: 0px -5px 0px 15px;
+		}
+	}
+}

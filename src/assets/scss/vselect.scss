@@ -5,14 +5,19 @@
 .v-select {
     border-radius: 4px;
     height: 42px;
-    background: #FAFBFC; // url("../../assets/images/select-arrow-down.svg") no-repeat right 0.75rem center/8px 10px;
+    background: #FAFBFC url("../../assets/images/select-arrow-down.svg") no-repeat right 0.75rem center/8px 10px;
     .vs__dropdown-toggle {
         border: 1px solid #E2E4E9;
         height: 100%;
         .vs__selected-options {
             flex-wrap: nowrap !important;
             width: 100%;
-        }
+		}
+		.vs__actions {
+			.vs__open-indicator {
+				display: none;
+			}
+		}
     }
     .v-select__new {
         display: flex;
@@ -25,7 +30,7 @@
         }
     }
     &.vs--open {
-        background: #FAFBFC; // url("../../assets/images/select-arrow-up.svg") no-repeat right 0.75rem center/8px 10px;
+        background: #FAFBFC url("../../assets/images/select-arrow-up.svg") no-repeat right 0.75rem center/8px 10px;
         .vs__dropdown-toggle {
             box-shadow: none;
             border: 1px solid #6799ED;
@@ -77,4 +82,10 @@
             }
         }
     }
+}
+
+html[dir="rtl"] {
+	.v-select {
+		background-position-x: 0.75rem
+	}
 }

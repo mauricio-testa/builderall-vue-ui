@@ -87,4 +87,10 @@ $flags: ar_AR, bm_ML, bn_BN, cz_CZ, da_DA, de_DE, el_EL, en_US, es_ES, fa_FA, fr
 	display: inline-block;
 	margin: 0px 12px 0px 2px;
 }
+
+html[dir="rtl"] {
+	.bui-flag {
+		margin: 0px 2px 0px 12px;
+	}
+}
 </style>

@@ -10,3 +10,9 @@ body {
     text-align: left;
     background-color: $body-bg;
 }
+
+html[dir="rtl"] {
+	body {
+		text-align: right;
+	}
+}
