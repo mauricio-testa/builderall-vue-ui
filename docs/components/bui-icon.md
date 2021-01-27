@@ -9,7 +9,10 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 <<< @/docs/.vuepress/components/examples/bui-icon-doc.vue
 </SourceCode>
 
-## Sizing
+## Available icons
+<Demo componentName="examples-bui-icon-doc-list" />
+
+## Size & Color
 
 ### Demo
 <Demo componentName="examples-bui-icon-doc-sizing" />

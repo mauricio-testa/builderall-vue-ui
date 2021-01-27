@@ -1,6 +1,6 @@
 
 <template>
-	<div class="bui-icon" v-html="icon" :style="style"></div>
+	<div class="bui-icon" :class="`bui-icon-${name}`" v-html="icon" :style="style"></div>
 </template>
 
 <script>
@@ -46,6 +46,9 @@ export default {
 			};
 			if (this.white) {
 				styles['filter'] = 'brightness(0) invert(1)'
+			}
+			if (this.size < 22) {
+				styles['margin-bottom'] = 0.9 + (0.5 * (22 - this.size)) + 'px'
 			}
 			return styles
 		},
