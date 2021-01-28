@@ -41,7 +41,7 @@ input[type=search].form-control {
 		display: block;
 		position: relative;
 		float: right;
-		padding-right: 10px;
+		padding: 0 10px;
 		font-size: 9px;
 		color: $secondary;
 		pointer-events: none;
@@ -153,41 +153,49 @@ label {
 // rtl
 
 html[dir="rtl"] {
-	.bui-checkbox-boxed {
-		padding: 0.9rem 3rem 0.9rem 0.9rem;
-		margin-left: 0;
-		margin-right: 0;
-		.custom-control-label {
-			padding-right: 0.7rem;
-			padding-left: unset;
+	.form-group .bui-form-char-counter {
+		float: left;
+	}
+	.custom-control {
+		padding-left: 0;
+		padding-right: 1.5rem;
+
+		&.custom-switch {
+			padding-right: 2.25rem;
+			.custom-control-label {
+				&::before {
+					right: -2.25rem;
+				}
+				&::after {
+					right: -1.25rem;
+				}
+				label {
+					margin-right: .5rem;
+					margin-left: 0;
+				}
+			}
 		}
-    }
-	.custom-switch {
-		padding: 0px 2.5rem 0px 0px;
+
+		&.bui-checkbox-boxed {
+			padding: 0.9rem 3rem 0.9rem 0.9rem;
+			margin-left: 0;
+			margin-right: 0;
+			.custom-control-label {
+				padding-left: unset;
+				padding-right: .7rem;
+			}
+		}
+
 		.custom-control-label {
-			&::before {
-				right: -2.25rem;
+			&::before, &::after {
+				right: -1.5rem;
 				left: unset;
-			}
-			&::after {
-				right: -22px;
-				left: unset;
-			}
-			label {
-				margin-right: .5rem;
 			}
 		}
 	}
-	.custom-checkbox {
-		.custom-control-label {
-			&::before {
-				right: -2.25rem;
-				left: unset;
-			}
-			&::after {
-				right: -36px;
-				left: unset;
-			}
-		}
-    }
+	
+	
+
+	
+	
 }
