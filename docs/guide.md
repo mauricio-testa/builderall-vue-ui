@@ -38,7 +38,7 @@ Vue.use(BuilderallVueUi, {
 });
 ```
 
-## Step 3: Build your app!
+## Step 4: Build your app!
 
 Adicione o código abaixo no seu arquivo Vue principal e está pronto!
 
