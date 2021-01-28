@@ -33,7 +33,9 @@ import { BuilderallVueUi } from 'builderall-vue-ui/src/main';
 import '@/scss/app.scss'; // arquivo do step 2
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
-Vue.use(BuilderallVueUi);
+Vue.use(BuilderallVueUi, {
+	rtl: document.documentElement.dir == 'rtl'
+});
 ```
 
 ## Step 3: Build your app!
