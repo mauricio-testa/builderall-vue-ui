@@ -1,3 +1,16 @@
+@import '../../src/assets/scss/variables'; 
+
+body {
+	margin: 0;
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: $line-height-base;
+    color: $color-base;
+    text-align: left;
+    background-color: $body-bg;
+}
+
 .demo-components-bui, .tabs, .modal, .alert{
 	font-family: Muli,Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
 	line-height: 1.4;

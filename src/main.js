@@ -1,4 +1,4 @@
-import './assets/scss/main.scss'
+import './main.scss'
 
 import './assets/css/fonts.css'
 

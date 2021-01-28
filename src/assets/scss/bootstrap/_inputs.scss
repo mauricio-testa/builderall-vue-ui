@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 
 // input e select
 select.custom-select, .form-control {
@@ -15,9 +16,9 @@ select.custom-select, .form-control {
 }
 
 select.custom-select {
-    background: #fff url("../../assets/images/select-arrow-down.svg") no-repeat right 0.75rem center/8px 10px;
+    @include select-arrow-down;
     &:focus {
-        background: #FAFBFC url("../../assets/images/select-arrow-up.svg") no-repeat right 0.75rem center/8px 10px;
+        @include select-arrow-up;
     }
 }
 

@@ -18,6 +18,8 @@
 	"bugs": {
 		"url": "https://github.com/mauricio-testa/builderall-vue-ui/issues"
 	},
+	"sass": "src/main.scss",
+	"style": "dist/builderall-vue-ui.css",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build --target lib --name builderall-vue-ui src/main.js",
@@ -25,10 +27,8 @@
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"bootstrap-vue": "^2.21.2",
-		"core-js": "^3.6.5",
-		"vue": "^2.6.12",
 		"vue-select": "^3.11.2"
 	},
 	"devDependencies": {
@@ -37,11 +37,16 @@
 		"sass-loader": "^10.1.1",
 		"vue-template-compiler": "^2.6.12",
 		"vuepress": "^1.8.0",
-		"node-sass": "^4.12.0"
+		"node-sass": "^4.12.0",
+		"bootstrap-vue": "^2.21.2",
+		"core-js": "^3.6.5",
+		"vue": "^2.6.12",
+		"vue-select": "^3.11.2"
 	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
 		"not dead"
-	]
+	],
+	"dependencies": {}
 }
