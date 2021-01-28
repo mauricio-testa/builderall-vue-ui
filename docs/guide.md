@@ -28,10 +28,12 @@ Elas farão com que o bootstrap-vue seja buildado com base nas variáveis do arq
 No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importação dos componentes BootstrapVue, BuilderallVueUi, do build personalizado do Bootstrap e do arquivo de estilos do BuilderallVueUi. É importante realizar importar o `builderall-vue-ui.css` por **ÚLTIMO** para que as regras CSS da biblioteca não sejam sobrescritas.
 
 ```js
-import { BootstrapVue } from 'bootstrap-vue'
-import { BuilderallVueUi } from '../../builderall-vue-ui'
-import '@/scss/app.scss';
+import { BootstrapVue } from 'bootstrap-vue';
+import { BuilderallVueUi } from 'builderall-vue-ui/src/main';
+import '@/scss/app.scss'; // arquivo do step 2
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
+Vue.use(BootstrapVue);
+Vue.use(BuilderallVueUi);
 ```
 
 ## Step 3: Build your app!

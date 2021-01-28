@@ -14,3 +14,8 @@ npm run docs:dev
 ``` bash
 npm run docs:build
 ```
+
+### Build Package
+``` bash
+npm run build
+```
