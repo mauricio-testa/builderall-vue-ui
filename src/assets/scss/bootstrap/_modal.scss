@@ -1,53 +1,53 @@
 .modal-content {
-	background-color: #f3f7ff;
-    box-shadow: 0 14px 32px rgba(0,0,0,.25);
-    border-radius: 10px;
-    padding: 30px 35px;
-	.modal-header {
-		padding: 0;
-		border-bottom: none;
-    	align-items: center;
-		.modal-title {
-			text-overflow: ellipsis;
-    		white-space: nowrap;
-    		overflow: hidden;
-			font-size: 20px;
-    		font-weight: 700;
-    		color: #2c3e50;
-		}
-		.close {
-			color: transparent;
-			text-shadow: none;
-			width: 24px;
-			height: 24px;
-			padding: 0;
-			margin: 0;
-			transition: .4s;
-			border-radius: 50%;
-			background-color: #ACB8D7;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z' fill='%23fff' style='%0A'%3E%3C/path%3E%3C/svg%3E");
-		}
-	}
-	.modal-body {
-		padding: 20px 0 10px;
-		&.modal-body-text,
-		.modal-body-text {
-			background: #fff;
-			border: 1px solid #d0daed;
-			font-weight: 700;
-			font-size: 1.2rem;
-			padding: 3rem;
-			text-align: center;
-			margin: 2rem 0;
-		}
-	}
-	.modal-footer {
-		padding: 12px 0;
-		border-top: none;
-		.btn:first-child {
-			text-transform: capitalize;
-		}
-	}
+  background-color: #f3f7ff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 30px 35px;
+  .modal-header {
+    padding: 0;
+    border-bottom: none;
+    align-items: center;
+    .modal-title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    .close {
+      color: transparent;
+      text-shadow: none;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin: 0;
+      transition: 0.4s;
+      border-radius: 50%;
+      background-color: #acb8d7;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z' fill='%23fff' style='%0A'%3E%3C/path%3E%3C/svg%3E");
+    }
+  }
+  .modal-body {
+    padding: 20px 0 10px;
+    &.modal-body-text,
+    .modal-body-text {
+      background: #fff;
+      border: 1px solid #d0daed;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 3rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+  }
+  .modal-footer {
+    padding: 12px 0;
+    border-top: none;
+    .btn:first-child {
+      text-transform: capitalize;
+    }
+  }
 }

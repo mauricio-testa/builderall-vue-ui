@@ -1,49 +1,50 @@
 .btn-outline-danger,
 .btn-outline-success,
 .btn-outline-primary {
-    &:hover i {
-        filter: brightness(0) invert(1);
-    }
+  &:hover i {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .btn {
-	text-transform: uppercase;
-	display: inline-flex;
-	align-items: center;
-    &:not(.btn-sm) {
-        font-size: 0.815rem;
-        font-weight: bold;
-        padding: 10px 30px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  &:not(.btn-sm) {
+    font-size: 0.815rem;
+    font-weight: bold;
+    padding: 10px 30px;
+  }
+  &.btn-lg {
+    font-size: 0.915rem;
+    font-weight: bold;
+    padding: 16px 50px;
+  }
+  &.btn-light {
+    color: #818181;
+    background: #f8f8f8;
+    &:hover {
+      background-color: darken(#f8f8f8, 5);
+      border-color: transparent;
     }
-    &.btn-lg {
-        font-size: 0.915rem;
-        font-weight: bold;
-        padding: 16px 50px;
-	}
-	&.btn-light {
-		color: #818181;
-		background: #F8F8F8;
-		&:hover {
-			background-color: darken(#f8f8f8, 5);
-			border-color: transparent;
-		}
-	}
-	&.btn-white {
-		box-shadow: 0px 0px 1px #2624241A;
-		background: #fff;
-		&:hover, &:active {
-			opacity: .9;
-		}
-	}
-	.bui-icon {
-		margin: 0px 15px 0px -5px;
-	}
+  }
+  &.btn-white {
+    box-shadow: 0px 0px 1px #2624241a;
+    background: #fff;
+    &:hover,
+    &:active {
+      opacity: 0.9;
+    }
+  }
+  .bui-icon {
+    margin: 0px 15px 0px -5px;
+  }
 }
 
 html[dir="rtl"] {
-	.btn {
-		.bui-icon {
-			margin: 0px -5px 0px 15px;
-		}
-	}
+  .btn {
+    .bui-icon {
+      margin: 0px -5px 0px 15px;
+    }
+  }
 }

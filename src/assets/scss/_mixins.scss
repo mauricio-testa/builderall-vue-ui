@@ -1,20 +1,20 @@
 @mixin select-arrow($bg: #fff) {
-    background-position-x: calc(100% - 0.75rem);
-    background-position-y: center;
-    background-size: 8px 5px;
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: $bg;
+  background-position-x: calc(100% - 0.75rem);
+  background-position-y: center;
+  background-size: 8px 5px;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: $bg;
 }
 
 @mixin select-arrow-up($bg: #fff) {
-	background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.986' height='5.246' viewBox='0 0 8.986 5.246'%3E%3Cpath fill='%23333' d='M17.69,69.453h7.475a.755.755,0,0,0,.534-1.288l-3.737-3.737a.751.751,0,0,0-1.065,0l-3.74,3.737A.755.755,0,0,0,17.69,69.453Z' transform='translate(-16.934 -64.207)'/%3E%3C/svg%3E");
-	@include select-arrow($bg);
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.986' height='5.246' viewBox='0 0 8.986 5.246'%3E%3Cpath fill='%23333' d='M17.69,69.453h7.475a.755.755,0,0,0,.534-1.288l-3.737-3.737a.751.751,0,0,0-1.065,0l-3.74,3.737A.755.755,0,0,0,17.69,69.453Z' transform='translate(-16.934 -64.207)'/%3E%3C/svg%3E");
+  @include select-arrow($bg);
 }
 
 @mixin select-arrow-down($bg: #fff) {
-	background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.987' height='5.247' viewBox='0 0 8.987 5.247'%3E%3Cpath fill='%23333' d='M17.69,64.207h7.475a.755.755,0,0,1,.534,1.288l-3.738,3.738a.751.751,0,0,1-1.065,0l-3.741-3.738A.755.755,0,0,1,17.69,64.207Z' transform='translate(-16.934 -64.207)'/%3E%3C/svg%3E");
-	@include select-arrow($bg);
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.987' height='5.247' viewBox='0 0 8.987 5.247'%3E%3Cpath fill='%23333' d='M17.69,64.207h7.475a.755.755,0,0,1,.534,1.288l-3.738,3.738a.751.751,0,0,1-1.065,0l-3.741-3.738A.755.755,0,0,1,17.69,64.207Z' transform='translate(-16.934 -64.207)'/%3E%3C/svg%3E");
+  @include select-arrow($bg);
 }

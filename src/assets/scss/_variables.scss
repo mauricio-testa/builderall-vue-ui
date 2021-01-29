@@ -2,7 +2,8 @@
 $body-bg: #e9edf2;
 
 // Typography
-$font-family-sans-serif: Muli, Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family-sans-serif: Muli, Lato, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.4;
 $color-base: #212529;
@@ -10,13 +11,13 @@ $color-base: #212529;
 // Colors
 $blue: #0080fc;
 $primary: $blue;
-$secondary: #6E6E6E;
-$success: #01D4B9;
-$danger: #FA4B57;
-$warning: #FFB244;
+$secondary: #6e6e6e;
+$success: #01d4b9;
+$danger: #fa4b57;
+$warning: #ffb244;
 
 // Custom
 $header-height: 60px;
 $sidebar-width: 230px;
 $sidebar-width-mini: 67px;
-$sidebar-transition: .2s;
+$sidebar-transition: 0.2s;

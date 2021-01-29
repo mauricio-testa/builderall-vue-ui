@@ -10,11 +10,11 @@ Dessa forma, você possui disponíveis 3 tipos de componentes:
 Componentes próprios da BuilderallVueUI são prefixados por `bui-`<br>
 Componentes nativos do BootstrapVue são prefixados por `b-`<br>
 
-## Dependências
+## Dependencies
 - [BootstrapVue](https://bootstrap-vue.org/)
 - [VueSelect](https://vue-select.org/) - para utilizá-lo, você deve fazer sua importação local. Somente seu CSS é importado globalmente
 
-## O que está incluído no pacote
+## What's included in the package
 - Font Muli Weigth 400,500,600,700,800,900
 - Font Lato italic, weigth 400,700
 - Variáveis para [personalização do bootstrap-vue](https://bootstrap-vue.org/docs)

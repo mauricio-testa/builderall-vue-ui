@@ -2,13 +2,13 @@
 
 body {
 	margin: 0;
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    font-weight: 400;
-    line-height: $line-height-base;
-    color: $color-base;
-    text-align: left;
-    background-color: $body-bg;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $color-base;
+  text-align: left;
+  background-color: $body-bg;
 }
 
 .demo-components-bui, .tabs, .modal, .alert{
@@ -71,4 +71,11 @@ body {
 
 .demo-bg-body {
 	background: #e9edf2;
+}
+
+.bui-form-group-sandbox {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1rem;
 }
