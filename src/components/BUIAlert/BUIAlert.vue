@@ -1,7 +1,9 @@
 <template>
   <b-alert :show="show" :dismissible="dismissible" fade class="bui-alert">
-    <h5 v-text="title" v-if="title"></h5>
-    <p v-text="content" v-if="content"></p>
+    <slot>
+      <h5 v-text="title" v-if="title"></h5>
+      <p v-text="content" v-if="content"></p>
+    </slot>
     <div class="d-flex justify-content-end mt-n1 flex-md-row flex-column">
       <b-btn
         v-if="labelNoShowAgain !== false"

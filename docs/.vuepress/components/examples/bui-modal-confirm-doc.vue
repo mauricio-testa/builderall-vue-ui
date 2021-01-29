@@ -9,7 +9,7 @@
       Send notification
     </b-button>
 
-    <bui-modal-confirm ref="modal"></bui-modal-confirm>
+    <bui-modal-confirm ref="modal" />
   </div>
 </template>
 

@@ -10,7 +10,7 @@ Menu lateral e menu mobile
 <<< @/docs/.vuepress/components/examples/bui-sidebar-doc.vue
 </SourceCode>
 
-## All options
+## All props
 
 ### Demo
 <Demo componentName="examples-bui-sidebar-doc-complete" />
@@ -32,7 +32,7 @@ Em caso de utilizar [Vue Router](https://router.vuejs.org/), não é necessário
 <<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue
 </SourceCode>
 
-## Links suportados
+## Links support
 Href, `<inertia-link>` & `<router-link>` support
 
 Using href:

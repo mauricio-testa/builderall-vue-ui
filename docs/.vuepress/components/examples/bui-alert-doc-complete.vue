@@ -9,6 +9,6 @@
 			voluptates illum corporis soluta blanditiis laudantium natus
 			corrupti minima eos dolorum maiores placeat. Obcaecati minima quam
 			incidunt laboriosam rem eaque?"
-    ></bui-alert>
+    />
   </div>
 </template>

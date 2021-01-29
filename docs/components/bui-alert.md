@@ -40,6 +40,24 @@ Você pode ocultar os botões que removem o alerta da tela, definindo as proprie
 <<< @/docs/.vuepress/components/examples/bui-alert-doc-hide-buttons.vue
 </SourceCode>
 
+## Using slots
+
+### Demo
+<template>
+<bui-alert index="alert-01">
+  <p class="text-uppercase">Lorem ipsum</p>
+  <bui-icon white name="whatsapp"/>
+</bui-alert>
+</template>
+
+### Code
+```html
+<bui-alert index="alert-01">
+  <p class="text-uppercase">Lorem ipsum</p>
+  <bui-icon white name="whatsapp"/>
+</bui-alert>
+```
+
 ## API Reference
 
 ### Props
@@ -51,3 +69,8 @@ Você pode ocultar os botões que removem o alerta da tela, definindo as proprie
 | `content` | `String` | `null` | Conteúdo do alerta |
 | `label-hide` | `{String|Boolean}` | `'Close'` | Label para o botão de esconder. Defina como `false` para esconder |
 | `label-no-show-again` | `{String|Boolean}` | `'No show again'` | Label para o botão de desaparecer definitivamente. Defina como `false` para esconder
+
+### Slots
+| Name | Description |
+| -------- | ---- |
+| `default` | Slot para sobrescrever o texto passado via prop |

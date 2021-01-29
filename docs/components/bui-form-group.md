@@ -33,3 +33,7 @@ Fornece áreas para label, texto de ajuda, indicador de campo obrigatório, comp
 | `max-chars` | `Number` | `null` | Número máximo de caracteres do campo. Se o campo está com erro ele não é exibido |
 | `value` | `{Number, Object, String}` | `undefined` | Valor para comparar com número máximo de caracteres |
 
+### Slots
+| Name | Description |
+| -------- | ---- |
+| `default` | Slot para o input |
