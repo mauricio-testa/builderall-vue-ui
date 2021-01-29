@@ -7,7 +7,7 @@
 					<span class="bui-page-subtitle" v-text="subtitle" v-if="subtitle"></span>
 				</slot>
 			</b-col>
-			<b-col lg="6" md="6" class="page-header-right">
+			<b-col lg="6" md="6" class="page-header-right mt-3 mt-md-0">
 				<slot name="page-header-right"/>
 			</b-col>
 		</b-row>

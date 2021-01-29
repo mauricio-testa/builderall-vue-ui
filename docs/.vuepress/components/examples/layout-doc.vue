@@ -20,7 +20,7 @@
 
 <script>
 
-const sidebarStateKey = 'wp_store_sidebar_state'
+const sidebarStateKey = 'bui_store_sidebar_state'
 
 export default {
 	data: () => {

@@ -51,8 +51,8 @@ export default {
 		}
 	},
 	methods: {
-		toggleSidebar(value) {
-			this.sidebarState = value
+		toggleSidebar(state) {
+			this.sidebarState = state
 		},
 	}
 }

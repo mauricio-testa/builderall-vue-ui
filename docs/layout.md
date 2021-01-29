@@ -2,6 +2,15 @@
 
 Existem várias formas de organizar um aplicativo desenvolvido com BuilderallVueUI. Mas todas elas devem possuir um [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) e [BUIContainer](/components/bui-container.html) no mesmo nível hierárquico e compartilhando da mesma variável `sidebar-state`. Dentro do [BUIContainer](/components/bui-container.html) é o lugar em que suas páginas devem ser contruídas.
 
+```
+├── BUISidebar
+├── BUINavbar
+├── BUIContainer
+│   ├── BUIPage
+```
+________________
+Se a sua aplicação usa o [Vue router](https://router.vuejs.org/), o slot `default` do `BUIContainer` é o lugar perfeito para inserir o `<router-view>`
+
 ## Basic example
 
 <SourceCode>
@@ -45,29 +54,60 @@ export default {
 }
 ```
 
+## File structure
+
+Não há problema nenhum em manter todos os componentes de layout em um arquivo único (`bui-sidebar`, `bui-navbar` e `bui-container`).
+No entanto, é uma boa prática manter cada componente em um arquivo separado, visto que cada um tem suas propriedades e eventos que necessitam implementação de métodos particulares, além de permitir a escalabilidade do sistema.
+Portanto, uma boa abordagem para isso, seria usando uma estrutura de arquivos como esta:
+
+```vue
+├── App.vue
+├── layout
+│   ├── TheNavbar.vue
+│   ├── TheSidebar.vue
+|	views
+│   ├── Home.vue
+│   ├── About.vue
+```
+
+Assim:
+* Cada view deve ter uma `bui-page` como elemento root
+* O arquivo `TheNavbar` deve possuir unicamente o componente `<bui-navbar>` com todas as props e definição dos métodos de logout, alteração de idioma e alteração do estado do sidebar
+* O arquivo `TheSidebar` deve possuir unicamente o componente `<bui-sidebar>`, com a definição dos menus, dados de usuário e todas as customizações de slots do componente.
+* O arquivo `App.vue` deve agrupar todos esses componentes e disponibilizar um `<router-view>` slot para as views
+
+`App.vue`
+```html
+<template>
+	<the-sidebar/>
+	<the-navbar/>
+	<bui-container>
+		<router-view/>
+	</bui-container>
+</template>
+```
+
 ## Using a Layout file
 
 Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portanto, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue em conjunto com [Laravel](http://laravel.com/) ou [InertiaJs](https://inertiajs.com/). Nesses casos, uma boa opção é a criação de arquivos de layout: você apenas disponibiliza um `slot` ao invés do `router-view` e herda este componente em todas as páginas da aplicação.
 
 `MyLayout.vue`
-``` html
+``` html{5}
 <template>
-	<div>
-		<bui-sidebar> </bui-sidebar>
-		<bui-navbar logo="https://booking.builderall.com/images/images/meta/logo.png"></bui-navbar>
-		<bui-container>
-			<slot/>
-		</bui-container>
-	</div>
+	<the-sidebar/>
+	<the-navbar/>
+	<bui-container>
+		<slot/>
+	</bui-container>
 </template>
 ```
 
-`About.vue`
-```html
+`Home.vue`
+```html{2,6}
 <template>
 	<my-layout>
 		<bui-page title="Dashboard" subtitle="Working!">
-			About.vue
+			Home.vue
 		</bui-page>
 	</my-layout>
 </template>
