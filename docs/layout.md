@@ -49,7 +49,7 @@ export default {
 
 Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portanto, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue em conjunto com [Laravel](http://laravel.com/) ou [InertiaJs](https://inertiajs.com/). Nesses casos, uma boa opção é a criação de arquivos de layout: você apenas disponibiliza um `slot` ao invés do `router-view` e herda este componente em todas as páginas da aplicação.
 
-MyLayout.vue
+`MyLayout.vue`
 ``` html
 <template>
 	<div>
@@ -62,7 +62,7 @@ MyLayout.vue
 </template>
 ```
 
-About.vue
+`About.vue`
 ```html
 <template>
 	<my-layout>

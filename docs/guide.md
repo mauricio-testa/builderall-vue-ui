@@ -29,14 +29,14 @@ No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importaç�
 
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
-import { BuilderallVueUi } from 'builderall-vue-ui/src/main';
+import { BuilderallVueUi } from 'builderall-vue-ui';
 import '@/scss/app.scss'; // arquivo do step 2
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);
 ```
 
-## Step 3: Build your app!
+## Step 4: Build your app!
 
 Adicione o código abaixo no seu arquivo Vue principal e está pronto!
 
