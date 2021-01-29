@@ -11,6 +11,6 @@ import { BuilderallVueUi } from './../../src/main.js'
 import '../../src/main.scss'
 
 export default ({ Vue, options, router, siteData }) => {
-	Vue.use(BootstrapVue);
-	Vue.use(BuilderallVueUi)
+  Vue.use(BootstrapVue);
+  Vue.use(BuilderallVueUi)
 }

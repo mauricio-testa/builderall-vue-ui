@@ -1,92 +1,93 @@
 // ######## vue select ###########
 
-@import 'vue-select/src/scss/vue-select.scss';
-@import './mixins';
+@import "vue-select/src/scss/vue-select.scss";
+@import "./mixins";
 
 .v-select {
-    border-radius: 4px;
-	height: 42px;
-	@include select-arrow-down(#FAFBFC);
+  border-radius: 4px;
+  height: 42px;
+  @include select-arrow-down(#fafbfc);
+  .vs__dropdown-toggle {
+    border: 1px solid #e2e4e9;
+    height: 100%;
+    .vs__selected-options {
+      flex-wrap: nowrap !important;
+      width: 100%;
+    }
+    .vs__actions {
+      .vs__open-indicator {
+        display: none;
+      }
+    }
+  }
+  .v-select__new {
+    display: flex;
+    width: 100%;
+    padding: 14px;
+    background: #f0f4fc;
+    a {
+      text-align: center;
+      flex: 1;
+    }
+  }
+  &.vs--open {
+    @include select-arrow-up(#fafbfc);
     .vs__dropdown-toggle {
-        border: 1px solid #E2E4E9;
-        height: 100%;
-        .vs__selected-options {
-            flex-wrap: nowrap !important;
-            width: 100%;
-		}
-		.vs__actions {
-			.vs__open-indicator {
-				display: none;
-			}
-		}
-    }
-    .v-select__new {
-        display: flex;
-        width: 100%;
-        padding: 14px;
-        background: #F0F4FC;
-        a {
-            text-align: center;
-            flex: 1;
-        }
-    }
-    &.vs--open {
-        @include select-arrow-up(#FAFBFC);
-        .vs__dropdown-toggle {
-            box-shadow: none;
-            border: 1px solid #6799ED;
-            border-radius: 4px;
-        }
-        .vs__selected {
-            opacity: initial !important;
-        }
-    }
-    &.is-invalid {
-        .vs__dropdown-toggle {
-            border: 1px solid #dc3545;
-        }
+      box-shadow: none;
+      border: 1px solid #6799ed;
+      border-radius: 4px;
     }
     .vs__selected {
-        position: relative !important;
-        color: var(--secondary);
-        font-weight: var(--semibold);
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 0 .25em 0 0.7em;
+      opacity: initial !important;
     }
-    ul {
-        padding: 0;
-        margin-top: 2px;
-        box-shadow: 0px 10px 16px #D4D4D466;
-        border-radius: 5px;
-        border: none;
-        li.vs__dropdown-option {
-            padding: 10px;
-            font-size: .9rem !important;
-            color: #656565;
-            font-weight: var(--semibold);
-            &.vs__dropdown-option--selected, 
-            &.vs__dropdown-option--selected.vs__dropdown-option--highlight {
-                background: #fff;
-                color: var(--primary);
-            }
-            &.vs__dropdown-option--highlight {
-                background: #fff;
-                color: #656565;
-            }
-            &:hover, &:hover > * {
-                background-color: var(--primary) !important;
-                color: #fff !important;
-            }
-            &:hover .bbi {
-                filter: contrast(1.4);
-            }
-        }
+  }
+  &.is-invalid {
+    .vs__dropdown-toggle {
+      border: 1px solid #dc3545;
     }
+  }
+  .vs__selected {
+    position: relative !important;
+    color: var(--secondary);
+    font-weight: var(--semibold);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 0.25em 0 0.7em;
+  }
+  ul {
+    padding: 0;
+    margin-top: 2px;
+    box-shadow: 0px 10px 16px #d4d4d466;
+    border-radius: 5px;
+    border: none;
+    li.vs__dropdown-option {
+      padding: 10px;
+      font-size: 0.9rem !important;
+      color: #656565;
+      font-weight: var(--semibold);
+      &.vs__dropdown-option--selected,
+      &.vs__dropdown-option--selected.vs__dropdown-option--highlight {
+        background: #fff;
+        color: var(--primary);
+      }
+      &.vs__dropdown-option--highlight {
+        background: #fff;
+        color: #656565;
+      }
+      &:hover,
+      &:hover > * {
+        background-color: var(--primary) !important;
+        color: #fff !important;
+      }
+      &:hover .bbi {
+        filter: contrast(1.4);
+      }
+    }
+  }
 }
 
 html[dir="rtl"] {
-	.v-select {
-		background-position-x: 0.75rem
-	}
+  .v-select {
+    background-position-x: 0.75rem;
+  }
 }
