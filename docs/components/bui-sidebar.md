@@ -29,7 +29,7 @@ Em caso de utilizar [Vue Router](https://router.vuejs.org/), não é necessário
 
 ### Code
 <SourceCode>
-<<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue{3,22}
+<<< @/docs/.vuepress/components/examples/bui-sidebar-doc-active.vue
 </SourceCode>
 
 ## Links suportados

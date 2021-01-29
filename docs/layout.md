@@ -30,7 +30,7 @@ Para desabilitar o `sidebar`, defina a propriedade `sidebarState` como `disabled
 Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e abrir a aplicação novamente podemos usar o localStorage
 
 <SourceCode>
-<<< @/docs/.vuepress/components/examples/layout-doc.vue{23,34,40}
+<<< @/docs/.vuepress/components/examples/layout-doc.vue{22,33,39}
 </SourceCode>
 
 ## Using Vuex

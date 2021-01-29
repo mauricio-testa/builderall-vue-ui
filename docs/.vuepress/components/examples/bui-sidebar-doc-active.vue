@@ -1,6 +1,5 @@
 <template>
-  <bui-sidebar active-menu="configs" :menus-bottom="[]" :menus="menus">
-  </bui-sidebar>
+  <bui-sidebar active-menu="configs" :menus-bottom="[]" :menus="menus" />
 </template>
 
 <script>
