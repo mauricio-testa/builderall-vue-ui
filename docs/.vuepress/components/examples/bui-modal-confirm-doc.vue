@@ -26,7 +26,7 @@ export default {
 		},
 		sendNotification() {
 			this.$refs.modal.show({
-				iconName: 'gear',
+				iconName: 'submit-mail',
 				title: 'Enviar notificação?',
 				message: 'Uma notificação será enviada a todos os seus contatos',
 				okVariant: "success",
