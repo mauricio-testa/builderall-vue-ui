@@ -2,7 +2,7 @@
 
 BUIPage é um componente que predefine os estilos do título e subtítulo da página. Ele deve ser filho de [BUIContainer](/components/bui-container.html)
 Por favor, visite a página [Layout](/layout.html) para ver como esses componentes trabalham em conjunto.
-Toda a página da aplicação (extendida de um arquivo de layout), deve possuir uma BUIPage como elemento root
+Todas as `views` da aplicação devem possuir uma BUIPage como elemento root
 
 ## Demo
 <Demo componentName="examples-bui-page-doc" />

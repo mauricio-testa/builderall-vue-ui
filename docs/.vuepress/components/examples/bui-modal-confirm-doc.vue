@@ -5,7 +5,7 @@
       Delete
     </b-button>
     <b-button variant="success" @click="sendNotification()" class="mx-1">
-      <bui-icon name="mail-send" white></bui-icon>
+      <bui-icon name="submit-mail" white></bui-icon>
       Send notification
     </b-button>
 

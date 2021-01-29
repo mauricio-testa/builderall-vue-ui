@@ -9,18 +9,6 @@ Por favor, visite a página [Layout](/layout.html) para ver como esses component
 ```html
 <bui-container sidebar-state="expanded"></bui-container>
 ```
-Se a sua aplicação usa o [Vue router](https://router.vuejs.org/), o slot `default` do `BUIContainer` é o lugar perfeito para injetar o `<router-view>`
-```html
-<bui-sidebar></bui-sidebar>
-<bui-navbar logo="..."></bui-navbar>
-<bui-container>
-	<router-view></router-view>
-</bui-container>
-```
-
-::: tip
-Toda página renderizada no `router-view` deverá ter um [BUIPage](/components/bui-page.html) como elemento root.
-:::
 
 ## Demo
 <Demo componentName="examples-bui-container-doc" />
