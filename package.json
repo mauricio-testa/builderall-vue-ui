@@ -2,10 +2,15 @@
 	"name": "builderall-vue-ui",
 	"version": "1.0.0",
 	"private": false,
-	"main": "dist/builderall-vue-ui.umd.min.js",
+	"main": "src/main.js",
 	"author": "Builderall",
 	"license": "MIT",
-	"description": "",
+	"description": "VUE component library for Builderall applications based on bootstrap-vue",
+	"keywords": [
+		"builderall",
+		"bootstrap",
+		"e-business4us"
+	],
 	"files": [
 		"dist/*",
 		"src/*"

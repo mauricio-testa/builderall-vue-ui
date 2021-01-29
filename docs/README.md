@@ -5,10 +5,10 @@ actionText: Get Started →
 actionLink: /guide
 features:
   - title: Responsive
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    details: Adaptable to all screen resolutions and looks like a mobile app
   - title: bootstrap-vue based
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  - title: RTL support
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    details: Take advantage of all the components of this library + the components of the bootstrap-vue
+  - title: Complete
+    details: Fonts, icons, RTL support, all in one installation
 footer: builderall, 2021
 ---

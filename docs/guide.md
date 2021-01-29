@@ -29,13 +29,11 @@ No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importa√ß√
 
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
-import { BuilderallVueUi } from 'builderall-vue-ui/src/main';
+import { BuilderallVueUi } from 'builderall-vue-ui';
 import '@/scss/app.scss'; // arquivo do step 2
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
-Vue.use(BuilderallVueUi, {
-	rtl: document.documentElement.dir == 'rtl'
-});
+Vue.use(BuilderallVueUi);
 ```
 
 ## Step 4: Build your app!
