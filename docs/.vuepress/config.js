@@ -67,6 +67,8 @@ module.exports = {
               ['/bootstrap/b-inputs', 'Inputs'],
               ['/bootstrap/b-modal', 'Modal'],
               ['/bootstrap/b-alert', 'Alert'],
+              ['/bootstrap/b-card', 'Card'],
+              ['/bootstrap/b-dropdown', 'Dropdown'],
             ]
           }
         ]

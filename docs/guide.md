@@ -25,8 +25,7 @@ Elas farão com que o bootstrap-vue seja buildado com base nas variáveis do arq
 
 ## Step 3: Import libs
 
-No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importação dos componentes BootstrapVue, BuilderallVueUi, do build personalizado do Bootstrap e do arquivo de estilos do BuilderallVueUi. É importante realizar a importação do `builderall-vue-ui.css` por **ÚLTIMO** para que as regras CSS da biblioteca não sejam sobrescritas. Se você estiver utilizando Laravel Mix para compilar o Sass, possivelmente você já importou o arquivo `app.scss` no `webpack.mix.js`. Nesse caso, a importação no `app.js` não é necessária.
-
+No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importação dos componentes BootstrapVue, BuilderallVueUi, do build personalizado do Bootstrap e do arquivo de estilos do BuilderallVueUi. É importante realizar a importação do `builderall-vue-ui.css` por **ÚLTIMO** para que as regras CSS da biblioteca não sejam sobrescritas.
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
 import { BuilderallVueUi } from 'builderall-vue-ui';
@@ -35,6 +34,9 @@ import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);
 ```
+::: tip
+Se você estiver utilizando Laravel Mix para compilar o Sass, possivelmente você já importou o arquivo `app.scss` no `webpack.mix.js`. Nesse caso, a importação no `app.js` não é necessária.
+:::
 
 ## Step 4: Build your app!
 

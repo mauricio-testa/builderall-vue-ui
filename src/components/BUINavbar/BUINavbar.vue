@@ -214,6 +214,12 @@ export default {
         align-items: center;
         .profile-dropdown {
           text-align: initial;
+          .b-avatar,
+          .b-avatar span {
+            flex: unset;
+            margin: unset;
+            display: inherit;
+          }
           div span {
             &:nth-child(1) {
               font-size: 18px;

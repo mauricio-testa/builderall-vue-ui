@@ -12,7 +12,9 @@
         </slot>
       </b-col>
       <b-col lg="6" md="6" class="page-header-right mt-3 mt-md-0">
-        <slot name="page-header-right" />
+        <div class="d-flex justify-content-end">
+          <slot name="page-header-right" />
+        </div>
       </b-col>
     </b-row>
     <slot />
