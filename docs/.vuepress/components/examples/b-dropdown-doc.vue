@@ -8,7 +8,7 @@
     toggle-class="text-decoration-none p-0"
   >
     <template v-slot:button-content>
-      <bui-icon name="three-dots-vertical" :size="13"></bui-icon>
+      <bui-icon name="three-dots-vertical"></bui-icon>
     </template>
     <b-dropdown-item>
       <bui-icon name="gear" :size="20"></bui-icon>
