@@ -7,7 +7,7 @@
       <bui-icon name="gear" class="mx-2" />
     </div>
     <b-button variant="primary">
-      <bui-icon name="plus" white :size="18"></bui-icon>
+      <bui-icon name="plus" white size="18"></bui-icon>
       Add new Calendar
     </b-button>
   </div>

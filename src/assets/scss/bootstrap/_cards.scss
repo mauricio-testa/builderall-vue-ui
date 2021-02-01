@@ -1,4 +1,43 @@
+.bui-card-container {
+  padding: 0 5px;
+  > div {
+    padding: 10px;
+  }
+}
+
 .card {
   border: unset;
   border-radius: .25rem;
+
+  &.bui-card-item {
+    box-shadow: 0px 1px 2px #00000029;
+    border-radius: 6px;
+    .card-header {
+      padding: 1.15rem 1.25rem;
+      background: #fdfdfd;
+      border-bottom-color: #d8e2ef;
+      border-radius: 6px 6px 0 0;
+      .card-title {
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+        color: var(--primary);
+        text-transform: uppercase;
+      }
+    }
+    .card-footer {
+      margin: 1rem 1.15rem 0 1.15rem;
+      padding: 1rem 0;
+      background: #fff;
+      border-top-color: #d8e2ef;
+      display: flex;
+      .card-footer-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+    }
+  }
 }

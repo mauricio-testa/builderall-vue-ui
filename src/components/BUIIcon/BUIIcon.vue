@@ -28,9 +28,12 @@ export default {
       },
     },
     size: {
-      type: Number,
+      type: [Number, String],
       required: false,
       default: 22,
+      validator: (size) => {
+        return !isNaN(size);
+      },
     },
     white: {
       type: Boolean,

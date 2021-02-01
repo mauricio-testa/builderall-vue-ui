@@ -4,15 +4,23 @@
 // input e select
 select.custom-select,
 .form-control {
-  background-color: #fafbfc;
-  border: 1px solid #e2e4e9;
+  background-color: #fff;
+  border: 1px solid #DDDDDD;
   font-family: Lato;
+  border-radius: 3px;
   line-height: 22px;
   font-size: 0.9rem;
   height: 42px;
+  color: #434343;
   &:focus {
     box-shadow: unset;
     border: 1px solid $primary;
+  }
+  &.form-control-xl {
+    @include input-group-xl;
+  }
+  &::placeholder {
+    opacity: 0.51;
   }
 }
 
@@ -20,6 +28,19 @@ select.custom-select {
   @include select-arrow-down;
   &:focus {
     @include select-arrow-up;
+  }
+}
+
+.input-group-xl {
+  @include input-group-xl;
+  border: 1px solid #DDDDDD;
+  &:focus-within {
+    border: 1px solid #0080fc;
+  }
+  padding: 0;
+  .form-control-xl {
+    border: unset;
+    box-shadow: unset;
   }
 }
 
@@ -153,7 +174,6 @@ label {
 }
 
 // rtl
-
 html[dir="rtl"] {
   .form-group .bui-form-char-counter {
     float: left;

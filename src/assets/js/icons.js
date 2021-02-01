@@ -33,6 +33,8 @@ const BUIWhatsapp = '<svg ' + ASPECT + ' viewBox="0 0 22.17 22.17"><path id="Cam
 const BUIPeoples = '<svg ' + ASPECT + ' viewBox="0 0 29.777 19"><g id="subscribers_-_hover" data-name="subscribers - hover" transform="translate(-11.342 -15.592)"><path id="Caminho_526" data-name="Caminho 526" d="M10.5,13.143A4.071,4.071,0,1,0,6.429,9.071,4.054,4.054,0,0,0,10.5,13.143Zm0,2.714c-3.162,0-9.5,1.588-9.5,4.75V24H20V20.607C20,17.445,13.662,15.857,10.5,15.857Z" transform="translate(10.342 10.592)" fill="#0f7bff"/><path id="Caminho_2723" data-name="Caminho 2723" d="M21.357,13.143a4.071,4.071,0,1,0-4.071-4.071A4.054,4.054,0,0,0,21.357,13.143Zm0,2.714c-.394,0-.841.027-1.316.068a5.727,5.727,0,0,1,2.674,4.682V24h8.143V20.607C30.857,17.445,24.519,15.857,21.357,15.857Z" transform="translate(10.262 10.592)" fill="#6daefd"/></g></svg>';
 const BUIHistory = '<svg ' + ASPECT + ' viewBox="0 0 22.168 22.168"><defs><style>.ahistory{fill:#0180fc;}.bhistory{fill:#d5e9fd;opacity:0.323;}</style></defs><g transform="translate(-2 -2)"><path class="ahistory" d="M12.976,2A11.1,11.1,0,0,0,5.217,5.189V3.108A1.108,1.108,0,1,0,3,3.108V8.1A1.108,1.108,0,0,0,4.108,9.2H9.1a1.108,1.108,0,0,0,0-2.217H6.567a8.858,8.858,0,1,1,6.408,14.963,1.108,1.108,0,1,0,0,2.217A11.084,11.084,0,0,0,12.976,2Z" transform="translate(0.108)"/><path class="ahistory" d="M14.325,13.542H12.108A1.108,1.108,0,0,1,11,12.434V9.108a1.108,1.108,0,1,1,2.217,0v2.217h1.108a1.108,1.108,0,0,1,0,2.217Z" transform="translate(0.976 0.65)"/><path class="bhistory" d="M13.084,4A8.876,8.876,0,0,0,6.676,6.771H9.2a1.108,1.108,0,1,1,0,2.217H4.217a1.1,1.1,0,0,1-1.082-.976,11.058,11.058,0,0,0,9.949,15.939,1.108,1.108,0,1,1,0-2.217A8.867,8.867,0,0,0,13.084,4ZM15.3,13.976H13.084a1.108,1.108,0,0,1-1.108-1.108V9.542a1.108,1.108,0,0,1,2.217,0v2.217H15.3a1.108,1.108,0,0,1,0,2.217Z" transform="translate(0 0.217)"/></g></svg>';
 const BUIArrowRight = '<svg ' + ASPECT + ' viewBox="0 0 7.494 12.588"><path fill="#0080fc" d="M1.2,7.494a1.2,1.2,0,0,0,.849-.352L6.294,2.9l4.245,4.244a1.2,1.2,0,1,0,1.7-1.7L7.143.352a1.2,1.2,0,0,0-1.7,0L.352,5.445A1.2,1.2,0,0,0,1.2,7.494Z" transform="translate(7.494) rotate(90)"/></svg>';
+const BUIThreeDotsVertical = '<svg ' + ASPECTMID + ' viewBox="0 0 4.005 13.795"><path id="ellipsis-v-solid" d="M54.26,22.314a2,2,0,1,1-2,2A2,2,0,0,1,54.26,22.314Zm-2-2.892a2,2,0,1,0,2-2A2,2,0,0,0,52.258,19.422Zm0,9.79a2,2,0,1,0,2-2A2,2,0,0,0,52.258,29.212Z" transform="translate(-52.258 -17.419)" fill="#0f7bff"/></svg>';
+const BUINext = '<svg ' + ASPECTMID + ' viewBox="0 0 19.554 13.79">  <path id="icon" d="M1021.494,866.19a.67.67,0,0,0-.935,0,.627.627,0,0,0,0,.9l4.741,4.6h-15.646a.642.642,0,0,0-.655.635.649.649,0,0,0,.655.644H1025.3l-4.741,4.589a.637.637,0,0,0,0,.907.67.67,0,0,0,.935,0l5.864-5.686a.611.611,0,0,0,0-.9Z" transform="translate(-1008.5 -865.43)" fill="#0080fc" stroke="#0080fc" stroke-width="1"/></svg>';
 
 export default {
   BUIExit,
@@ -64,5 +66,7 @@ export default {
   BUIWhatsapp,
   BUIPeoples,
   BUIHistory,
-  BUIArrowRight
+  BUIArrowRight,
+  BUIThreeDotsVertical,
+  BUINext
 }
