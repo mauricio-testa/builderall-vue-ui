@@ -8,11 +8,11 @@ module.exports = {
   },
 
   themeConfig: {
-    repoLabel: 'Contribute Jovem!',
-    repo: '',
+    repoLabel: 'Github',
+    repo: 'https://github.com/mauricio-testa/builderall-vue-ui',
     docsDir: 'docs',
     editLinks: true,
-    docsBranch: 'dev',
+    docsBranch: 'develop',
     editLinkText: 'Edit!',
     search: true,
     locales: {
@@ -31,7 +31,6 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Components', link: '/components/' },
-          { text: 'GitHub', link: 'https://github.com/mauricio-testa/builderall-vue-ui' }
         ],
         sidebar: [
           {
@@ -48,10 +47,10 @@ module.exports = {
             title: 'Components',
             collapsable: false,
             children: [
+              ['/components/bui-navbar', 'Navbar'],
+              ['/components/bui-sidebar', 'Sidebar'],
               ['/components/bui-container', 'Container'],
               ['/components/bui-page', 'Page'],
-              ['/components/bui-sidebar', 'Sidebar'],
-              ['/components/bui-navbar', 'Navbar'],
               ['/components/bui-alert', 'Alert'],
               ['/components/bui-icon', 'Icon'],
               ['/components/bui-form-group', 'Form group'],

@@ -5,7 +5,7 @@
       as="b-nav-item"
       v-if="menu.inertia"
       :href="menu.inertia"
-      :active="menu.active"
+      :active="menu._active"
       :id="`sidebar-menu-${_uid}`"
     >
       <b-tooltip
@@ -22,7 +22,8 @@
     <b-nav-item
       v-else-if="menu.to"
       :to="menu.to"
-      :active="menu.active"
+      :exact="Array.isArray(menu.routes)"
+      :active="menu._active"
       :id="`sidebar-menu-${_uid}`"
     >
       <b-tooltip
@@ -39,7 +40,7 @@
     <b-nav-item
       v-else
       :href="menu.href"
-      :active="menu.active"
+      :active="menu._active"
       :target="menu.target"
       :id="`sidebar-menu-${_uid}`"
     >

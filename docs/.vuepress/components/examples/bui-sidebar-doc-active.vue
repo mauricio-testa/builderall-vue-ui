@@ -1,5 +1,5 @@
 <template>
-  <bui-sidebar active-menu="configs" :menus-bottom="[]" :menus="menus" />
+  <bui-sidebar active-menu="sites.create" :menus="menus" />
 </template>
 
 <script>
@@ -7,17 +7,39 @@ export default {
   data() {
     return {
       menus: [
+        // inactive
         {
-          title: "Dashboard",
-          name: "home",
+          title: "/home",
+          routes: ["home"],
           icon: "dashboard",
-          href: "/",
+          href: "#",
+        },
+        // example prefix
+        {
+          title: "/sites",
+          prefix: "sites.",
+          icon: "gear",
+          href: "#",
         },
         {
-          title: "Configs",
-          name: "configs",
+          title: "/sites/create",
+          prefix: "sites.",
           icon: "gear",
-          to: "/",
+          href: "#",
+        },
+        // example routes
+        {
+          title: "/sites/create",
+          routes: ["sites.create"],
+          icon: "gear",
+          href: "#",
+        },
+        // example explicitly
+        {
+          title: "/does/not/matter",
+          active: true,
+          icon: "gear",
+          href: "#",
         },
       ],
     };

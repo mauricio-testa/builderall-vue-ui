@@ -1,11 +1,7 @@
 # Getting Started
 
-::: warning
-Esta documentação e biblioteca estão em fase de desenvolvimento e os textos ainda não foram revisados e traduzidos completamente.
-:::
 
 ## Step 1: Install dependencies
-Faça a instalação da biblioteca builderall-vue-ui e de suas [Peer Dependencies](https://nodejs.org/es/blog/npm/peer-dependencies/)
 
 ```bash
 npm i builderall-vue-ui bootstrap-vue vue-select
@@ -13,7 +9,7 @@ npm i builderall-vue-ui bootstrap-vue vue-select
 
 ## Step 2: Theming bootstrap
 
-No seu arquivo scss principal (`/src/scss/app.scss`) realize a importação dos seguintes arquivos scss, nesta ordem:
+In your main sass file (`/src/scss/app.scss`) perform the import of the following scss files, in this order:
 
 ```scss
 @import 'node_modules/builderall-vue-ui/src/assets/scss/variables';
@@ -21,26 +17,27 @@ No seu arquivo scss principal (`/src/scss/app.scss`) realize a importação dos 
 @import 'node_modules/bootstrap-vue/src/index.scss';
 ```
 
-Elas farão com que o bootstrap-vue seja buildado com base nas variáveis do arquivo `variables.scss` do Builderall Vue UI, personalizando as cores, fontes e espaçamentos do Bootstrap com base em padrões da Builderall.
+They will cause the bootstrap-vue to be built based on the variables in the Builderall Vue UI `variables.scss` file, customizing Bootstrap colors, fonts and spacing based on Builderall standards.
 
 ## Step 3: Import libs
 
-No seu arquivo javascript principal (`main.js` ou `app.js`) incluia a importação dos componentes BootstrapVue, BuilderallVueUi, do build personalizado do Bootstrap e do arquivo de estilos do BuilderallVueUi. É importante realizar a importação do `builderall-vue-ui.css` por **ÚLTIMO** para que as regras CSS da biblioteca não sejam sobrescritas.
+In your main javascript file (`main.js` or` app.js`) import the libraries, style sheets and tell Vue to use them. In this order.
+
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
 import { BuilderallVueUi } from 'builderall-vue-ui';
-import '@/scss/app.scss'; // arquivo do step 2
+import '@/scss/app.scss'; // (the same file as in step 2)
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);
 ```
 ::: tip
-Se você estiver utilizando Laravel Mix para compilar o Sass, possivelmente você já importou o arquivo `app.scss` no `webpack.mix.js`. Nesse caso, a importação no `app.js` não é necessária.
+If you are using Laravel Mix to compile Sass, you may have already imported the `app.scss` inside of `webpack.mix.js`. In this case, importing into `app.js` is not necessary.
 :::
 
 ## Step 4: Build your app!
 
-Adicione o código abaixo no seu arquivo Vue principal e está pronto!
+Add the code below to your main Vue file and all will be working!
 
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/getting-started-doc.vue

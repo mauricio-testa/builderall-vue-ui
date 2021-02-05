@@ -1,33 +1,29 @@
 # Layout
 
-Existem várias formas de organizar um aplicativo desenvolvido com BuilderallVueUI. Mas todas elas devem possuir um [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) e [BUIContainer](/components/bui-container.html) no mesmo nível hierárquico e compartilhando da mesma variável `sidebar-state`. Dentro do [BUIContainer](/components/bui-container.html) é o lugar em que suas páginas devem ser contruídas.
-
-```
-├── BUISidebar
-├── BUINavbar
-├── BUIContainer
-│   ├── BUIPage
-```
-________________
-Se a sua aplicação usa o [Vue router](https://router.vuejs.org/), o slot `default` do `BUIContainer` é o lugar perfeito para inserir o `<router-view>`
-
-## Basic example
+There are several ways to organize an application developed with Builderall Vue UI. But they must all have a [BUISidebar](/components/bui-sidebar.html), [BUINavbar](/components/bui-navbar.html) and [BUIContainer](/components/bui-container.html) at the same hierarchical level and sharing the same variable `sidebar-state`. Inside the [BUIContainer](/components/bui-container.html) is the place where your pages should be built.
 
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/getting-started-doc.vue
 </SourceCode>
 
-::: tip
-A única propriedade necessária para o funcionamento do layout base é a `logo` do `bui-navbar`. Se você não definir a propriedade `sidebarState`, por padrão ela será `expanded`
-::: 
+If your application uses the [Vue router](https://router.vuejs.org/), the `default` slot of `BUIContainer` is the perfect place to insert `<router-view>`
 
-::: tip
-Para desabilitar o `sidebar`, defina a propriedade `sidebarState` como `disabled`
-::: 
+```vue{6}
+<template>
+  <div>
+    <bui-sidebar ... />
+    <bui-navbar ... />
+    <bui-container ... >
+      <router-view />
+    </bui-container>
+  </div>
+</template>
+
+```
 
 ## Basic example with localStorage
 
-Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e abrir a aplicação novamente podemos usar o localStorage
+For the status of the sidebar to be remembered when reloading the page, or to exit and open the application again, we can use localStorage:
 
 <SourceCode>
 <<< @/docs/.vuepress/components/examples/layout-doc.vue{22,33,39}
@@ -35,7 +31,7 @@ Para que o estado do sidebar seja lembrado ao recarregar a página, ou sair e ab
 
 ## Using Vuex
 
-Para uma melhor organização de código, você pode querer armazenar o estado do sidebar em uma store do [Vuex](https://vuex.vuejs.org/), mapeando o `sidebarState` como uma variável do state e transformando o `toggleSidebar` em uma action
+For better code organization, you may want to store the sidebar state in a [Vuex store](https://vuex.vuejs.org/), mapping `sidebar-state` as a state variable and transforming `toggleSidebar` in an action.
 
 ``` javascript
 import { mapState } from 'vuex'
@@ -55,10 +51,9 @@ export default {
 ```
 
 ## File structure
-
-Não há problema nenhum em manter todos os componentes de layout em um arquivo único (`bui-sidebar`, `bui-navbar` e `bui-container`).
-No entanto, é uma boa prática manter cada componente em um arquivo separado, visto que cada um tem suas propriedades e eventos que necessitam implementação de métodos particulares, além de permitir a escalabilidade do sistema.
-Portanto, uma boa abordagem para isso, seria usando uma estrutura de arquivos como esta:
+There is no problem in keeping all layout components in a single file (`bui-sidebar`, `bui-navbar` e `bui-container`).
+However, it is a good practice to keep each component in a separate file, since each has its properties and events that require implementation of particular methods, in addition to allowing the scalability of the system.
+So a good approach for this would be to use a file structure like this:
 
 ```vue
 ├── App.vue
@@ -70,11 +65,11 @@ Portanto, uma boa abordagem para isso, seria usando uma estrutura de arquivos co
 │   ├── About.vue
 ```
 
-Assim:
-* Cada view deve ter uma `bui-page` como elemento root
-* O arquivo `TheNavbar` deve possuir unicamente o componente `<bui-navbar>` com todas as props e definição dos métodos de logout, alteração de idioma e alteração do estado do sidebar
-* O arquivo `TheSidebar` deve possuir unicamente o componente `<bui-sidebar>`, com a definição dos menus, dados de usuário e todas as customizações de slots do componente.
-* O arquivo `App.vue` deve agrupar todos esses componentes e disponibilizar um `<router-view>` slot para as views
+Thus:
+* Each view must have a `bui-page` as root element
+* The `TheNavbar` file must have only the component `<bui-navbar>` with all the props and definition of the logout methods, language change and change of the state of the sidebar
+* The `TheSidebar` file must have only the component `<bui-sidebar>`, with the definition of the menus, user data and all the customizations of the component slots.
+* The `App.vue` file must group all these components and provide a `<router-view>` slot for the views
 
 `App.vue`
 ```html
@@ -89,7 +84,7 @@ Assim:
 
 ## Using a Layout file
 
-Ás vezes você pode não utilizar [Vue Router](https://router.vuejs.org/) para gerenciar as rotas da sua aplicação e, portanto, não possuir um componente `router-view` para injetar as páginas nela. Exemplos disso são utilizando o Vue em conjunto com [Laravel](http://laravel.com/) ou [InertiaJs](https://inertiajs.com/). Nesses casos, uma boa opção é a criação de arquivos de layout: você apenas disponibiliza um `slot` ao invés do `router-view` e herda este componente em todas as páginas da aplicação.
+Sometimes you may not use [Vue Router](https://router.vuejs.org/) to manage your application's routes and therefore you don't have a `router-view` component to inject pages into it. Examples of this are using Vue in conjunction with [Laravel](http://laravel.com/) or [InertiaJs](https://inertiajs.com/). In such cases, a good option is the creation of layout files: you only provide a `slot` instead of the `router-view` and inherit this component in all pages of the application
 
 `MyLayout.vue`
 ``` html{5}

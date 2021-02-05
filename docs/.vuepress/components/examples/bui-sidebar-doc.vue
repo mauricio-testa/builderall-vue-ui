@@ -10,12 +10,8 @@
 export default {
   data() {
     return {
-      menusTop: [
-        { title: "Dashboard", name: "item1", icon: "dashboard", href: "#" },
-      ],
-      menusBottom: [
-        { title: "Office", name: "item2", icon: "logo", href: "#" },
-      ],
+      menusTop: [{ title: "Dashboard", icon: "dashboard", href: "#" }],
+      menusBottom: [{ title: "Office", icon: "logo", href: "#" }],
     };
   },
 };

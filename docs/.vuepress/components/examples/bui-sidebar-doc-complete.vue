@@ -31,15 +31,22 @@ export default {
           "https://secure.gravatar.com/avatar/2253502b4562dad48c2c74681c459dd1",
       },
       menus: [
-        { title: "Dashboard", name: "home", icon: "dashboard", href: "/" },
-        { title: "Configs", name: "config", icon: "gear", href: "/" },
+        {
+          title: "Dashboard",
+          routes: ["dashboard"],
+          icon: "dashboard",
+          href: "/",
+        },
+        {
+          title: "Sites",
+          routes: ["sites"],
+          name: "config",
+          icon: "gear",
+          href: "/",
+        },
       ],
-      menus_bottom: [
-        { title: "Office", name: "office", icon: "logo", href: "#" },
-      ],
-      menus_mobile: [
-        { title: "Mobile!", name: "mob", icon: "lang", href: "#" },
-      ],
+      menus_bottom: [{ title: "Office", icon: "logo", href: "#" }],
+      menus_mobile: [{ title: "Mobile!", icon: "lang", href: "#" }],
     };
   },
 };

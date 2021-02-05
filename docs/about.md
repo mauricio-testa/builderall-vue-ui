@@ -1,24 +1,28 @@
 # About docs
 
-Esta biblioteca foi construída sobre a biblioteca [BootstrapVue](https://bootstrap-vue.org/).
-Dessa forma, você possui disponíveis 3 tipos de componentes:
+This library was built using some components of the [BootstrapVue](https://bootstrap-vue.org/) library.
+Thus, using it you have at your disposal 3 types of components:
 
-* Componentes nativos BootstrapVue - Todos os componentes, diretivas e helpers disponíveis nativamente pelo [BootstrapVue](https://bootstrap-vue.org/)
-* Componentes BuilderallVueUI - Componentes desenvolvidos pela Builderall que atendem a necessidades específicas da empresa (Veja o submenu [Components](/components/bui-container.html))
-* Componentes BootstrapVue com CSS customizado - Componentes nativos do BootstrapVue mas com customizações (Veja o submenu [Bootstrap components](/bootstrap/b-tabs.html))
+* **Bootstrap Vue native components** - All components, policies and helpers available natively through [BootstrapVue](https://bootstrap-vue.org/)
+* **Builderall Vue UI Components** - Components developed by Builderall that meet the specific needs of the company (See [Components](/components/bui-container.html))
+* **Bootstrap Vue components with custom CSS** - Native components of BootstrapVue but with customizations (See [Bootstrap components](/bootstrap/b-tabs.html))
 
-Componentes próprios da BuilderallVueUI são prefixados por `bui-`<br>
-Componentes nativos do BootstrapVue são prefixados por `b-`<br>
+Builderall Vue UI's own components are prefixed by `bui-`<br>
+Native BootstrapVue components are prefixed by `b-`<br>
 
 ## Dependencies
-- [BootstrapVue](https://bootstrap-vue.org/)
-- [VueSelect](https://vue-select.org/) - para utilizá-lo, você deve fazer sua importação local. Somente seu CSS é importado globalmente
+- [BootstrapVue](https://bootstrap-vue.org/) (Because it would be a lot of work to have to make all the components from scratch)
+- [VueSelect](https://vue-select.org/) (Because bootstrap-vue uses the browser's native select and it doesn't allow customizations)
 
 ## What's included in the package
-- Font Muli Weigth 400,500,600,700,800,900
-- Font Lato italic, weigth 400,700
-- Variáveis para [personalização do bootstrap-vue](https://bootstrap-vue.org/docs)
-- Biblioteca de ícones
-- Biblioteca de flags para o BUILanguageSelector
-- Componentes
-- Customizações de componentes bootstrap
+
+You will have available when installing this package:
+
+- His own components
+- Bootstrap Vue components
+- Bootstrap Vue components with custom Builderall CSS
+- Custom [Icons library](/components/bui-icon.html)
+- Font Muli Weigth 400, 500, 600, 700, 800, 900
+- Font Lato Italic, Weigth 400,700
+- Variables for [bootstrap-vue customization](https://bootstrap-vue.org/docs)
+- Flag library

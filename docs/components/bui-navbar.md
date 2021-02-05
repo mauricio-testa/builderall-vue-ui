@@ -1,6 +1,6 @@
 # BUINavbar
 
-Cabeçalho da aplicação e popup de perfil do usuário.
+Top header and popup component of the user profile. Contains the button that changes the status of the sidebar and also the language change field of the application.
 
 ## Demo
 <Demo componentName="examples-bui-navbar-doc" />
@@ -10,7 +10,7 @@ Cabeçalho da aplicação e popup de perfil do usuário.
 <<< @/docs/.vuepress/components/examples/bui-navbar-doc.vue
 </SourceCode>
 
-## All options
+## Full example
 
 ### Demo
 <Demo componentName="examples-bui-navbar-complete-doc" />
@@ -25,26 +25,26 @@ Cabeçalho da aplicação e popup de perfil do usuário.
 ### Events
 | Name | Args | Description |
 | -------- | ---- | ------- | ----------- |
-| `toggle-sidebar` | O novo estado do sidebar (Ex: `'expanded'`, `'mini'`, `'disabled'`) | Evento emitido ao clicar no menu hamburger pra fazer o toggle do sidebar. Ouvir este evento para setar o estado do sidebar no [Vuex](https://vuex.vuejs.org/) e/ou [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/Window.localStorage) |
-| `change-language` | Idioma selecionado (Ex: `en_US`) |  Evento emitido ao alterar idioma no dropdown. Após isso, o novo idioma deve ser salvo e a página recarregada |
-| `logout` | | Emitido ao clicar no botão de logout |
+| `toggle-sidebar` | The new state of the sidebar (possible values: `'expanded'`, `'mini'`, `'disabled'`) | Event emitted when clicking on the hamburger menu. You must listen to this event to change the `sidebar-state` value |
+| `change-language` | Selected language (Ex: `en_US`) |  Event emitted when changing language at dropdown. After that, the new language must be saved and the page reloaded |
+| `logout` | | Issued when clicked on the Logout button |
 
 
 ### Props
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `user` | `Object` | `{name: 'The user name',email: 'mail@builderall.com', gravatar: '...', locale: 'pt_BR'}` | Dados do usuário logado. Um objeto que deve obrigatoriamente possuir as chaves `name`, `email`, `gravatar`, `locale`  |
-| `sidebar-state` | `String` | `'expanded'` | Estado do sidebar. Utilizado para exibir o menu hamburguer aberto ou fechado. Possíveis valores: `'expanded'`, `'mini'`, `'disabled'` |
-| `logo` | `String` | `null` | Logo da aplicação |
-| `logo-sm` | `String` | `null` | Logo da aplicação para exibir no mobile |
-| `label-favorite-lang` | `Number` | `'Your favorite lang'` | Label idioma preferido no popup do usuário|
-| `label-logout` | `Number` | `'Logout'` | Label logout no popup do usuário |
-| `home-link` | `Number` | `'/'` | Link da home da aplicação ao clicar no logo |
-| `languages` | `Number` | Um array de idiomas `[{key: 'pt_BR', desc: 'Português (Brasil)'}, ...]` | Lista de idiomas disponíveis. Você pode personalizar essa lista para disponibilizar somente idiomas que possuem traduções no select. Todo idioma deve possuir uma `key` e um `desc` |
+| `user` | `Object` | `{name: 'The user name',email: 'mail@builderall.com', gravatar: '...', locale: 'pt_BR'}` | Object referring to the logged user data. He must have the keys `name`, `email`, `gravatar`, `locale`  |
+| `sidebar-state` | `String` | `'expanded'` | Sidebar state. Used to display the open or closed hamburger menu (possible values: `'expanded'`, `'mini'`, `'disabled'`) |
+| `logo` | `String` | `null` | Application logo URL |
+| `logo-sm` | `String` | `null` | Application logo URL on mobile |
+| `label-favorite-lang` | `Number` | `'Your favorite lang'` | "Preferred language" label in the user's popup |
+| `label-logout` | `String` | `'Logout'` | Label "logout" in the user's popup |
+| `home-link` | `String` | `'/'` | Application home link when clicking on the logo |
+| `languages` | `Array` | An array of languages `[{key: 'pt_BR', desc: 'Português (Brasil)'}, ...]` | List of available languages. You can customize this list to provide only languages that have translations. Every language must have a `key` and a `desc` |
 
 ### Slots
 | Name | Description |
 | -------- | ---- | ------- | ----------- |
-| `items-right` | Espaço para ícones no header |
-| `dropdown-item-before` | Espaço antes do select de idiomas para itens personalizados |
-| `dropdown-item-after` | Espaço depois do select de idiomas para itens personalizados |
+| `items-right` | Space for icons in the header |
+| `dropdown-item-before` | Space for dropdown items before language selector |
+| `dropdown-item-after` | Space for dropdown items after language selector |
