@@ -25,7 +25,7 @@ export default {
   data: () => {
     return {
       sidebarState: "expanded",
-      menus: [{ title: "Item", name: "item1", icon: "gear", href: "#" }],
+      menus: [{ title: "Item", icon: "gear", href: "#" }],
     };
   },
 

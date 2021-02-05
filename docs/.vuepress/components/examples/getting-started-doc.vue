@@ -13,8 +13,6 @@
     />
 
     <bui-container :sidebar-state="sidebarState">
-      <!-- <router-view> -->
-
       <bui-page
         title="Dashboard"
         subtitle="Welcome to a Builderall application!"
@@ -25,17 +23,8 @@
             New calendar
           </b-button>
         </template>
-
-        <bui-alert
-          index="alert-01"
-          title="Builderall VUE UI Library!"
-          content="Lorem ipsum Lorem ipsum dolor"
-        />
-
-        Content here
+        <bui-alert index="alert-01" content="Welcome!" />
       </bui-page>
-
-      <!-- </router-view> -->
     </bui-container>
   </div>
 </template>
@@ -45,7 +34,7 @@ export default {
   data() {
     return {
       sidebarState: "expanded",
-      menus: [{ title: "Item", name: "item1", icon: "gear", href: "#" }],
+      menus: [{ title: "Item", icon: "gear", href: "#" }],
     };
   },
   methods: {

@@ -1,6 +1,7 @@
 # RTL Support
 
-O BootstrapVue não possui suporte a RTL, mas é possível adicionar o suporte RTL em sua aplicação BuilderallVueUi apenas inserindo a direção do documento na tag `html` e informando se deseja que sua aplicação se comporte em RTL ao fazer o `use` da biblioteca.
+BootstrapVue does not have RTL support, but it is possible to add RTL support to your Builderall Vue Ui application just by 
+inserting the document direction in the `html` tag and informing if you want your application to behave in RTL when using the library (you can use the `dir` attribute itself for that)
 
 `index.html`
 ```html
