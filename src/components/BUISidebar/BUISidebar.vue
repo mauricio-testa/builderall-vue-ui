@@ -129,6 +129,26 @@ export default {
     menusMobile: menusProp,
   },
 
+  methods: {
+    isActive(menu) {
+      if (menu.hasOwnProperty("active")) {
+        return menu.active;
+      }
+      if (menu.hasOwnProperty("routes")) {
+        return Array.isArray(menu.routes)
+          ? menu.routes.includes(this.activeMenu)
+          : false;
+      }
+      if (menu.hasOwnProperty("prefix")) {
+        return typeof menu.prefix == "string" &&
+          typeof this.activeMenu == "string"
+          ? this.activeMenu.startsWith(menu.prefix)
+          : false;
+      }
+      return false;
+    },
+  },
+
   computed: {
     sidebarIsMini() {
       return this.sidebarState == "mini";
@@ -137,14 +157,14 @@ export default {
     menusComputed() {
       return (this.menus || []).map((menu) => ({
         ...menu,
-        active: menu.name == this.activeMenu,
+        _active: this.isActive(menu),
       }));
     },
 
     menusBottomComputed() {
       return (this.menusBottom || []).map((menu) => ({
         ...menu,
-        active: menu.name == this.activeMenu,
+        _active: this.isActive(menu),
       }));
     },
 
@@ -152,7 +172,7 @@ export default {
       if (Array.isArray(this.menusMobile) && this.menusMobile.length) {
         return (this.menusMobile || []).map((menu) => ({
           ...menu,
-          active: menu.name == this.activeMenu,
+          _active: this.isActive(menu),
         }));
       } else {
         return this.menusComputed.concat(this.menusBottomComputed);
@@ -224,6 +244,7 @@ html[dir="rtl"] {
     }
     &:hover,
     &.active,
+    &.router-link-active,
     &.router-link-exact-active {
       background-color: #f4f7fc;
       color: var(--primary);
@@ -232,6 +253,7 @@ html[dir="rtl"] {
       }
     }
     &.active,
+    &.router-link-active,
     &.router-link-exact-active {
       border-left: 3px solid #1d5ef5;
     }
