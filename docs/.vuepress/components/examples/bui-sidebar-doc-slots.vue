@@ -12,7 +12,9 @@
         </template>
       </template>
       <template #item-bottom="{ menu }">
-        {{ menu.title }} <b-badge> {{ menu.icon }}</b-badge>
+        <bui-icon :name="menu.icon" class="mr-3"></bui-icon>
+        {{ menu.title }}
+        <b-badge> Buuh!</b-badge>
       </template>
       <template #item-mobile="{ menu }">
         {{ menu.title }} <b-badge> {{ menu.icon }}</b-badge>
