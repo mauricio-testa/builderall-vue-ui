@@ -1,6 +1,6 @@
 # BUILanguageSelector
 
-Seletor de idioma
+A simple language selector with little flags.
 
 ## Demo
 <Demo componentName="examples-bui-language-selector-doc" />
@@ -17,4 +17,4 @@ Seletor de idioma
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
 | `value` *v-model* | `String` | `null` | Selected language |
-| `options` | `Number` | Um array de idiomas `[{key: 'pt_BR', desc: 'Português (Brasil)'}, ...]` | Lista de idiomas disponíveis Todo idioma deve possuir uma `key` e um `desc` |
+| `options` | `Number` | An array of languages `[{key: 'pt_BR', desc: 'Português (Brasil)'}, ...]` | Every language must have a `key` and a` desc` |

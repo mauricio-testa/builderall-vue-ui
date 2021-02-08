@@ -1,8 +1,6 @@
 # Inputs
 
-Componentes de input do bootstrap-vue customizados
-<br>
-[More BootstrapVue Inputs](https://bootstrap-vue.org/docs/components/form)
+[BootstrapVue Inputs Reference](https://bootstrap-vue.org/docs/components/form)
 
 ## Demo
 <Demo componentName="examples-b-inputs-doc" />

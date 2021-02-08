@@ -1,8 +1,6 @@
 # Card
 
-Card para listagem de itens
-<br>
-[More BootstrapVue Cards](https://bootstrap-vue.org/docs/components/card)
+[BootstrapVue Cards Reference](https://bootstrap-vue.org/docs/components/card)
 
 ## Demo
 <Demo componentName="examples-b-card-doc" />

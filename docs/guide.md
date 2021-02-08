@@ -17,7 +17,7 @@ In your main sass file (`/src/scss/app.scss`) perform the import of the followin
 @import 'node_modules/bootstrap-vue/src/index.scss';
 ```
 
-They will cause the bootstrap-vue to be built based on the variables in the Builderall Vue UI `variables.scss` file, customizing Bootstrap colors, fonts and spacing based on Builderall standards.
+They will cause the bootstrap-vue to be built based on the variables in the `builderall-vue-ui/src/assets/scss/variables.scss` file, customizing Bootstrap colors, fonts and spacing based on Builderall standards.
 
 ## Step 3: Import libs
 

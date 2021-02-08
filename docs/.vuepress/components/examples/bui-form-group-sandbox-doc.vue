@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       input: {
-        label: "Meu label",
+        label: "My label",
         help: "Help do tooltip",
         required: true,
         error: "",

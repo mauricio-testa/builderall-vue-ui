@@ -15,3 +15,6 @@ Vue.use(BuilderallVueUi, {
 	rtl: document.documentElement.dir == 'rtl'
 })
 ```
+_________
+
+**Note:** This library offers RTL support only to its own components and to Bootstrap vue components with custom CSS. To customize other things, you can add necessary CSS within the selector `html[dir=rtl]`

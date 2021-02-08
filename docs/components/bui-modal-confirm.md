@@ -1,6 +1,6 @@
 # BUIModalConfirm
 
-Modal de confirmação genérico
+Simple confirmation modal with callbacks support, that can be mounted through function or slot. It has two buttons: Clicking cancel it executes the `onCancel()` function and clicking ok it executes `onSuccess()`.
 
 ## Demo
 <Demo componentName="examples-bui-modal-confirm-doc" />
@@ -11,24 +11,26 @@ Modal de confirmação genérico
 </SourceCode>
 
 ## How to use
-Você deve adicionar um `<bui-modal-confirm ref="modal"></bui-modal-confirm>` ao seu aplicativo e definir um ref para ele.
-Após isso é só abri-lo utilizando `this.$refs.modal.show({})` enviando as opções desejadas como parâmetro.
+You must add a `<bui-modal-confirm ref="modal"></bui-modal-confirm>` to your application and define a ref for it.
+After, just open it using `this.$refs.modal.show({})` sending the desired options as a parameter.
 
 ### Available options:
 | Key | Default | Description |
 | -------- | ---- | ------- | 
-| `title` | `'Title'` | Título do modal |
-| `message` | `null` | Mensagem exibida no modal. Se configurado slot, não será exibida |
-| `okVariant` | `'primary'` | Variação do botão de confirmar |
-| `okTitle` | `'Ok'` | Texto do botão confirmar |
-| `cancelVariant` | `'default'` | Variação do botão de cancelar |
-| `cancelTitle` | `'Cancel'` | Texto do botão cancelar |
-| `iconName` | `null` | Nome do ícone que aparece ao lado do botão confirmar |
-| `data` | `{}` | Dados necessários para executar callbacks. Essa mesma variável será enviada por parâmetro nas funções `onSuccess` e `onCancel` |
-| `onSuccess` | `(data) => ({})` | Callback executado ao confirmar |
-| `onCancel` | `(data) => ({})` | Callback executado ao cancelar |
+| `title` | `'Title'` | Modal title |
+| `message` | `null` | Modal message |
+| `okVariant` | `'primary'` | Button ok variant |
+| `okTitle` | `'Ok'` | Button ok text |
+| `cancelVariant` | `'default'` | Button cancel variant |
+| `cancelTitle` | `'Cancel'` | Button cancel text |
+| `iconName` | `null` | icon that appears with the confirm button |
+| `data` | `{}` | Data needed to perform callbacks. This same variable will be sent by parameter in the `onSuccess` and `onCancel` |
+| `onSuccess` | `(data) => ({})` | Callback executed when confirming  |
+| `onCancel` | `(data) => ({})` | Callback executed when canceling |
 
 ## Slot
+
+If you want custom content for the modal instead of the description box, you can use the default slot.
 
 ### Demo
 <Demo componentName="examples-bui-modal-confirm-slot-doc" />
@@ -38,10 +40,13 @@ Após isso é só abri-lo utilizando `this.$refs.modal.show({})` enviando as op�
 <<< @/docs/.vuepress/components/examples/bui-modal-confirm-slot-doc.vue
 </SourceCode>
 
-## API Reference
+::: tip
+Not needing a slot will give you the possibility to use a single ref for multiple confirmation operations
+:::
 
+## API Reference
 
 ### Slots
 | Name | Description |
-| -------- | ---- | ------- | ----------- |
-| `default` | Slot padrão do conteúdo. Se informado. `options.description` não terá efeito |
+| -------- | ---- |
+| `default` | Default content slot. If informed. `options.description` will have no effect |

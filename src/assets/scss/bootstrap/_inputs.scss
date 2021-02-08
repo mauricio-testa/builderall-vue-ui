@@ -17,7 +17,11 @@ select.custom-select,
     border: 1px solid $primary;
   }
   &.form-control-xl {
-    @include input-group-xl;
+    box-shadow: 0px 2px 14px #0000001A;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 50px;
   }
   &::placeholder {
     opacity: 0.51;
@@ -31,18 +35,6 @@ select.custom-select {
   }
 }
 
-.input-group-xl {
-  @include input-group-xl;
-  border: 1px solid #DDDDDD;
-  &:focus-within {
-    border: 1px solid #0080fc;
-  }
-  padding: 0;
-  .form-control-xl {
-    border: unset;
-    box-shadow: unset;
-  }
-}
 
 // search
 input[type="search"].form-control {

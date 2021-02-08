@@ -66,10 +66,10 @@ So a good approach for this would be to use a file structure like this:
 ```
 
 Thus:
-* Each view must have a `bui-page` as root element
-* The `TheNavbar` file must have only the component `<bui-navbar>` with all the props and definition of the logout methods, language change and change of the state of the sidebar
-* The `TheSidebar` file must have only the component `<bui-sidebar>`, with the definition of the menus, user data and all the customizations of the component slots.
-* The `App.vue` file must group all these components and provide a `<router-view>` slot for the views
+* Each view must have a `bui-page` as root element;
+* The `TheNavbar` file must have only the component `<bui-navbar>` with all the props and definition of the logout methods, language change and change of the state of the sidebar;
+* The `TheSidebar` file must have only the component `<bui-sidebar>`, with the definition of the menus, user data and all the customizations of the component slots;
+* The `App.vue` file must group all these components and provide a `<router-view>` slot for the views.
 
 `App.vue`
 ```html

@@ -13,7 +13,7 @@ It has three menu areas: the main, bottom and mobile and you can customize the i
 </SourceCode>
 
 ::: tip
-If you don't set the `'sidebar-state'` property, by default it will be `'expanded'`. To disable the sidebar, set the `sidebar-state` property to `disabled`
+If you don't set the `sidebar-state` property, by default it will be `'expanded'`. To disable the sidebar, set the `sidebar-state` property to `disabled`
 ::: 
 
 ## Full example

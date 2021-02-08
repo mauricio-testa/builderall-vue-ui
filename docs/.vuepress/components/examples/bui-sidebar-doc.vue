@@ -2,7 +2,6 @@
   <bui-sidebar
     :menus="menusTop"
     :menus-bottom="menusBottom"
-    active-menu="item1"
   ></bui-sidebar>
 </template>
 
