@@ -26,7 +26,7 @@ In your main javascript file (`main.js` or` app.js`) import the libraries, style
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
 import { BuilderallVueUi } from 'builderall-vue-ui';
-import '@/scss/app.scss'; // (the same file as in step 2)
+import '@/sass/app.scss'; // (the same file as in step 2)
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);

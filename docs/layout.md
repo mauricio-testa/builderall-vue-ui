@@ -50,7 +50,7 @@ export default new Vuex.Store({
 })
 ```
 
-`TheSidebar.vue`
+`TheNavbar.vue`
 ```javascript{2,5}
 export default {
   computed: mapState(["sidebarState"]),
