@@ -87,7 +87,7 @@ menus = [{
 4. If all of the above rules fail, it will return `false`
 
 ### Vue Router
-In case of using [Vue Router](https://router.vuejs.org/), it is not necessary to define the `active-menu` prop in any of the link activation modes, as it is automatically activated through the` router-link-exact-active` when using `menu.routes` and via the` router-link-active` class when using `menu.prefix`.
+In case of using the [Vue Router](https://router.vuejs.org/), it is not necessary to set the `active-menu` property in any of the activation modes, because the menus are activated automatically through the automatic classes `router-link-exact-active` and `router-link-active`. It is also not necessary to inform `menu.active`, `menu.prefix` and `menu.routes`. Instead, you can specify `menu.exact` to match the `exact` `router-link` property.
 
 ### Demo
 <Demo componentName="examples-bui-sidebar-doc-active" />

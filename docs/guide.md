@@ -9,7 +9,7 @@ npm i builderall-vue-ui bootstrap-vue vue-select
 
 ## Step 2: Theming bootstrap
 
-In your main sass file (`/src/scss/app.scss`) perform the import of the following scss files, in this order:
+In your main sass file (`/src/sass/app.scss`) perform the import of the following scss files, in this order:
 
 ```scss
 @import 'node_modules/builderall-vue-ui/src/assets/scss/variables';

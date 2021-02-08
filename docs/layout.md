@@ -31,23 +31,35 @@ For the status of the sidebar to be remembered when reloading the page, or to ex
 
 ## Using Vuex
 
-For better code organization, you may want to store the sidebar state in a [Vuex store](https://vuex.vuejs.org/), mapping `sidebar-state` as a state variable and transforming `toggleSidebar` in an action.
+For better code organization, you may want to store the sidebar state in a [Vuex store](https://vuex.vuejs.org/), mapping `sidebar-state` as a state variable and transforming `toggleSidebar` in an mutation.
 
-``` javascript
-import { mapState } from 'vuex'
+`store.js`
+``` javascript{1,5,8}
+const sidebarStateKey = "bui_store_sidebar_state";
 
+export default new Vuex.Store({
+  state: {
+    sidebarState: localStorage.getItem(sidebarStateKey) || "expanded"
+  },
+  mutations: {
+    toggleSidebar(state, payload) {
+      localStorage.setItem(sidebarStateKey, payload);
+      state.sidebarState = payload
+    }
+  },
+})
+```
+
+`TheSidebar.vue`
+```javascript{2,5}
 export default {
-	
-	computed: mapState({
-		sidebarState
-	}),
-
-	methods: {
-		toggleSidebar(state) {
-			this.$store.dispatch('toggleSidebar', state)		
-		}
-	},
-}
+  computed: mapState(["sidebarState"]),
+  methods: {
+    toggleSidebar(state) {
+      this.$store.commit("toggleSidebar", state);
+    },
+  },
+};
 ```
 
 ## File structure
@@ -57,10 +69,10 @@ So a good approach for this would be to use a file structure like this:
 
 ```vue
 ├── App.vue
-├── layout
+├── components/layout
 │   ├── TheNavbar.vue
 │   ├── TheSidebar.vue
-|	views
+├── views
 │   ├── Home.vue
 │   ├── About.vue
 ```
