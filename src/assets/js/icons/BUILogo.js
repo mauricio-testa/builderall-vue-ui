@@ -1,4 +1,6 @@
-export default '<svg preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 29.688 18.533">'
+import { ASPECTMID } from './aspect'
+
+export default '<svg ' + ASPECTMID + ' viewBox="0 0 29.688 18.533">'
 	+ '  <g id="backoffice" transform="translate(-120.861 -263.325)">'
 	+ '    <g id="Grupo_3498" data-name="Grupo 3498" transform="translate(121.378 263.648)">'
 	+ '      <g id="Grupo_3496" data-name="Grupo 3496" transform="translate(14.374 13.41)">'

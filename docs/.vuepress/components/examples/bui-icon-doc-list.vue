@@ -10,14 +10,24 @@
     </div>
 
     <!-- sizing test
-		<div v-for="(icon, name) in icons" :key="name" class="d-flex align-items-end border-bottom">
-			<bui-icon :name="extractIconName(name)" v-for="i in 10" :key="i" :size="i * 10"></bui-icon>
-		</div>-->
+    <div
+      v-for="(icon, name) in icons"
+      :key="name"
+      class="d-flex align-items-end border-bottom"
+    >
+      <bui-icon
+        :name="extractIconName(name)"
+        v-for="i in 10"
+        :key="i"
+        :size="i * 10"
+      ></bui-icon>
+    </div>
+    -->
   </div>
 </template>
 
 <script>
-import icons from "../../../../src/assets/js/icons";
+import icons from "../../../../src/assets/js/icons/index";
 import { kebabCase } from "lodash";
 
 export default {

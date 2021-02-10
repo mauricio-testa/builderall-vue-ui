@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import icons from "../../assets/js/icons";
+import icons from "../../assets/js/icons/index.js";
 
 import { camelCase, startCase } from "lodash";
 
@@ -40,6 +40,11 @@ export default {
       required: false,
       default: false,
     },
+    gray: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     rotate: {
       type: Number,
       required: false,
@@ -60,6 +65,9 @@ export default {
       };
       if (this.white) {
         styles["filter"] = "brightness(0) invert(1)";
+      }
+      if (this.gray) {
+        styles["filter"] = "opacity(0.5) grayscale(0.4)";
       }
       return styles;
     },

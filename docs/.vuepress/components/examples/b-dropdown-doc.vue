@@ -15,6 +15,26 @@
       <span> Manage </span>
     </b-dropdown-item>
     <b-dropdown-item>
+      <bui-icon name="server-settings" :size="20"></bui-icon>
+      <span> Server settings </span>
+    </b-dropdown-item>
+    <b-dropdown-item>
+      <bui-icon name="backup" :size="20"></bui-icon>
+      <span> Backup</span>
+    </b-dropdown-item>
+    <b-dropdown-item>
+      <bui-icon name="database" :size="20"></bui-icon>
+      <span> Database </span>
+    </b-dropdown-item>
+    <b-dropdown-item>
+      <bui-icon name="globe-gear" :size="20"></bui-icon>
+      <span> Domain </span>
+    </b-dropdown-item>
+    <b-dropdown-item>
+      <bui-icon name="file-transfer" :size="20"></bui-icon>
+      <span> FTP </span>
+    </b-dropdown-item>
+    <b-dropdown-item>
       <bui-icon name="pencil" :size="20"></bui-icon>
       <span> Rename </span>
     </b-dropdown-item>
