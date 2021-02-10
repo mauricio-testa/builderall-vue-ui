@@ -1,8 +1,6 @@
 # BUIPage
 
-BUIPage é um componente que predefine os estilos do título e subtítulo da página. Ele deve ser filho de [BUIContainer](/components/bui-container.html)
-Por favor, visite a página [Layout](/layout.html) para ver como esses componentes trabalham em conjunto.
-Todas as `views` da aplicação devem possuir uma BUIPage como elemento root
+BUIPage must be the root component of all views in your application. Through it you will display the title and subtitle of the current page, search input and button to create a new item
 
 ## Demo
 <Demo componentName="examples-bui-page-doc" />
@@ -13,6 +11,8 @@ Todas as `views` da aplicação devem possuir uma BUIPage como elemento root
 </SourceCode>
 
 ## Custom content
+
+You can customize the content of the two columns. But it is preferable that you do not use the `#page-header-left` slot and insert the customized content in the `#page-header-right` slot
 
 ### Demo
 <Demo componentName="examples-bui-page-doc-slots" />
@@ -27,13 +27,13 @@ Todas as `views` da aplicação devem possuir uma BUIPage como elemento root
 ### Props
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `title` | `String` | `null` | Título da página |
-| `subtitle` | `String` | `null` | Subtítulo da página |
+| `title` | `String` | `null` | Page title |
+| `subtitle` | `String` | `null` | Page subtitle |
 
 
 ### Slots
 | Name | Description |
 | -------- | ---- |
-| `default` | Conteúdo para exibir dentro do container |
-| `page-header-right` | Conteúdo a ser exibido no lado inverso ao título |
-| `page-header-left` | Conteúdo a ser exibido no lugar do título e subtítulo |
+| `default` | Content to display below the title |
+| `page-header-right` | Content to be displayed on the reverse side of the title ("new" button goes here) |
+| `page-header-left` | Content to be displayed instead of the title and subtitle |

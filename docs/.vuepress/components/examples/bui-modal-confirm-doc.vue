@@ -19,12 +19,12 @@ export default {
     deleteItem() {
       this.$refs.modal.show({
         iconName: "trash",
-        title: "Deseja mesmo excluir?",
-        message: "Se eu fosse você não faria isso...",
+        title: "Do you really want to delete?",
+        message: "If I were you I wouldn't do that ...",
         okVariant: "danger",
-        okTitle: "Excluir",
+        okTitle: "Delete",
         cancelVariant: "default",
-        cancelTitle: "Cancelar",
+        cancelTitle: "Cancel",
         data: { id: 16 },
         onSuccess: (data) => alert("delete id " + data.id),
         onCancel: (data) => alert("cancel deleting id " + data.id),
@@ -33,10 +33,10 @@ export default {
     sendNotification() {
       this.$refs.modal.show({
         iconName: "submit-mail",
-        title: "Enviar notificação?",
-        message: "Uma notificação será enviada a todos os seus contatos",
+        title: "Send notification?",
+        message: "A notification will be sent to all your contacts",
         okVariant: "success",
-        okTitle: "Enviar",
+        okTitle: "Send",
         onSuccess: () => alert("sending notifications..."),
         onCancel: () => alert("not send"),
       });

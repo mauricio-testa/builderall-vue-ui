@@ -1,7 +1,7 @@
 # BUIIFormGroup
 
-Maneira mais fácil de se construir formulário:
-Fornece áreas para label, texto de ajuda, indicador de campo obrigatório, componente para mensagem de erro e contador de caracteres
+This is the easiest way to build a form field:
+The component provides properties for label, help text, required field indicator, error message and character counter.
 
 ## Demo
 <Demo componentName="examples-bui-form-group-doc" />
@@ -26,14 +26,14 @@ Fornece áreas para label, texto de ajuda, indicador de campo obrigatório, comp
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `label` | `String` | `undefined` | Label do campo |
-| `help` | `String` | `undefined` | Texto de ajuda que aparece no tooltip |
-| `required` | `Boolean` | `false` | Se é required. Se for aparece o * no campo |
-| `error` | `String` | `''` | Erro relacionado ao campo. Se informado, o campo obtém contexto de erro |
-| `max-chars` | `Number` | `null` | Número máximo de caracteres do campo. Se o campo está com erro ele não é exibido |
-| `value` | `{Number, Object, String}` | `undefined` | Valor para comparar com número máximo de caracteres |
+| `label` | `String` | `undefined` | Field label |
+| `help` | `String` | `undefined` | Help text that appears in the tooltip |
+| `required` | `Boolean` | `false` | If required, an * will be displayed |
+| `error` | `String` | `''` | Field-related error. If informed, the field gets error context (red borders) and the error shown below |
+| `max-chars` | `Number` | `null` | If informed, a character counter will be displayed as the user fills in the field |
+| `value` | `{Number, Object, String}` | `undefined` | Reference value to compare with maximum number of characters |
 
 ### Slots
 | Name | Description |
 | -------- | ---- |
-| `default` | Slot para o input |
+| `default` | Slot for the input |

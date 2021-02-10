@@ -31,23 +31,35 @@ For the status of the sidebar to be remembered when reloading the page, or to ex
 
 ## Using Vuex
 
-For better code organization, you may want to store the sidebar state in a [Vuex store](https://vuex.vuejs.org/), mapping `sidebar-state` as a state variable and transforming `toggleSidebar` in an action.
+For better code organization, you may want to store the sidebar state in a [Vuex store](https://vuex.vuejs.org/), mapping `sidebar-state` as a state variable and transforming `toggleSidebar` in an mutation.
 
-``` javascript
-import { mapState } from 'vuex'
+`store.js`
+``` javascript{1,5,8}
+const sidebarStateKey = "bui_store_sidebar_state";
 
+export default new Vuex.Store({
+  state: {
+    sidebarState: localStorage.getItem(sidebarStateKey) || "expanded"
+  },
+  mutations: {
+    toggleSidebar(state, payload) {
+      localStorage.setItem(sidebarStateKey, payload);
+      state.sidebarState = payload
+    }
+  },
+})
+```
+
+`TheNavbar.vue`
+```javascript{2,5}
 export default {
-	
-	computed: mapState({
-		sidebarState
-	}),
-
-	methods: {
-		toggleSidebar(state) {
-			this.$store.dispatch('toggleSidebar', state)		
-		}
-	},
-}
+  computed: mapState(["sidebarState"]),
+  methods: {
+    toggleSidebar(state) {
+      this.$store.commit("toggleSidebar", state);
+    },
+  },
+};
 ```
 
 ## File structure
@@ -57,19 +69,19 @@ So a good approach for this would be to use a file structure like this:
 
 ```vue
 ├── App.vue
-├── layout
+├── components/layout
 │   ├── TheNavbar.vue
 │   ├── TheSidebar.vue
-|	views
+├── views
 │   ├── Home.vue
 │   ├── About.vue
 ```
 
 Thus:
-* Each view must have a `bui-page` as root element
-* The `TheNavbar` file must have only the component `<bui-navbar>` with all the props and definition of the logout methods, language change and change of the state of the sidebar
-* The `TheSidebar` file must have only the component `<bui-sidebar>`, with the definition of the menus, user data and all the customizations of the component slots.
-* The `App.vue` file must group all these components and provide a `<router-view>` slot for the views
+* Each view must have a `bui-page` as root element;
+* The `TheNavbar` file must have only the component `<bui-navbar>` with all the props and definition of the logout methods, language change and change of the state of the sidebar;
+* The `TheSidebar` file must have only the component `<bui-sidebar>`, with the definition of the menus, user data and all the customizations of the component slots;
+* The `App.vue` file must group all these components and provide a `<router-view>` slot for the views.
 
 `App.vue`
 ```html

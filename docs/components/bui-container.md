@@ -1,9 +1,9 @@
 # BUIContainer
 
-BUIContainer deve ser utilizado em conjunto com [BUINavbar](/components/bui-navbar.html) e [BUISidebar](/components/bui-sidebar.html). 
-Ele é necessário para estabelecer os espaçamentos necessários para estes componentes conforme o estado do sidebar, para fornecer responsividade e dar suporte ao RTL.
+This component must be used in conjunction with [BUINavbar](/components/bui-navbar.html) and [BUISidebar](/components/bui-sidebar.html). 
+It is necessary to establish the necessary spacing for these components according to the state of the sidebar, to provide responsiveness and support RTL.
 <br>
-Por favor, visite a página [Layout](/layout.html) para ver como esses componentes trabalham em conjunto
+Please visit the [Layout page](/layout.html) to see how these components work together
 
 ## Basic usage
 ```html
@@ -23,9 +23,9 @@ Por favor, visite a página [Layout](/layout.html) para ver como esses component
 ### Props
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `sidebar-state` | `String` | `'expanded'` | Estado do sidebar. Possíveis valores: `'expanded'`, `'mini'`, `'disabled'` |
+| `sidebar-state` | `String` | `'expanded'` | Sidebar state (possible values: `'expanded'`, `'mini'`, `'disabled'`) |
 
 ### Slots
 | Name | Description |
 | -------- | ---- |
-| `default` | Conteúdo para exibir dentro do container |
+| `default` | Content to display inside the container. It is usually a [BUIPage](/components/bui-page.html) |

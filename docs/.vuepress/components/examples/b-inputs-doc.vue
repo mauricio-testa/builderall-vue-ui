@@ -72,20 +72,5 @@
       </template>
       <b-input size="xl" placeholder="aksdj"></b-input>
     </b-form-group>
-
-    <b-form-group>
-      <template #label>
-        <label class="font-weight-bold">Website Address</label>
-      </template>
-      <b-input-group size="xl">
-        <b-input size="xl" value=""></b-input>
-        <b-input
-          size="xl"
-          placeholder=".builderallwp.com"
-          readonly
-          class="text-right bg-white"
-        ></b-input>
-      </b-input-group>
-    </b-form-group>
   </b-card>
 </template>

@@ -13,7 +13,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     docsBranch: 'develop',
-    editLinkText: 'Edit!',
+    editLinkText: 'Edit this page',
     search: true,
     locales: {
       '/': {
@@ -30,7 +30,7 @@ module.exports = {
         */
         nav: [
           { text: 'Getting Started', link: '/guide' },
-          { text: 'Components', link: '/components/' },
+          { text: 'Components', link: '/components/bui-navbar' },
         ],
         sidebar: [
           {
@@ -62,12 +62,12 @@ module.exports = {
             title: 'Bootstrap components',
             collapsable: false,
             children: [
-              ['/bootstrap/b-tabs', 'Tabs'],
-              ['/bootstrap/b-inputs', 'Inputs'],
-              ['/bootstrap/b-modal', 'Modal'],
               ['/bootstrap/b-alert', 'Alert'],
               ['/bootstrap/b-card', 'Card'],
               ['/bootstrap/b-dropdown', 'Dropdown'],
+              ['/bootstrap/b-inputs', 'Inputs'],
+              ['/bootstrap/b-modal', 'Modal'],
+              ['/bootstrap/b-tabs', 'Tabs'],
             ]
           }
         ]

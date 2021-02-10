@@ -1,5 +1,5 @@
 # BUIIcon
-Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados em svg injetado no html e permitem customização de cores e tamanho.
+Icon library for Builderall Vue UI. All icons are rendered in svg injected into html and allow customization of colors, rotation and size.
 
 ## Demo
 <Demo componentName="examples-bui-icon-doc" />
@@ -14,6 +14,10 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 
 ## Size & Color
 
+You can customize the size of the icon using the `size` property, in pixels.
+<br>
+To customize the colors, simply apply the properties css `fill` and `stroke` in the selector `.bui-icon-{name} > svg`.
+
 ### Demo
 <Demo componentName="examples-bui-icon-doc-sizing" />
 
@@ -23,6 +27,8 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 </SourceCode>
 
 ## Rotate
+
+Use the `rotate` property to rotate the icon, in degress
 
 ### Demo
 <template>
@@ -50,6 +56,8 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 
 ## Dark
 
+Set the `white` property to have the icon contrast to dark backgrounds.
+
 ### Demo
 <Demo componentName="examples-bui-icon-doc-dark" />
 
@@ -64,7 +72,7 @@ Biblioteca de ícones para BuilderallVueUI. Todos os ícones são renderizados e
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
-| `name` | `String` | `null` | Nome do ícone |
-| `size` | `Number` | `22` | Tamanho do ícone em px |
-| `white` | `Boolean` | `false` | Utiliza-se para tornar o ícone branco e exibir acima de um fundo escuro |
-| `rotate` | `Number` | `0` | Rotação do ícone
+| `name` | `String` | `null` | Icon name  |
+| `size` | `Number` | `22` | Icon size in px |
+| `white` | `Boolean` | `false` | Used to make the icon white and display above a dark background |
+| `rotate` | `Number` | `0` | Icon rotation

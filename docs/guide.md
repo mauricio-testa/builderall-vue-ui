@@ -9,7 +9,7 @@ npm i builderall-vue-ui bootstrap-vue vue-select
 
 ## Step 2: Theming bootstrap
 
-In your main sass file (`/src/scss/app.scss`) perform the import of the following scss files, in this order:
+In your main sass file (`/src/sass/app.scss`) perform the import of the following scss files, in this order:
 
 ```scss
 @import 'node_modules/builderall-vue-ui/src/assets/scss/variables';
@@ -17,7 +17,7 @@ In your main sass file (`/src/scss/app.scss`) perform the import of the followin
 @import 'node_modules/bootstrap-vue/src/index.scss';
 ```
 
-They will cause the bootstrap-vue to be built based on the variables in the Builderall Vue UI `variables.scss` file, customizing Bootstrap colors, fonts and spacing based on Builderall standards.
+They will cause the bootstrap-vue to be built based on the variables in the `builderall-vue-ui/src/assets/scss/variables.scss` file, customizing Bootstrap colors, fonts and spacing based on Builderall standards.
 
 ## Step 3: Import libs
 
@@ -26,7 +26,7 @@ In your main javascript file (`main.js` or` app.js`) import the libraries, style
 ```js
 import { BootstrapVue } from 'bootstrap-vue';
 import { BuilderallVueUi } from 'builderall-vue-ui';
-import '@/scss/app.scss'; // (the same file as in step 2)
+import '@/sass/app.scss'; // (the same file as in step 2)
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);

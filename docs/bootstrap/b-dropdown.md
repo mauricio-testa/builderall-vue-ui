@@ -1,8 +1,6 @@
 # Dropdown
 
-Dropdown estilizado com ícones
-<br>
-[More BootstrapVue Dropdown](https://bootstrap-vue.org/docs/components/dropdown)
+[BootstrapVue Dropdown Reference](https://bootstrap-vue.org/docs/components/dropdown)
 
 ## Demo
 <Demo componentName="examples-b-dropdown-doc" />

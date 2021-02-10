@@ -22,7 +22,7 @@
     <b-nav-item
       v-else-if="menu.to"
       :to="menu.to"
-      :exact="Array.isArray(menu.routes)"
+      :exact="exact(menu)"
       :active="menu._active"
       :id="`sidebar-menu-${_uid}`"
     >
@@ -83,6 +83,14 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+  },
+  methods: {
+    exact(menu) {
+      if (!menu.hasOwnProperty("exact")) {
+        return true;
+      }
+      return menu.exact;
     },
   },
 };
