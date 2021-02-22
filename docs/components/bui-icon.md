@@ -26,6 +26,24 @@ To customize the colors, simply apply the properties css `fill` and `stroke` in 
 <<< @/docs/.vuepress/components/examples/bui-icon-doc-sizing.vue
 </SourceCode>
 
+Some icons do not have an equal proportion. So sometimes, you may need specific dimensions to correct this and achieve perfect alignment. You can do this with the height and width properties:
+
+<template>
+<div class="icons-demo-size">
+  <bui-icon name="eye" size="30"></bui-icon>
+  <bui-icon name="eye" height="17"></bui-icon>
+  <bui-icon name="eye" width="30"></bui-icon>
+  <bui-icon name="eye" width="43" height="30"></bui-icon>
+</div>
+</template>
+
+```html
+<bui-icon name="eye" size="30"></bui-icon>
+<bui-icon name="eye" height="17"></bui-icon>
+<bui-icon name="eye" width="30"></bui-icon>
+<bui-icon name="eye" width="43" height="30"></bui-icon>
+```
+
 ## Rotate
 
 Use the `rotate` property to rotate the icon, in degress
@@ -74,5 +92,7 @@ Set the `white` property to have the icon contrast to dark backgrounds.
 | -------- | ---- | ------- | ----------- |
 | `name` | `String` | `null` | Icon name  |
 | `size` | `Number` | `22` | Icon size in px |
+| `height` | `Number` | `22` | Icon height in px |
+| `width` | `Number` | `22` | Icon width in px |
 | `white` | `Boolean` | `false` | Used to make the icon white and display above a dark background |
 | `rotate` | `Number` | `0` | Icon rotation

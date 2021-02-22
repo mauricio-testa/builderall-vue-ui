@@ -16,6 +16,14 @@ import { camelCase, startCase } from "lodash";
 const makeIconName = (icon) =>
   `BUI${startCase(camelCase(icon)).replace(/ /g, "")}`;
 
+const propIconSize = {
+  type: [Number, String],
+  required: false,
+  validator: (size) => {
+    return !isNaN(size);
+  },
+};
+
 export default {
   name: "bui-icon",
 
@@ -27,24 +35,25 @@ export default {
         return icons.hasOwnProperty(makeIconName(value));
       },
     },
-    size: {
-      type: [Number, String],
-      required: false,
-      default: 22,
-      validator: (size) => {
-        return !isNaN(size);
-      },
-    },
+
+    size: { ...propIconSize, ...{ default: 22 } },
+
+    height: propIconSize,
+
+    width: propIconSize,
+
     white: {
       type: Boolean,
       required: false,
       default: false,
     },
+
     gray: {
       type: Boolean,
       required: false,
       default: false,
     },
+
     rotate: {
       type: Number,
       required: false,
@@ -59,16 +68,19 @@ export default {
 
     style: function () {
       let styles = {
-        width: this.size + "px",
-        height: this.size + "px",
+        width: (this.width ?? this.size) + "px",
+        height: (this.height ?? this.size) + "px",
         transform: `rotate(${this.rotate}deg)`,
       };
+
       if (this.white) {
         styles["filter"] = "brightness(0) invert(1)";
       }
+
       if (this.gray) {
         styles["filter"] = "opacity(0.5) grayscale(0.4)";
       }
+
       return styles;
     },
   },
