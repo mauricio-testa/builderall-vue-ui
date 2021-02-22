@@ -49,10 +49,17 @@ export default {
       options: DEFAULT_OPTIONS,
     };
   },
+
   methods: {
     show(options) {
       this.options = Object.assign({}, this.options, options);
       this.$refs.modal.show();
+      this.$nextTick(() => {
+        setTimeout(() => {
+          let el = this.$refs.modal.$refs["ok-button"];
+          if (el) el.focus();
+        }, 200);
+      });
     },
 
     ok: function () {
