@@ -1,6 +1,6 @@
 # RTL Support
 
-BootstrapVue does not have RTL support, but it is possible to add RTL support to your Builderall Vue Ui application just by 
+Bootstrap Vue does not have RTL support, but it is possible to add RTL support to your Builderall Vue Ui application just by 
 inserting the document direction in the `html` tag and informing if you want your application to behave in RTL when using the library (you can use the `dir` attribute itself for that)
 
 `index.html`
@@ -21,9 +21,9 @@ _________
 
 ## RTL Spacing Helper 
 
-Bootstrap-vue provides us with some fantastic [spacing helper classes](https://bootstrap-vue.org/docs/reference/spacing-classes)! However, if we want a specific spacing only when the application is in RTL, for example, this is not possible.
+Bootstrap Vue provides us with some fantastic [spacing helper classes](https://bootstrap-vue.org/docs/reference/spacing-classes)! However, if we want a specific spacing only when the application is in RTL, for example, this is not possible.
 <br>
-Therefore, the builderall vue ui includes some classes of add-ons that determine the spacing to be used only in specific directions!
+Therefore, the Builderall Vue UI includes some classes of add-ons that determine the spacing to be used only in specific directions!
 <br>
 For example, `ml-rtl-3`, will add a margin to the left of 1rem for a given element, only when in RTL.
 
