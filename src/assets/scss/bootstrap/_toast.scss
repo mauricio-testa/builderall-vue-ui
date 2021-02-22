@@ -1,0 +1,38 @@
+.b-toast {
+  bottom: 0.5rem;
+  right: 1rem;
+  &.b-toast-danger .toast-body {
+    border-left-color: var(--danger);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='Grupo_4651' data-name='Grupo 4651' transform='translate(-2304 -1752)'%3E%3Crect id='Rectangle-path' width='24' height='24' transform='translate(2328 1752) rotate(90)' opacity='0'/%3E%3Cpath id='Path' d='M21.547,14.3l-7.67-12.72a3.43,3.43,0,0,0-5.78,0L.427,14.3a3,3,0,0,0-.05,3A3.37,3.37,0,0,0,3.317,19h15.34a3.37,3.37,0,0,0,2.94-1.66,3,3,0,0,0-.05-3.04Z' transform='translate(2305.012 1752.996)' fill='%23ff6156'/%3E%3Cpath id='Path-2' data-name='Path' d='M1,2A1,1,0,1,1,2,1,1,1,0,0,1,1,2Z' transform='translate(2315 1766)' fill='%23ff6156'/%3E%3Cpath id='Path-3' data-name='Path' d='M2,5A1,1,0,0,1,0,5V1A1,1,0,0,1,2,1Z' transform='translate(2315 1759)' fill='%23ff6156'/%3E%3Ccircle id='Elipse_200' data-name='Elipse 200' cx='1' cy='1' r='1' transform='translate(2315.078 1766.5)' fill='%23fff'/%3E%3Cpath id='Caminho_807' data-name='Caminho 807' d='M12,14a1,1,0,0,1-1-1V9a1,1,0,0,1,2,0v4A1,1,0,0,1,12,14Z' transform='translate(2304.078 1750.5)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+  &.b-toast-success .toast-body {
+    border-left-color: var(--success);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg id='Grupo_4650' data-name='Grupo 4650' transform='translate(-2308 -1832)'%3E%3Cg id='Grupo_3495' data-name='Grupo 3495' transform='translate(2281 1813.5)'%3E%3Cpath id='Path' d='M10,0a10,10,0,1,0,7.071,2.929A10,10,0,0,0,10,0Z' transform='translate(27 18.5)' fill='%2300c38e'/%3E%3Cpath id='Path-2' data-name='Path' d='M0,2.848,3.518,6.366,9.884,0' transform='translate(32 25.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+  &.b-toast-warning .toast-body {
+    border-left-color: var(--warning);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cg id='Grupo_4652' data-name='Grupo 4652' transform='translate(-105 -821)'%3E%3Cg id='Grupo_4608' data-name='Grupo 4608' transform='translate(105 821)'%3E%3Ccircle id='Oval' cx='9' cy='9' r='9' transform='translate(18 18) rotate(180)' fill='%23ffb244' opacity='0.403'/%3E%3Ccircle id='Elipse_181' data-name='Elipse 181' cx='0.838' cy='0.838' r='0.838' transform='translate(8.445 11.973)' fill='%23ef4411' opacity='0.651'/%3E%3Cpath id='Caminho_548' data-name='Caminho 548' d='M11.838,13.028A.838.838,0,0,1,11,12.19V8.838a.838.838,0,0,1,1.676,0V12.19A.838.838,0,0,1,11.838,13.028Z' transform='translate(-2.555 -2.732)' fill='%23ef4411' opacity='0.651'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+  .toast {
+    border: unset;
+    color: #080d3acc;
+  }
+  .toast-header {
+    display: none;
+  }
+  .toast-body {
+    box-shadow: 0px 2px 20px #a6aec928;
+    border-radius: 6px;
+    background: #fff;
+    border: unset;
+    font-weight: 600;
+    font-family: Muli;
+    padding: 20px 20px 20px 55px;
+    border-left-width: 9px;
+    border-left-style: solid;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 21px;
+    font-size: 15px;
+  }
+}

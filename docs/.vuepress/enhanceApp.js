@@ -11,6 +11,19 @@ import { BuilderallVueUi } from './../../src/main.js'
 import '../../src/main.scss'
 
 export default ({ Vue, options, router, siteData }) => {
-  Vue.use(BootstrapVue);
-  Vue.use(BuilderallVueUi)
+
+  const BUI_CONFIG = {
+    rtl: false
+  }
+
+  const BV_CONFIG = {
+    BToast: {
+      toaster: 'b-toaster-bottom-right',
+      appendToast: true,
+      noCloseButton: true
+    }
+  }
+
+  Vue.use(BootstrapVue, BV_CONFIG);
+  Vue.use(BuilderallVueUi, BUI_CONFIG);
 }
