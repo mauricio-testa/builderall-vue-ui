@@ -18,3 +18,21 @@ Vue.use(BuilderallVueUi, {
 _________
 
 **Note:** This library offers RTL support only to its own components and to Bootstrap vue components with custom CSS. To customize other things, you can add necessary CSS within the selector `html[dir=rtl]`
+
+## RTL Spacing Helper 
+
+Bootstrap-vue provides us with some fantastic [spacing helper classes](https://bootstrap-vue.org/docs/reference/spacing-classes)! However, if we want a specific spacing only when the application is in RTL, for example, this is not possible.
+<br>
+Therefore, the builderall vue ui includes some classes of add-ons that determine the spacing to be used only in specific directions!
+<br>
+For example, `ml-rtl-3`, will add a margin to the left of 1rem for a given element, only when in RTL.
+
+____
+
+The complete syntax is:
+`${property}${side}-${dir}-${size}`
+
+::: details Expand to examples
+<Demo componentName="examples-rtl-spacing-doc" />
+If you change `ltr` to` rtl` in the above classes, everything will work the same way. But only when the document direction is `rtl`
+:::
