@@ -79,3 +79,11 @@ body {
   align-items: center;
   gap: 1rem;
 }
+
+.icons-demo-size {
+  display: flex;
+  align-items: center;
+  .bui-icon {
+    background-color: #9e5a9e;
+  }
+}

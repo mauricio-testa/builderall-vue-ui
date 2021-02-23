@@ -1,0 +1,46 @@
+
+$steps: (
+  0.25rem,
+  0.5rem,
+  1rem,
+  1.5rem,
+  3rem
+);
+
+@mixin generateSpacingClasses($dir, $index, $size) {
+  .ml-#{$dir}-#{$index} {
+    margin-left: $size;
+  }
+  .ml-#{$dir}n-#{$index} {
+    margin-left: -$size;
+  }
+  .mr-#{$dir}-#{$index} {
+    margin-right: $size;
+  }
+  .mr-#{$dir}n-#{$index} {
+    margin-right: -$size;
+  }
+
+  .pl-#{$dir}-#{$index} {
+    padding-left: $size;
+  }
+  .pr-#{$dir}-#{$index} {
+    padding-right: $size;
+  }
+}
+
+html[dir="rtl"] {
+  @each $step in $steps {
+    $i: index($steps, $step);
+    @debug $step $i;
+    @include generateSpacingClasses('rtl', $i, $step)
+  }
+}
+
+html:not([dir="ltr"]) {
+  @each $step in $steps {
+    $i: index($steps, $step);
+    @debug $step $i;
+    @include generateSpacingClasses('ltr', $i, $step)
+  }
+}
