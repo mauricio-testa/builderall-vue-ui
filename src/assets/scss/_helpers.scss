@@ -37,7 +37,7 @@ html[dir="rtl"] {
   }
 }
 
-html:not([dir="ltr"]) {
+html:not([dir="rtl"]) {
   @each $step in $steps {
     $i: index($steps, $step);
     @debug $step $i;

@@ -14,10 +14,15 @@
         ></bui-icon>
       </label>
     </slot>
-    <slot></slot>
-    <span class="bui-form-char-counter" v-if="value && maxChars">
+    <div class="bui-input" ref="input">
+      <slot></slot>
+      <div class="bui-input-actions">
+        <slot name="actions"></slot>
+      </div>
+    </div>
+    <div class="bui-form-char-counter" v-if="value && maxChars">
       {{ countStrLength(value) }}
-    </span>
+    </div>
     <b-form-invalid-feedback :state="!error">
       {{ error }}
     </b-form-invalid-feedback>
@@ -89,9 +94,9 @@ export default {
   },
 
   async mounted() {
-    await this.$refs.group.$children.forEach((element) => {
-      if (["INPUT", "TEXTAREA", "SELECT"].includes(element.$el.tagName)) {
-        this.element = element.$el;
+    await this.$refs.input.children.forEach((element) => {
+      if (["INPUT", "TEXTAREA", "SELECT"].includes(element.tagName)) {
+        this.element = element;
       }
     });
 
@@ -138,3 +143,18 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.bui-input {
+  position: relative;
+  .bui-input-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+</style>

@@ -31,6 +31,7 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Components', link: '/components/bui-navbar' },
+          { text: 'Demo', link: 'https://builderall-vue-ui-demo.netlify.app/' },
         ],
         sidebar: [
           {
