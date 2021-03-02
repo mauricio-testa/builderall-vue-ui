@@ -1,23 +1,23 @@
 <template>
   <v-select
+    v-model="country"
     :dir="$buiOptions.isRtl ? 'rtl' : 'ltr'"
     style="background-color: #f2f2f2"
     :clearable="false"
     :options="options"
     label="desc"
-    @input="changeLanguage()"
-    v-model="country"
     :reduce="(value) => value.key"
+    @input="changeLanguage()"
   >
     <template #selected-option="{ key, desc }">
       <div class="d-flex align-items-center">
-        <span :class="`bui-flag bui-flag-${key}`"></span>
+        <span :class="`bui-flag bui-flag-${key}`" />
         {{ desc }}
       </div>
     </template>
     <template #option="{ key, desc }">
       <div class="d-flex align-items-center">
-        <span :class="`bui-flag bui-flag-${key}`"></span>
+        <span :class="`bui-flag bui-flag-${key}`" />
         {{ desc }}
       </div>
     </template>
@@ -25,20 +25,14 @@
 </template>
 
 <script>
-import vSelect from "vue-select";
-import { languagesProp } from "../../assets/js/props";
+import vSelect from 'vue-select'
+import { languagesProp } from '../../assets/js/props'
 
 export default {
-  name: "bui-language-selector",
+  name: 'BuiLanguageSelector',
 
   components: {
-    vSelect,
-  },
-
-  data() {
-    return {
-      country: this.value,
-    };
+    vSelect
   },
 
   props: {
@@ -48,15 +42,21 @@ export default {
      * Dataset com os idiomas suportados.
      * Cada item do array deve possuir key e desc
      */
-    options: languagesProp,
+    options: languagesProp
+  },
+
+  data () {
+    return {
+      country: this.value
+    }
   },
 
   methods: {
     changeLanguage: function () {
-      this.$emit("input", this.country);
-    },
-  },
-};
+      this.$emit('input', this.country)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

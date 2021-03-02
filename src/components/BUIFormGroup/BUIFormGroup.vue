@@ -3,24 +3,33 @@
     <slot name="label">
       <label v-if="label">
         {{ label }}
-        <span class="bui-form-required" v-if="required"> * </span>
+        <span
+          v-if="required"
+          class="bui-form-required"
+        > * </span>
         <bui-icon
-          class="mx-2"
           v-if="help"
+          v-b-tooltip.hover
+          class="mx-2"
           name="info"
           :size="18"
-          v-b-tooltip.hover
           :title="help"
-        ></bui-icon>
+        />
       </label>
     </slot>
-    <div class="bui-input" ref="input">
-      <slot></slot>
+    <div
+      ref="input"
+      class="bui-input"
+    >
+      <slot />
       <div class="bui-input-actions">
-        <slot name="actions"></slot>
+        <slot name="actions" />
       </div>
     </div>
-    <div class="bui-form-char-counter" v-if="value && maxChars">
+    <div
+      v-if="value && maxChars"
+      class="bui-form-char-counter"
+    >
       {{ countStrLength(value) }}
     </div>
     <b-form-invalid-feedback :state="!error">
@@ -31,7 +40,7 @@
 
 <script>
 export default {
-  name: "bui-form-group",
+  name: 'BuiFormGroup',
 
   props: {
     /*
@@ -39,7 +48,7 @@ export default {
      */
     label: {
       type: String,
-      required: false,
+      required: false
     },
 
     /*
@@ -47,7 +56,7 @@ export default {
      */
     help: {
       type: String,
-      required: false,
+      required: false
     },
 
     /*
@@ -56,7 +65,7 @@ export default {
     required: {
       type: Boolean,
       required: false,
-      default: false,
+      default: false
     },
 
     /*
@@ -65,7 +74,7 @@ export default {
     error: {
       type: String,
       required: false,
-      default: "",
+      default: ''
     },
 
     /*
@@ -74,7 +83,7 @@ export default {
     maxChars: {
       type: Number,
       default: null,
-      required: false,
+      required: false
     },
 
     /*
@@ -83,68 +92,68 @@ export default {
      */
     value: {
       type: [Number, Object, String],
-      required: false,
-    },
+      required: false
+    }
   },
 
-  data() {
+  data () {
     return {
-      element: null,
-    };
+      element: null
+    }
   },
 
-  async mounted() {
-    await this.$refs.input.children.forEach((element) => {
-      if (["INPUT", "TEXTAREA", "SELECT"].includes(element.tagName)) {
-        this.element = element;
+  watch: {
+    error (val) {
+      if (this.error) {
+        this.setInputErrorClass()
+      } else {
+        this.removeInputErrorClass()
       }
-    });
+    }
+  },
+
+  async mounted () {
+    await this.$refs.input.children.forEach((element) => {
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(element.tagName)) {
+        this.element = element
+      }
+    })
 
     if (this.element) {
-      this.setInputMaxLength();
+      this.setInputMaxLength()
       if (this.error) {
-        this.setInputErrorClass();
+        this.setInputErrorClass()
       }
     }
   },
 
   methods: {
-    setInputMaxLength() {
+    setInputMaxLength () {
       if (this.maxChars && this.element) {
-        this.element.maxLength = this.maxChars;
+        this.element.maxLength = this.maxChars
       }
     },
 
-    setInputErrorClass() {
+    setInputErrorClass () {
       if (this.element) {
-        this.element.classList.add("is-invalid");
+        this.element.classList.add('is-invalid')
       }
     },
 
-    removeInputErrorClass() {
+    removeInputErrorClass () {
       if (this.element) {
-        this.element.classList.remove("is-invalid");
+        this.element.classList.remove('is-invalid')
       }
     },
 
-    countStrLength(str) {
-      return (str != null ? str.length : 0) + "/" + this.maxChars;
-    },
-  },
-
-  watch: {
-    error(val) {
-      if (this.error) {
-        this.setInputErrorClass();
-      } else {
-        this.removeInputErrorClass();
-      }
-    },
-  },
-};
+    countStrLength (str) {
+      return (str != null ? str.length : 0) + '/' + this.maxChars
+    }
+  }
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .bui-input {
   position: relative;
   .bui-input-actions {

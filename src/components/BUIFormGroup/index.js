@@ -1,3 +1,3 @@
-import BUIFormGroup from "./BUIFormGroup"
+import BUIFormGroup from './BUIFormGroup'
 
 export default BUIFormGroup

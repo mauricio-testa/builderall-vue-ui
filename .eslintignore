@@ -1,0 +1,16 @@
+.eslintrc.js
+node_modules*
+dist
+*.svg
+*.ico
+*.json
+.gitignore
+*.md
+*.log
+*.lock
+*.scss
+*.css
+*.txt
+*.png
+*.jpg
+src/assets/js/icons**

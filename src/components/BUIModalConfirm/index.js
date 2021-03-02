@@ -1,3 +1,3 @@
 import BUIModalConfirm from './BUIModalConfirm'
 
-export default BUIModalConfirm;
+export default BUIModalConfirm

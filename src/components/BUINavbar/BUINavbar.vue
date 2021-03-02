@@ -7,19 +7,25 @@
     :class="{ 'bui-navbar-rtl': $buiOptions.isRtl }"
   >
     <div
+      v-if="sidebarState != 'disabled'"
       v-b-toggle.sidebar-mobile
       class="d-sm-none bui-toggle-icon"
-      v-if="sidebarState != 'disabled'"
     >
-      <bui-icon name="menu-burger" :size="25"></bui-icon>
+      <bui-icon
+        name="menu-burger"
+        :size="25"
+      />
     </div>
 
     <div
+      v-if="sidebarState != 'disabled'"
       class="bui-toggle-icon d-none d-sm-flex"
       @click="toggleSidebar"
-      v-if="sidebarState != 'disabled'"
     >
-      <bui-icon :name="burgerIconName" :size="25"></bui-icon>
+      <bui-icon
+        :name="burgerIconName"
+        :size="25"
+      />
     </div>
 
     <b-navbar-brand :href="homeLink">
@@ -27,11 +33,14 @@
         :src="logo"
         class="mx-4 mb-1 d-sm-inline-block"
         :class="{ 'd-none': logoSm }"
-      />
-      <img :src="logoSm" class="mx-3 mb-1 d-sm-none" />
+      >
+      <img
+        :src="logoSm"
+        class="mx-3 mb-1 d-sm-none"
+      >
     </b-navbar-brand>
 
-    <span class="flex-fill"></span>
+    <span class="flex-fill" />
 
     <slot name="items-right" />
 
@@ -42,8 +51,11 @@
           no-caret
           class="bui-dropdown-user"
         >
-          <template v-slot:button-content>
-            <b-avatar variant="default" :src="user.gravatar"></b-avatar>
+          <template #button-content>
+            <b-avatar
+              variant="default"
+              :src="user.gravatar"
+            />
           </template>
 
           <b-dropdown-item href="#">
@@ -52,37 +64,50 @@
                 :src="user.gravatar"
                 variant="default"
                 size="3rem"
-              ></b-avatar>
+              />
               <div class="flex-fill d-flex flex-column m-3">
-                <span v-text="user.name"></span>
-                <span v-text="user.email"></span>
+                <span v-text="user.name" />
+                <span v-text="user.email" />
               </div>
             </div>
           </b-dropdown-item>
 
-          <b-dropdown-divider></b-dropdown-divider>
+          <b-dropdown-divider />
 
-          <slot name="dropdown-item-before"></slot>
+          <slot name="dropdown-item-before" />
 
-          <b-dropdown-item tabindex="-1" link-class="py-2">
-            <bui-icon name="lang" class="mx-3" />
+          <b-dropdown-item
+            tabindex="-1"
+            link-class="py-2"
+          >
+            <bui-icon
+              name="lang"
+              class="mx-3"
+            />
             {{ labelFavoriteLang }}
           </b-dropdown-item>
 
           <bui-language-selector
+            v-model="user.locale"
             class="mt-1 mx-3 mb-3"
             :rtl="$buiOptions.isRtl"
             :options="languages"
             @input="changeLanguage()"
-            v-model="user.locale"
-          ></bui-language-selector>
+          />
 
-          <b-dropdown-divider></b-dropdown-divider>
+          <b-dropdown-divider />
 
-          <slot name="dropdown-item-after"></slot>
+          <slot name="dropdown-item-after" />
 
-          <b-dropdown-item tabindex="-1" @click="logout()" link-class="py-2">
-            <bui-icon name="exit" class="mx-3" />
+          <b-dropdown-item
+            tabindex="-1"
+            link-class="py-2"
+            @click="logout()"
+          >
+            <bui-icon
+              name="exit"
+              class="mx-3"
+            />
             {{ labelLogout }}
           </b-dropdown-item>
         </b-nav-item-dropdown>
@@ -92,18 +117,18 @@
 </template>
 
 <script>
-import BUIIcon from "../BUIIcon/BUIIcon";
+import BUIIcon from '../BUIIcon/BUIIcon'
 import {
   userProp,
   sidebarStateProp,
-  languagesProp,
-} from "../../assets/js/props";
+  languagesProp
+} from '../../assets/js/props'
 
 export default {
-  name: "bui-navbar",
+  name: 'BuiNavbar',
 
   components: {
-    BUIIcon,
+    BUIIcon
   },
 
   props: {
@@ -124,7 +149,7 @@ export default {
      */
     logo: {
       type: String,
-      required: true,
+      required: true
     },
 
     /*
@@ -132,7 +157,7 @@ export default {
      */
     logoSm: {
       type: String,
-      required: false,
+      required: false
     },
 
     /*
@@ -141,7 +166,7 @@ export default {
     labelFavoriteLang: {
       type: String,
       required: false,
-      default: "Your favorite lang",
+      default: 'Your favorite lang'
     },
 
     /*
@@ -150,7 +175,7 @@ export default {
     labelLogout: {
       type: String,
       required: false,
-      default: "Logout",
+      default: 'Logout'
     },
 
     /*
@@ -159,37 +184,39 @@ export default {
     homeLink: {
       type: String,
       required: false,
-      default: "/",
+      default: '/'
     },
 
     /*
      * Dataset com os idiomas suportados.
      * Cada item do array deve possuir key e desc
      */
-    languages: languagesProp,
-  },
-
-  methods: {
-    toggleSidebar() {
-      this.$emit(
-        "toggle-sidebar",
-        this.sidebarState == "mini" ? "expanded" : "mini"
-      );
-    },
-    changeLanguage() {
-      this.$emit("change-language", this.user.locale);
-    },
-    logout() {
-      this.$emit("logout");
-    },
+    languages: languagesProp
   },
 
   computed: {
-    burgerIconName() {
-      return this.sidebarState == "mini" ? "menu-burger" : "menu-burger-open";
-    },
+    burgerIconName () {
+      return this.sidebarState == 'mini' ? 'menu-burger' : 'menu-burger-open'
+    }
   },
-};
+
+  methods: {
+    toggleSidebar () {
+      this.$emit(
+        'toggle-sidebar',
+        this.sidebarState == 'mini' ? 'expanded' : 'mini'
+      )
+    },
+
+    changeLanguage () {
+      this.$emit('change-language', this.user.locale)
+    },
+
+    logout () {
+      this.$emit('logout')
+    }
+  }
+}
 </script>
 
 <style lang="scss">

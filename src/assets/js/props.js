@@ -1,4 +1,4 @@
-import { langs } from "./langs";
+import { langs } from './langs'
 
 export const sidebarStateProp = {
   type: String,
@@ -13,8 +13,8 @@ export const languagesProp = {
   default: () => langs,
   validator: value =>
     value.every(obj =>
-      obj.hasOwnProperty("key") &&
-      obj.hasOwnProperty("desc")
+      obj.hasOwnProperty('key') &&
+      obj.hasOwnProperty('desc')
     )
 }
 
@@ -23,16 +23,16 @@ export const menusProp = {
   required: false,
   default: () => {
     return []
-  },
+  }
 }
 
 export const userProp = {
   type: Object,
   required: false,
   validator: value =>
-    value.hasOwnProperty("name") &&
-    value.hasOwnProperty("email") &&
-    value.hasOwnProperty("gravatar"),
+    value.hasOwnProperty('name') &&
+    value.hasOwnProperty('email') &&
+    value.hasOwnProperty('gravatar'),
   default: () => {
     return {
       name: 'The user name',
