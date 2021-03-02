@@ -78,7 +78,7 @@ export default {
       }
 
       if (this.gray) {
-        styles["filter"] = "opacity(0.5) grayscale(0.4)";
+        styles["filter"] = "opacity(0.5) grayscale(.7)";
       }
 
       return styles;

@@ -148,13 +148,21 @@ export default {
 .bui-input {
   position: relative;
   .bui-input-actions {
+    margin: 0 12px;
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    button {
+      border: none;
+      background: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
 </style>

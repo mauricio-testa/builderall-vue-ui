@@ -9,23 +9,23 @@ $steps: (
 
 @mixin generateSpacingClasses($dir, $index, $size) {
   .ml-#{$dir}-#{$index} {
-    margin-left: $size;
+    margin-left: $size !important;
   }
   .ml-#{$dir}n-#{$index} {
-    margin-left: -$size;
+    margin-left: -$size !important;
   }
   .mr-#{$dir}-#{$index} {
-    margin-right: $size;
+    margin-right: $size !important;
   }
   .mr-#{$dir}n-#{$index} {
-    margin-right: -$size;
+    margin-right: -$size !important;
   }
 
   .pl-#{$dir}-#{$index} {
-    padding-left: $size;
+    padding-left: $size !important;
   }
   .pr-#{$dir}-#{$index} {
-    padding-right: $size;
+    padding-right: $size !important;
   }
 }
 

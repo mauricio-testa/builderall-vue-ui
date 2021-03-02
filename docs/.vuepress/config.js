@@ -68,6 +68,7 @@ module.exports = {
               ['/bootstrap/b-dropdown', 'Dropdown'],
               ['/bootstrap/b-inputs', 'Inputs'],
               ['/bootstrap/b-modal', 'Modal'],
+              // ['/bootstrap/b-table', 'Table'],
               ['/bootstrap/b-tabs', 'Tabs'],
               ['/bootstrap/b-toast', 'Toast'],
             ]

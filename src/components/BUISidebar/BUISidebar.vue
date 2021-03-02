@@ -12,7 +12,7 @@
           :show-tooltip="sidebarIsMini"
         >
           <slot name="item" :menu="menu">
-            <bui-icon :name="menu.icon" :size="20" />
+            <bui-icon :name="menu.icon" :size="20" :gray="!menu._active" />
             <span v-text="menu.title"></span>
           </slot>
         </bui-sidebar-item>
@@ -30,7 +30,7 @@
           :show-tooltip="sidebarIsMini"
         >
           <slot name="item-bottom" :menu="menu">
-            <bui-icon :name="menu.icon" :size="20" />
+            <bui-icon :name="menu.icon" :size="20" :gray="!menu._active"/>
             <span v-text="menu.title"></span>
           </slot>
         </bui-sidebar-item>
@@ -74,6 +74,7 @@
               <bui-icon
                 :name="menu.icon"
                 :size="menu.icon == 'logo' ? 25 : 20"
+                :gray="!menu._active"
               />
               <span v-text="menu.title"></span>
             </slot>
@@ -234,10 +235,6 @@ html[dir="rtl"] {
     border-left: 3px solid transparent;
     transition: 0.4s;
     position: relative;
-    .bui-icon {
-      filter: opacity(0.7) grayscale(0.6);
-      transition: inherit;
-    }
     span {
       margin-left: 20px;
       margin-right: 0;
@@ -248,9 +245,6 @@ html[dir="rtl"] {
     &.router-link-exact-active {
       background-color: #f4f7fc;
       color: var(--primary);
-      .bui-icon {
-        filter: unset;
-      }
     }
     &.active,
     &.router-link-active,
