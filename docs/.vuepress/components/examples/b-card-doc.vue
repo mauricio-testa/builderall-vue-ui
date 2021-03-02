@@ -52,7 +52,17 @@
       no-body
       class="bui-card-collapse site-details-content"
     >
-      <b-card-header> Site Manage </b-card-header>
+      <b-card-header class="justify-content-between"> 
+        Site Manage 
+        <b-button variant="success">
+          <bui-icon
+            name="save"
+            white
+            size="18"
+          />
+          Save
+        </b-button>
+      </b-card-header>
       <b-card-body>
         Hello!
       </b-card-body>
