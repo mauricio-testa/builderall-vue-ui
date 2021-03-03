@@ -5,6 +5,7 @@
     :fields="fields"
   >
     <template #cell(actions)="row">
+      {{ row.index }}
       <!-- info(row.item, row.index, $event.target) -->
       <bui-icon
         name="trash"

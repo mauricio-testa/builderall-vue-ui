@@ -1,10 +1,15 @@
 <template>
   <div>
-    <b-button variant="warning" @click="rename()">Renomear</b-button>
+    <b-button
+      variant="warning"
+      @click="rename()"
+    >
+      Renomear
+    </b-button>
 
     <bui-modal-confirm ref="modal">
       <bui-form-group title="Digite o novo nome">
-        <b-input v-model="name"></b-input>
+        <b-input v-model="name" />
       </bui-form-group>
     </bui-modal-confirm>
   </div>
@@ -12,24 +17,24 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      name: "Florinda",
-    };
+      name: 'Florinda'
+    }
   },
   methods: {
-    rename() {
+    rename () {
       this.$refs.modal.show({
-        iconName: "gear",
-        title: "Renomear",
-        okVariant: "success",
-        okTitle: "Salvar",
-        cancelVariant: "default",
-        cancelTitle: "Cancelar",
-        onSuccess: (data) => alert("rename to " + this.name),
-        onCancel: (data) => alert("not rename"),
-      });
-    },
-  },
-};
+        iconName: 'gear',
+        title: 'Renomear',
+        okVariant: 'success',
+        okTitle: 'Salvar',
+        cancelVariant: 'default',
+        cancelTitle: 'Cancelar',
+        onSuccess: (data) => alert('rename to ' + this.name),
+        onCancel: (data) => alert('not rename')
+      })
+    }
+  }
+}
 </script>

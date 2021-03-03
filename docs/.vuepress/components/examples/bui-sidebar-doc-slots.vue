@@ -6,13 +6,20 @@
       :menus-bottom="menus_bottom"
     >
       <template #item="{ menu }">
-        <template v-if="menu.name == 'config'"> Hello config menu! </template>
+        <template v-if="menu.name == 'config'">
+          Hello config menu!
+        </template>
         <template v-else>
-          {{ menu.title }} <b-badge class="mr-1"> {{ menu.icon }}</b-badge>
+          {{ menu.title }} <b-badge class="mr-1">
+            {{ menu.icon }}
+          </b-badge>
         </template>
       </template>
       <template #item-bottom="{ menu }">
-        <bui-icon :name="menu.icon" class="mr-3"></bui-icon>
+        <bui-icon
+          :name="menu.icon"
+          class="mr-3"
+        />
         {{ menu.title }}
         <b-badge> Buuh!</b-badge>
       </template>
@@ -25,22 +32,22 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       menus: [
-        { title: "Dashbard", icon: "dashboard", href: "/" },
-        { title: "Contacts", icon: "person", to: "/sites" },
-        { title: "Configs", icon: "gear", href: "/" },
+        { title: 'Dashbard', icon: 'dashboard', href: '/' },
+        { title: 'Contacts', icon: 'person', to: '/sites' },
+        { title: 'Configs', icon: 'gear', href: '/' }
       ],
       menus_bottom: [
         {
-          title: "Office",
-          icon: "logo",
-          href: "#",
-          target: "_blank",
-        },
-      ],
-    };
-  },
-};
+          title: 'Office',
+          icon: 'logo',
+          href: '#',
+          target: '_blank'
+        }
+      ]
+    }
+  }
+}
 </script>
