@@ -1,7 +1,9 @@
 <template>
   <bui-page>
     <template #page-header-left>
-      <h1 class="bui-page-title">Dashboard</h1>
+      <h1 class="bui-page-title">
+        Dashboard
+      </h1>
       <b-badge>Title of my page with custom styles</b-badge>
     </template>
     <template #page-header-right>
@@ -12,7 +14,11 @@
         style="max-width: 200px"
       />
       <b-button variant="primary">
-        <bui-icon name="plus" white :size="18"></bui-icon>
+        <bui-icon
+          name="plus"
+          white
+          :size="18"
+        />
         New
       </b-button>
     </template>

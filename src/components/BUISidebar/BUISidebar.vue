@@ -11,17 +11,23 @@
           :menu="menu"
           :show-tooltip="sidebarIsMini"
         >
-          <slot name="item" :menu="menu">
-            <bui-icon :name="menu.icon" :size="20" />
-            <span v-text="menu.title"></span>
+          <slot
+            name="item"
+            :menu="menu"
+          >
+            <bui-icon
+              :name="menu.icon"
+              :size="20"
+            />
+            <span v-text="menu.title" />
           </slot>
         </bui-sidebar-item>
       </b-nav>
 
       <b-nav
+        v-if="menusBottomComputed.length"
         vertical
         class="pb-4 pt-3 mt-3 bui-sidebar-bottom"
-        v-if="menusBottomComputed.length"
       >
         <bui-sidebar-item
           v-for="(menu, k) in menusBottomComputed"
@@ -29,9 +35,15 @@
           :menu="menu"
           :show-tooltip="sidebarIsMini"
         >
-          <slot name="item-bottom" :menu="menu">
-            <bui-icon :name="menu.icon" :size="20" />
-            <span v-text="menu.title"></span>
+          <slot
+            name="item-bottom"
+            :menu="menu"
+          >
+            <bui-icon
+              :name="menu.icon"
+              :size="20"
+            />
+            <span v-text="menu.title" />
           </slot>
         </bui-sidebar-item>
       </b-nav>
@@ -48,34 +60,50 @@
       <div class="bui-sidebar-mobile-header">
         <div class="d-flex justify-content-end">
           <b-button-close
-            text-variant="white"
             v-b-toggle.sidebar-mobile
-          ></b-button-close>
+            text-variant="white"
+          />
         </div>
-        <b-avatar variant="default" size="4rem" :src="user.gravatar"></b-avatar>
+        <b-avatar
+          variant="default"
+          size="4rem"
+          :src="user.gravatar"
+        />
         <div class="d-flex justify-content-between align-items-center mt-3">
           <div>
-            <span class="name" v-text="user.name"></span> <br />
-            <small v-text="user.email"></small>
+            <span
+              class="name"
+              v-text="user.name"
+            /> <br>
+            <small v-text="user.email" />
           </div>
-          <a><bui-icon name="gear" white></bui-icon></a>
+          <a><bui-icon
+            name="gear"
+            white
+          /></a>
         </div>
       </div>
 
       <div class="pt-2">
-        <b-nav vertical sticky>
+        <b-nav
+          vertical
+          sticky
+        >
           <bui-sidebar-item
             v-for="(menu, k) in menusMobileComputed"
             :key="k"
             :menu="menu"
             :show-tooltip="false"
           >
-            <slot name="item-mobile" :menu="menu">
+            <slot
+              name="item-mobile"
+              :menu="menu"
+            >
               <bui-icon
                 :name="menu.icon"
                 :size="menu.icon == 'logo' ? 25 : 20"
               />
-              <span v-text="menu.title"></span>
+              <span v-text="menu.title" />
             </slot>
           </bui-sidebar-item>
         </b-nav>
@@ -85,14 +113,15 @@
 </template>
 
 <script>
-import BuiSidebarItem from "./BUISidebarItem";
-import { userProp, sidebarStateProp, menusProp } from "../../assets/js/props";
+import BuiSidebarItem from './BUISidebarItem'
+import { userProp, sidebarStateProp, menusProp } from '../../assets/js/props'
+import { hasProperty } from '../../utils/index'
 
 export default {
-  name: "bui-sidebar",
+  name: 'BuiSidebar',
 
   components: {
-    BuiSidebarItem,
+    BuiSidebarItem
   },
 
   props: {
@@ -111,6 +140,8 @@ export default {
      */
     activeMenu: {
       required: false,
+      type: [String, Number],
+      default: undefined
     },
 
     /*
@@ -126,60 +157,60 @@ export default {
     /*
      * Menus mobile
      */
-    menusMobile: menusProp,
-  },
-
-  methods: {
-    isActive(menu) {
-      if (menu.hasOwnProperty("active")) {
-        return menu.active;
-      }
-      if (menu.hasOwnProperty("routes")) {
-        return Array.isArray(menu.routes)
-          ? menu.routes.includes(this.activeMenu)
-          : false;
-      }
-      if (menu.hasOwnProperty("prefix")) {
-        return typeof menu.prefix == "string" &&
-          typeof this.activeMenu == "string"
-          ? this.activeMenu.startsWith(menu.prefix)
-          : false;
-      }
-      return false;
-    },
+    menusMobile: menusProp
   },
 
   computed: {
-    sidebarIsMini() {
-      return this.sidebarState == "mini";
+    sidebarIsMini () {
+      return this.sidebarState === 'mini'
     },
 
-    menusComputed() {
+    menusComputed () {
       return (this.menus || []).map((menu) => ({
         ...menu,
-        _active: this.isActive(menu),
-      }));
+        _active: this.isActive(menu)
+      }))
     },
 
-    menusBottomComputed() {
+    menusBottomComputed () {
       return (this.menusBottom || []).map((menu) => ({
         ...menu,
-        _active: this.isActive(menu),
-      }));
+        _active: this.isActive(menu)
+      }))
     },
 
-    menusMobileComputed() {
+    menusMobileComputed () {
       if (Array.isArray(this.menusMobile) && this.menusMobile.length) {
         return (this.menusMobile || []).map((menu) => ({
           ...menu,
-          _active: this.isActive(menu),
-        }));
+          _active: this.isActive(menu)
+        }))
       } else {
-        return this.menusComputed.concat(this.menusBottomComputed);
+        return this.menusComputed.concat(this.menusBottomComputed)
       }
-    },
+    }
   },
-};
+
+  methods: {
+    isActive (menu) {
+      if (hasProperty(menu, 'active')) {
+        return menu.active
+      }
+      if (hasProperty(menu, 'routes')) {
+        return Array.isArray(menu.routes)
+          ? menu.routes.includes(this.activeMenu)
+          : false
+      }
+      if (hasProperty(menu, 'prefix')) {
+        return typeof menu.prefix === 'string' &&
+          typeof this.activeMenu === 'string'
+          ? this.activeMenu.startsWith(menu.prefix)
+          : false
+      }
+      return false
+    }
+  }
+}
 </script>
 
 <style lang="scss">

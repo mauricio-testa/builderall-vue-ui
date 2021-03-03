@@ -1,8 +1,19 @@
 <template>
-  <b-alert :show="show" :dismissible="dismissible" fade class="bui-alert">
+  <b-alert
+    :show="show"
+    :dismissible="dismissible"
+    fade
+    class="bui-alert"
+  >
     <slot>
-      <h5 v-text="title" v-if="title"></h5>
-      <p v-text="content" v-if="content"></p>
+      <h5
+        v-if="title"
+        v-text="title"
+      />
+      <p
+        v-if="content"
+        v-text="content"
+      />
     </slot>
     <div class="d-flex justify-content-end mt-n1 flex-md-row flex-column">
       <b-btn
@@ -10,22 +21,22 @@
         class="m-0 mb-2 m-md-1"
         @click="hideForever"
         v-text="labelNoShowAgain"
-      ></b-btn>
+      />
       <b-btn
         v-if="labelHide !== false"
         class="m-0 mb-2 m-md-1"
         @click="show = false"
         v-text="labelHide"
-      ></b-btn>
+      />
     </div>
   </b-alert>
 </template>
 
 <script>
-const prefix = "bui_store_alert";
+const prefix = 'bui_store_alert'
 
 export default {
-  name: "bui-alert",
+  name: 'BuiAlert',
 
   props: {
     /*
@@ -34,7 +45,7 @@ export default {
      */
     index: {
       required: true,
-      type: String,
+      type: String
     },
 
     /*
@@ -43,7 +54,7 @@ export default {
     title: {
       required: false,
       type: String,
-      default: null,
+      default: null
     },
 
     /*
@@ -52,7 +63,7 @@ export default {
     content: {
       required: false,
       type: String,
-      default: null,
+      default: null
     },
 
     /*
@@ -61,7 +72,7 @@ export default {
     labelHide: {
       required: false,
       type: [String, Boolean],
-      default: "Close",
+      default: 'Close'
     },
 
     /*
@@ -71,37 +82,37 @@ export default {
     labelNoShowAgain: {
       required: false,
       type: [String, Boolean],
-      default: "No show again",
-    },
+      default: 'No show again'
+    }
   },
 
   data: () => {
     return {
-      show: false,
-    };
-  },
-
-  mounted() {
-    this.show = !this.existsInLocalStorage();
-  },
-
-  methods: {
-    existsInLocalStorage() {
-      return localStorage.getItem(prefix + this.index) != null;
-    },
-
-    hideForever() {
-      this.show = false;
-      localStorage.setItem(prefix + this.index, 1);
-    },
+      show: false
+    }
   },
 
   computed: {
-    dismissible() {
-      return this.labelHide !== false || this.labelNoShowAgain !== false;
-    },
+    dismissible () {
+      return this.labelHide !== false || this.labelNoShowAgain !== false
+    }
   },
-};
+
+  mounted () {
+    this.show = !this.existsInLocalStorage()
+  },
+
+  methods: {
+    existsInLocalStorage () {
+      return localStorage.getItem(prefix + this.index) != null
+    },
+
+    hideForever () {
+      this.show = false
+      localStorage.setItem(prefix + this.index, 1)
+    }
+  }
+}
 </script>
 
 <style lang="scss">

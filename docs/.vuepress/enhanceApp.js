@@ -11,7 +11,6 @@ import { BuilderallVueUi } from './../../src/main.js'
 import '../../src/main.scss'
 
 export default ({ Vue, options, router, siteData }) => {
-
   const BUI_CONFIG = {
     rtl: false
   }
@@ -24,6 +23,6 @@ export default ({ Vue, options, router, siteData }) => {
     }
   }
 
-  Vue.use(BootstrapVue, BV_CONFIG);
-  Vue.use(BuilderallVueUi, BUI_CONFIG);
+  Vue.use(BootstrapVue, BV_CONFIG)
+  Vue.use(BuilderallVueUi, BUI_CONFIG)
 }

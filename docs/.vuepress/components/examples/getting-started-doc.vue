@@ -7,9 +7,9 @@
     />
 
     <bui-navbar
-      @toggle-sidebar="toggleSidebar"
       :sidebar-state="sidebarState"
       logo="https://booking.builderall.com/images/images/meta/logo.png"
+      @toggle-sidebar="toggleSidebar"
     />
 
     <bui-container :sidebar-state="sidebarState">
@@ -18,12 +18,22 @@
         subtitle="Welcome to a Builderall application!"
       >
         <template #page-header-right>
-          <b-button variant="primary" class="ml-auto">
-            <bui-icon name="plus" white :size="18"></bui-icon>
+          <b-button
+            variant="primary"
+            class="ml-auto"
+          >
+            <bui-icon
+              name="plus"
+              white
+              :size="18"
+            />
             New calendar
           </b-button>
         </template>
-        <bui-alert index="alert-01" content="Welcome!" />
+        <bui-alert
+          index="alert-01"
+          content="Welcome!"
+        />
       </bui-page>
     </bui-container>
   </div>
@@ -31,16 +41,16 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      sidebarState: "expanded",
-      menus: [{ title: "Item", icon: "gear", href: "#" }],
-    };
+      sidebarState: 'expanded',
+      menus: [{ title: 'Item', icon: 'gear', href: '#' }]
+    }
   },
   methods: {
-    toggleSidebar(state) {
-      this.sidebarState = state;
-    },
-  },
-};
+    toggleSidebar (state) {
+      this.sidebarState = state
+    }
+  }
+}
 </script>

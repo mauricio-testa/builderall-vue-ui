@@ -6,10 +6,10 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
-      lang: "pt_BR",
-    };
-  },
-};
+      lang: 'pt_BR'
+    }
+  }
+}
 </script>

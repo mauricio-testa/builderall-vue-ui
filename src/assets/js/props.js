@@ -1,4 +1,5 @@
-import { langs } from "./langs";
+import { langs } from './langs'
+import { hasProperty } from '../../utils/index'
 
 export const sidebarStateProp = {
   type: String,
@@ -13,8 +14,8 @@ export const languagesProp = {
   default: () => langs,
   validator: value =>
     value.every(obj =>
-      obj.hasOwnProperty("key") &&
-      obj.hasOwnProperty("desc")
+      hasProperty(obj, 'key') &&
+      hasProperty(obj, 'desc')
     )
 }
 
@@ -23,16 +24,16 @@ export const menusProp = {
   required: false,
   default: () => {
     return []
-  },
+  }
 }
 
 export const userProp = {
   type: Object,
   required: false,
   validator: value =>
-    value.hasOwnProperty("name") &&
-    value.hasOwnProperty("email") &&
-    value.hasOwnProperty("gravatar"),
+    hasProperty(value, 'name') &&
+    hasProperty(value, 'email') &&
+    hasProperty(value, 'gravatar'),
   default: () => {
     return {
       name: 'The user name',

@@ -2,11 +2,11 @@
   <div>
     <!-- inertia link -->
     <inertia-link
-      as="b-nav-item"
       v-if="menu.inertia"
+      :id="`sidebar-menu-${_uid}`"
+      as="b-nav-item"
       :href="menu.inertia"
       :active="menu._active"
-      :id="`sidebar-menu-${_uid}`"
     >
       <b-tooltip
         :disabled="!showTooltip"
@@ -21,10 +21,10 @@
     <!-- router link -->
     <b-nav-item
       v-else-if="menu.to"
+      :id="`sidebar-menu-${_uid}`"
       :to="menu.to"
       :exact="exact(menu)"
       :active="menu._active"
-      :id="`sidebar-menu-${_uid}`"
     >
       <b-tooltip
         :disabled="!showTooltip"
@@ -39,10 +39,10 @@
     <!-- href common -->
     <b-nav-item
       v-else
+      :id="`sidebar-menu-${_uid}`"
       :href="menu.href"
       :active="menu._active"
       :target="menu.target"
-      :id="`sidebar-menu-${_uid}`"
     >
       <b-tooltip
         :disabled="!showTooltip"
@@ -57,8 +57,11 @@
 </template>
 
 <script>
+
+import { hasProperty } from '../../utils/index'
+
 export default {
-  name: "bui-sidebar-item",
+  name: 'BuiSidebarItem',
 
   props: {
     /*
@@ -68,11 +71,11 @@ export default {
       type: Object,
       required: true,
       validator: (value) =>
-        value.hasOwnProperty("title") &&
-        value.hasOwnProperty("icon") &&
-        (value.hasOwnProperty("inertia") ||
-          value.hasOwnProperty("to") ||
-          value.hasOwnProperty("href")),
+        hasProperty(value, 'title') &&
+        hasProperty(value, 'icon') &&
+        (hasProperty(value, 'inertia') ||
+          hasProperty(value, 'to') ||
+          hasProperty(value, 'href'))
     },
 
     /*
@@ -82,16 +85,16 @@ export default {
     showTooltip: {
       type: Boolean,
       required: false,
-      default: true,
-    },
+      default: true
+    }
   },
   methods: {
-    exact(menu) {
-      if (!menu.hasOwnProperty("exact")) {
-        return true;
+    exact (menu) {
+      if (!hasProperty(menu, 'exact')) {
+        return true
       }
-      return menu.exact;
-    },
-  },
-};
+      return menu.exact
+    }
+  }
+}
 </script>

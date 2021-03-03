@@ -2,18 +2,19 @@
   <div>
     <div class="d-flex align-items-end">
       <bui-icon
+        v-for="i in 8"
+        :key="i"
         name="gear"
         class="mx-2"
         :size="i * 15"
-        v-for="i in 8"
         :class="colorClass"
       />
     </div>
 
     <b-button
-      class="my-4 mx-1 border-0"
       v-for="(color, key) in colors"
       :key="key"
+      class="my-4 mx-1 border-0"
       :style="{ background: color }"
       @click="colorClass = key"
     >
@@ -24,17 +25,17 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       colors: {
-        teal: "#20c997",
-        indigo: "#6610f2",
-        orange: "#fd7e14",
+        teal: '#20c997',
+        indigo: '#6610f2',
+        orange: '#fd7e14'
       },
-      colorClass: null,
-    };
-  },
-};
+      colorClass: null
+    }
+  }
+}
 </script>
 
 <style lang="scss">

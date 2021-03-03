@@ -1,9 +1,12 @@
 <template>
   <div class="bui-container">
-    <main class="bui-main" :class="`bui-main-${sidebarState}`">
+    <main
+      class="bui-main"
+      :class="`bui-main-${sidebarState}`"
+    >
       <b-container>
         <div class="px-sm-2 py-4 py-sm-5">
-          <slot></slot>
+          <slot />
         </div>
       </b-container>
     </main>
@@ -11,18 +14,18 @@
 </template>
 
 <script>
-import { sidebarStateProp } from "../../assets/js/props";
+import { sidebarStateProp } from '../../assets/js/props'
 
 export default {
-  name: "bui-container",
+  name: 'BuiContainer',
   props: {
     /*
      * Estado do sidebar:
      * se tem margin ou não
      */
-    sidebarState: sidebarStateProp,
-  },
-};
+    sidebarState: sidebarStateProp
+  }
+}
 </script>
 
 <style lang="scss" scoped>

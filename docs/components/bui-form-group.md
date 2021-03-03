@@ -37,3 +37,4 @@ The component provides properties for label, help text, required field indicator
 | Name | Description |
 | -------- | ---- |
 | `default` | Slot for the input |
+| `actions` | Slot for placing action icons inside the input | 

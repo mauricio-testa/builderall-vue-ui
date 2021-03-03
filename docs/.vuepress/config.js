@@ -31,7 +31,7 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Components', link: '/components/bui-navbar' },
-          { text: 'Demo', link: 'https://builderall-vue-ui-demo.netlify.app/' },
+          { text: 'Demo', link: 'https://builderall-vue-ui-demo.netlify.app/' }
         ],
         sidebar: [
           {
@@ -56,7 +56,7 @@ module.exports = {
               ['/components/bui-icon', 'Icon'],
               ['/components/bui-form-group', 'Form group'],
               ['/components/bui-language-selector', 'Language Selector'],
-              ['/components/bui-modal-confirm', 'Confirmation modal'],
+              ['/components/bui-modal-confirm', 'Confirmation modal']
             ]
           },
           {
@@ -68,13 +68,14 @@ module.exports = {
               ['/bootstrap/b-dropdown', 'Dropdown'],
               ['/bootstrap/b-inputs', 'Inputs'],
               ['/bootstrap/b-modal', 'Modal'],
+              // ['/bootstrap/b-table', 'Table'],
               ['/bootstrap/b-tabs', 'Tabs'],
-              ['/bootstrap/b-toast', 'Toast'],
+              ['/bootstrap/b-toast', 'Toast']
             ]
           }
         ]
       }
     }
-  },
+  }
 
 }

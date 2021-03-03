@@ -7,40 +7,64 @@
     :popper-opts="{ positionFixed: true, eventsEnabled: true }"
     toggle-class="text-decoration-none p-0"
   >
-    <template v-slot:button-content>
-      <bui-icon name="three-dots-vertical"></bui-icon>
+    <template #button-content>
+      <bui-icon name="three-dots-vertical" />
     </template>
     <b-dropdown-item>
-      <bui-icon name="gear" :size="20"></bui-icon>
+      <bui-icon
+        name="gear"
+        :size="20"
+      />
       <span> Manage </span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="server-settings" :size="20"></bui-icon>
+      <bui-icon
+        name="server-settings"
+        :size="20"
+      />
       <span> Server settings </span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="backup" :size="20"></bui-icon>
+      <bui-icon
+        name="backup"
+        :size="20"
+      />
       <span> Backup</span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="database" :size="20"></bui-icon>
+      <bui-icon
+        name="database"
+        :size="20"
+      />
       <span> Database </span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="globe-gear" :size="20"></bui-icon>
+      <bui-icon
+        name="globe-gear"
+        :size="20"
+      />
       <span> Domain </span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="file-transfer" :size="20"></bui-icon>
+      <bui-icon
+        name="file-transfer"
+        :size="20"
+      />
       <span> FTP </span>
     </b-dropdown-item>
     <b-dropdown-item>
-      <bui-icon name="pencil" :size="20"></bui-icon>
+      <bui-icon
+        name="pencil"
+        :size="20"
+      />
       <span> Rename </span>
     </b-dropdown-item>
-    <b-dropdown-divider></b-dropdown-divider>
+    <b-dropdown-divider />
     <b-dropdown-item>
-      <bui-icon name="trash" :size="20"></bui-icon>
+      <bui-icon
+        name="trash"
+        :size="20"
+      />
       <span> Delete </span>
     </b-dropdown-item>
   </b-dropdown>

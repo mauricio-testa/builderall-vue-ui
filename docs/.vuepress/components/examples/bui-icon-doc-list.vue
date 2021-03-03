@@ -1,10 +1,20 @@
 <template>
   <div>
-    <b-form-input type="search" v-model="search" class="my-3"></b-form-input>
+    <b-form-input
+      v-model="search"
+      type="search"
+      class="my-3"
+    />
 
     <div class="icons-grid">
-      <div v-for="(icon, name) in icons" :key="name">
-        <bui-icon :name="extractIconName(name)" :size="30"></bui-icon>
+      <div
+        v-for="(icon, name) in icons"
+        :key="name"
+      >
+        <bui-icon
+          :name="extractIconName(name)"
+          :size="30"
+        />
         {{ extractIconName(name) }}
       </div>
     </div>
@@ -27,35 +37,35 @@
 </template>
 
 <script>
-import icons from "../../../../src/assets/js/icons/index";
-import { kebabCase } from "lodash";
+import icons from '../../../../src/assets/js/icons/index'
+import { kebabCase } from 'lodash'
 
 export default {
-  data() {
+  data () {
     return {
-      search: null,
-    };
+      search: null
+    }
   },
   computed: {
-    icons() {
+    icons () {
       if (!this.search) {
-        return icons;
+        return icons
       }
-      var filtered = {};
-      for (var k in icons) {
+      const filtered = {}
+      for (const k in icons) {
         if (k.toLowerCase().indexOf(this.search.toLowerCase()) > -1) {
-          filtered[k] = icons[k];
+          filtered[k] = icons[k]
         }
       }
-      return filtered;
-    },
+      return filtered
+    }
   },
   methods: {
-    extractIconName(name) {
-      return kebabCase(name.substr(3, name.length));
-    },
-  },
-};
+    extractIconName (name) {
+      return kebabCase(name.substr(3, name.length))
+    }
+  }
+}
 </script>
 
 <style scoped>

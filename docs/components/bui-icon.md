@@ -95,4 +95,5 @@ Set the `white` property to have the icon contrast to dark backgrounds.
 | `height` | `Number` | `22` | Icon height in px |
 | `width` | `Number` | `22` | Icon width in px |
 | `white` | `Boolean` | `false` | Used to make the icon white and display above a dark background |
-| `rotate` | `Number` | `0` | Icon rotation
+| `rotate` | `Number` | `0` | Icon rotation |
+| `gray` | `Boolean` | `false` | Icon with disabled semantics

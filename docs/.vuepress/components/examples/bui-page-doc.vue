@@ -1,8 +1,15 @@
 <template>
-  <bui-page title="Dashboard" subtitle="Welcome to a Builderall application!">
+  <bui-page
+    title="Dashboard"
+    subtitle="Welcome to a Builderall application!"
+  >
     <template #page-header-right>
       <b-button variant="primary">
-        <bui-icon name="plus" white :size="18"></bui-icon>
+        <bui-icon
+          name="plus"
+          white
+          :size="18"
+        />
         New calendar
       </b-button>
     </template>

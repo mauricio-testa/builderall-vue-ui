@@ -1,17 +1,31 @@
 <template>
   <section>
-    <b-row align-v="center" class="mb-4">
-      <b-col lg="6" md="6">
+    <b-row
+      align-v="center"
+      class="mb-4"
+    >
+      <b-col
+        lg="6"
+        md="6"
+      >
         <slot name="page-header-left">
-          <h1 class="bui-page-title" v-text="title" v-if="title"></h1>
+          <h1
+            v-if="title"
+            class="bui-page-title"
+            v-text="title"
+          />
           <span
+            v-if="subtitle"
             class="bui-page-subtitle"
             v-text="subtitle"
-            v-if="subtitle"
-          ></span>
+          />
         </slot>
       </b-col>
-      <b-col lg="6" md="6" class="page-header-right mt-3 mt-md-0">
+      <b-col
+        lg="6"
+        md="6"
+        class="page-header-right mt-3 mt-md-0"
+      >
         <div class="d-flex justify-content-end">
           <slot name="page-header-right" />
         </div>
@@ -23,19 +37,21 @@
 
 <script>
 export default {
-  name: "bui-page",
+  name: 'BuiPage',
 
   props: {
     title: {
       type: String,
       required: false,
+      default: undefined
     },
     subtitle: {
       type: String,
       required: false,
-    },
-  },
-};
+      default: undefined
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

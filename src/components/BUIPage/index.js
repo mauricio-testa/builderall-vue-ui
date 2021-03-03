@@ -1,3 +1,3 @@
 import BUIPage from './BUIPage'
 
-export default BUIPage;
+export default BUIPage

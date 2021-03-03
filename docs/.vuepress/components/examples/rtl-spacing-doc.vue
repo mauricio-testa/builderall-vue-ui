@@ -1,7 +1,14 @@
 <template>
   <div>
-    <ul style="list-style-type: none" v-for="property in properties">
-      <li v-for="side in ['l', 'r']" :key="side">
+    <ul
+      v-for="property in properties"
+      :key="property.name"
+      style="list-style-type: none"
+    >
+      <li
+        v-for="side in ['l', 'r']"
+        :key="side"
+      >
         <ul
           v-for="variant in property.variants"
           :key="variant"
@@ -24,19 +31,19 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       properties: [
         {
-          name: "m",
-          variants: ["ltr", "ltrn"],
+          name: 'm',
+          variants: ['ltr', 'ltrn']
         },
         {
-          name: "p",
-          variants: ["ltr"],
-        },
-      ],
-    };
-  },
-};
+          name: 'p',
+          variants: ['ltr']
+        }
+      ]
+    }
+  }
+}
 </script>

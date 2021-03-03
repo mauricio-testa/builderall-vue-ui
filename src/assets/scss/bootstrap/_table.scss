@@ -1,0 +1,17 @@
+.b-table {
+  border: 1px solid #dee2e6;
+  thead {
+    background: #F7F8FC;
+    border: 1px solid #DEE3EA;
+    border-radius: 5px 5px 0px 0px;
+  }
+  tbody {
+    font: normal normal normal 14px/18px Muli;
+    color: #434343;
+  }
+  &.table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color:#FDFDFD;
+    }
+  }
+}

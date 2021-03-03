@@ -6,10 +6,10 @@ const mixinChangesDetector = {
   },
 
   methods: {
-    $_mixinChangesDetector_storeInitial(object) {
-      this.initialObject = JSON.stringify(object);
+    $_mixinChangesDetector_storeInitial (object) {
+      this.initialObject = JSON.stringify(object)
     },
-    $_mixinChangesDetector_hasChanged(newObject) {
+    $_mixinChangesDetector_hasChanged (newObject) {
       return JSON.stringify(newObject) !== this.initialObject
     }
   }

@@ -1,18 +1,17 @@
-const defaultOptions = {
-  rtl: false
-};
-
 import './main.scss'
 
 import './assets/css/fonts.css'
 
 import * as components from './components'
 
-export const BuilderallVueUi = {
-  install(Vue, options = {}) {
+const defaultOptions = {
+  rtl: false
+}
 
+export const BuilderallVueUi = {
+  install (Vue, options = {}) {
     // merge options
-    let appOptions = Object.assign({}, defaultOptions, options);
+    const appOptions = Object.assign({}, defaultOptions, options)
 
     // components
     for (const componentName in components) {
