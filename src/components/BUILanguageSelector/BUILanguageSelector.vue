@@ -36,7 +36,10 @@ export default {
   },
 
   props: {
-    value: String,
+    value: {
+      type: String,
+      default: null
+    },
 
     /*
      * Dataset com os idiomas suportados.

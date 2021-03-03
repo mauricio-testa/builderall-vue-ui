@@ -64,9 +64,7 @@ export default {
     }
   },
   methods: {
-    doSomething (arg) {
-      this.sidebarState = arg
-    }
+    doSomething () {}
   }
 }
 </script>

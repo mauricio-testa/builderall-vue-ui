@@ -1,14 +1,17 @@
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <div
     class="bui-icon"
     :class="`bui-icon-${name}`"
     :style="style"
     v-html="icon"
   />
+  <!-- eslint-enable -->
 </template>
 
 <script>
+import { hasProperty } from '../../utils/index'
 import icons from '../../assets/js/icons/index.js'
 
 import { camelCase, startCase } from 'lodash'
@@ -32,11 +35,18 @@ export default {
       required: true,
       type: String,
       validator: (value) => {
-        return icons.hasOwnProperty(makeIconName(value))
+        return hasProperty(icons, makeIconName(value))
       }
     },
 
-    size: { ...propIconSize, ...{ default: 22 } },
+    size: {
+      type: [Number, String],
+      required: false,
+      default: 22,
+      validator: (size) => {
+        return !isNaN(size)
+      }
+    },
 
     height: propIconSize,
 

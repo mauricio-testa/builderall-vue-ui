@@ -48,7 +48,8 @@ export default {
      */
     label: {
       type: String,
-      required: false
+      required: false,
+      default: null
     },
 
     /*
@@ -56,7 +57,8 @@ export default {
      */
     help: {
       type: String,
-      required: false
+      required: false,
+      default: null
     },
 
     /*
@@ -92,7 +94,8 @@ export default {
      */
     value: {
       type: [Number, Object, String],
-      required: false
+      required: false,
+      default: null
     }
   },
 

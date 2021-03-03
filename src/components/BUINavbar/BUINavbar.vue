@@ -54,20 +54,20 @@
           <template #button-content>
             <b-avatar
               variant="default"
-              :src="user.gravatar"
+              :src="internalUser.gravatar"
             />
           </template>
 
           <b-dropdown-item href="#">
             <div class="d-flex profile-dropdown align-items-center">
               <b-avatar
-                :src="user.gravatar"
+                :src="internalUser.gravatar"
                 variant="default"
                 size="3rem"
               />
               <div class="flex-fill d-flex flex-column m-3">
-                <span v-text="user.name" />
-                <span v-text="user.email" />
+                <span v-text="internalUser.name" />
+                <span v-text="internalUser.email" />
               </div>
             </div>
           </b-dropdown-item>
@@ -88,7 +88,7 @@
           </b-dropdown-item>
 
           <bui-language-selector
-            v-model="user.locale"
+            v-model="internalUser.locale"
             class="mt-1 mx-3 mb-3"
             :rtl="$buiOptions.isRtl"
             :options="languages"
@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import BUIIcon from '../BUIIcon/BUIIcon'
+
 import {
   userProp,
   sidebarStateProp,
@@ -126,10 +126,6 @@ import {
 
 export default {
   name: 'BuiNavbar',
-
-  components: {
-    BUIIcon
-  },
 
   props: {
     /*
@@ -157,7 +153,8 @@ export default {
      */
     logoSm: {
       type: String,
-      required: false
+      required: false,
+      default: null
     },
 
     /*
@@ -194,9 +191,15 @@ export default {
     languages: languagesProp
   },
 
+  data () {
+    return {
+      internalUser: this.user
+    }
+  },
+
   computed: {
     burgerIconName () {
-      return this.sidebarState == 'mini' ? 'menu-burger' : 'menu-burger-open'
+      return this.sidebarState === 'mini' ? 'menu-burger' : 'menu-burger-open'
     }
   },
 
@@ -204,12 +207,12 @@ export default {
     toggleSidebar () {
       this.$emit(
         'toggle-sidebar',
-        this.sidebarState == 'mini' ? 'expanded' : 'mini'
+        this.sidebarState === 'mini' ? 'expanded' : 'mini'
       )
     },
 
     changeLanguage () {
-      this.$emit('change-language', this.user.locale)
+      this.$emit('change-language', this.internalUser.locale)
     },
 
     logout () {

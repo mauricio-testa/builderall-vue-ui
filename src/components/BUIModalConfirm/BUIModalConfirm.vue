@@ -11,10 +11,7 @@
     @cancel="cancel"
     @hide="reset"
   >
-    <template
-      #modal-ok="{ ok }"
-      @click="ok"
-    >
+    <template #modal-ok>
       <bui-icon
         v-if="options.iconName"
         :name="options.iconName"
@@ -85,7 +82,6 @@ export default {
 
     reset: function () {
       this.options = Object.assign({}, DEFAULT_OPTIONS)
-      console.log('reset', this.options, DEFAULT_OPTIONS)
     }
   }
 }

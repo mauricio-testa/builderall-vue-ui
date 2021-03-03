@@ -115,6 +115,7 @@
 <script>
 import BuiSidebarItem from './BUISidebarItem'
 import { userProp, sidebarStateProp, menusProp } from '../../assets/js/props'
+import { hasProperty } from '../../utils/index'
 
 export default {
   name: 'BuiSidebar',
@@ -138,7 +139,9 @@ export default {
      * O menu que está atualmente ativo
      */
     activeMenu: {
-      required: false
+      required: false,
+      type: [String, Number],
+      default: undefined
     },
 
     /*
@@ -159,7 +162,7 @@ export default {
 
   computed: {
     sidebarIsMini () {
-      return this.sidebarState == 'mini'
+      return this.sidebarState === 'mini'
     },
 
     menusComputed () {
@@ -190,15 +193,15 @@ export default {
 
   methods: {
     isActive (menu) {
-      if (menu.hasOwnProperty('active')) {
+      if (hasProperty(menu, 'active')) {
         return menu.active
       }
-      if (menu.hasOwnProperty('routes')) {
+      if (hasProperty(menu, 'routes')) {
         return Array.isArray(menu.routes)
           ? menu.routes.includes(this.activeMenu)
           : false
       }
-      if (menu.hasOwnProperty('prefix')) {
+      if (hasProperty(menu, 'prefix')) {
         return typeof menu.prefix === 'string' &&
           typeof this.activeMenu === 'string'
           ? this.activeMenu.startsWith(menu.prefix)

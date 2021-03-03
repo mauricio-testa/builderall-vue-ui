@@ -16,3 +16,7 @@ export const previewUpload = data => {
     reader.onerror = error => reject(error)
   })
 }
+
+export const hasProperty = (object, key) => {
+  return Object.prototype.hasOwnProperty.call(object, key)
+}

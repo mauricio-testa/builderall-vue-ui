@@ -57,6 +57,9 @@
 </template>
 
 <script>
+
+import { hasProperty } from '../../utils/index'
+
 export default {
   name: 'BuiSidebarItem',
 
@@ -68,11 +71,11 @@ export default {
       type: Object,
       required: true,
       validator: (value) =>
-        value.hasOwnProperty('title') &&
-        value.hasOwnProperty('icon') &&
-        (value.hasOwnProperty('inertia') ||
-          value.hasOwnProperty('to') ||
-          value.hasOwnProperty('href'))
+        hasProperty(value, 'title') &&
+        hasProperty(value, 'icon') &&
+        (hasProperty(value, 'inertia') ||
+          hasProperty(value, 'to') ||
+          hasProperty(value, 'href'))
     },
 
     /*
@@ -87,7 +90,7 @@ export default {
   },
   methods: {
     exact (menu) {
-      if (!menu.hasOwnProperty('exact')) {
+      if (!hasProperty(menu, 'exact')) {
         return true
       }
       return menu.exact

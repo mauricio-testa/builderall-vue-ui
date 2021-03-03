@@ -31,7 +31,7 @@
     "prepublishOnly": "npm run build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:lint": "eslint ./docs/** --fix --no-error-on-unmatched-pattern",
+    "docs:lint": "eslint ./docs/.vuepress/** --fix --no-error-on-unmatched-pattern",
     "lint": "eslint ./src/** --fix --no-error-on-unmatched-pattern"
   },
   "peerDependencies": {
