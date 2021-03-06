@@ -20,6 +20,10 @@ export default ({ Vue, options, router, siteData }) => {
       toaster: 'b-toaster-bottom-right',
       appendToast: true,
       noCloseButton: true
+    },
+    BModal: {
+      centered: true,
+      noFade: true
     }
   }
 
