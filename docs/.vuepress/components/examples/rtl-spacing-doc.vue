@@ -26,6 +26,13 @@
         </ul>
       </li>
     </ul>
+    <b-button
+      class="my-2"
+      variant="link"
+      @click="toggleDir"
+    >
+      Toggle documment dir
+    </b-button>
   </div>
 </template>
 
@@ -43,6 +50,13 @@ export default {
           variants: ['ltr']
         }
       ]
+    }
+  },
+
+  methods: {
+    toggleDir () {
+      const dir = document.documentElement.dir
+      document.documentElement.dir = dir === 'rtl' ? 'ltr' : 'rtl'
     }
   }
 }

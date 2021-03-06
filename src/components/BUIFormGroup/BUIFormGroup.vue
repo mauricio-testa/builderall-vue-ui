@@ -157,6 +157,12 @@ export default {
 </script>
 
 <style lang="scss">
+html[dir=rtl] {
+  .bui-input .bui-input-actions {
+    left: 0;
+    right: unset;
+  }
+}
 .bui-input {
   position: relative;
   .bui-input-actions {
