@@ -1,4 +1,12 @@
 
+html[dir="rtl"] {
+  .rtl-mirror {
+    transform: scaleX(-1);
+  }
+}
+
+/* spacing helper rtl */ 
+
 $steps: (
   0.25rem,
   0.5rem,
