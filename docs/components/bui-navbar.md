@@ -44,7 +44,7 @@ Top header and popup component of the user profile. Contains the button that cha
 
 ### Slots
 | Name | Description |
-| -------- | ---- | ------- | ----------- |
+| -------- | ---- |
 | `items-right` | Space for icons in the header |
 | `dropdown-item-before` | Space for dropdown items before language selector |
 | `dropdown-item-after` | Space for dropdown items after language selector |
