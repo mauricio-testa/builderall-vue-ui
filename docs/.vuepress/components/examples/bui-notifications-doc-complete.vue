@@ -1,14 +1,10 @@
 <template>
   <div>
-    <b-button
-      v-b-toggle.bui-notifications-complete
-      variant="primary"
-    >
-      <bui-icon
-        name="bell"
-        white
-      /> Open
-    </b-button>
+    <bui-navbar logo="https://booking.builderall.com/images/images/meta/logo.png">
+      <template #items-right>
+        <bui-icon name="bell" v-b-toggle.bui-notifications-complete/>
+      </template>
+    </bui-navbar>
 
     <bui-notifications
       id="bui-notifications-complete"

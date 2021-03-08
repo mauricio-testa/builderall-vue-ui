@@ -4,7 +4,7 @@
     shadow
     backdrop
     no-header
-    :right="!$buiOptions.isRTL"
+    :right="!$buiOptions.isRtl"
     class="bui-notifications"
     @hidden="$emit('hidden')"
     @shown="$emit('shown')"
