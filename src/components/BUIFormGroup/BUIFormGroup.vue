@@ -177,6 +177,8 @@ html[dir=rtl] {
     button {
       border: none;
       background: transparent;
+      display: flex;
+      align-items: center;
       &:focus {
         outline: none;
       }
