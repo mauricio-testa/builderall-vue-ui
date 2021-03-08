@@ -1,5 +1,15 @@
 <template>
   <section>
+    <slot
+      name="breadcrumbs"
+      :items="breadcrumbs"
+    >
+      <b-breadcrumb
+        v-if="breadcrumbs.length"
+        :items="breadcrumbs"
+      />
+    </slot>
+
     <b-row
       align-v="center"
       class="mb-4"
@@ -45,10 +55,17 @@ export default {
       required: false,
       default: undefined
     },
+
     subtitle: {
       type: String,
       required: false,
       default: undefined
+    },
+
+    breadcrumbs: {
+      type: Array,
+      required: false,
+      default: () => []
     }
   }
 }
