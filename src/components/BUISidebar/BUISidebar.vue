@@ -50,7 +50,7 @@
     </div>
 
     <b-sidebar
-      id="sidebar-mobile"
+      :id="sidebarMobileId"
       class="bui-sidebar-mobile"
       shadow
       backdrop
@@ -60,7 +60,7 @@
       <div class="bui-sidebar-mobile-header">
         <div class="d-flex justify-content-end">
           <b-button-close
-            v-b-toggle.sidebar-mobile
+            v-b-toggle="sidebarMobileId"
             text-variant="white"
           />
         </div>
@@ -114,7 +114,7 @@
 
 <script>
 import BuiSidebarItem from './BUISidebarItem'
-import { userProp, sidebarStateProp, menusProp } from '../../assets/js/props'
+import { userProp, sidebarStateProp, menusProp, sidebarMobileIdProp } from '../../assets/js/props'
 import { hasProperty } from '../../utils/index'
 
 export default {
@@ -157,7 +157,9 @@ export default {
     /*
      * Menus mobile
      */
-    menusMobile: menusProp
+    menusMobile: menusProp,
+
+    sidebarMobileId: sidebarMobileIdProp
   },
 
   computed: {

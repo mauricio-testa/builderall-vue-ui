@@ -43,3 +43,9 @@ export const userProp = {
     }
   }
 }
+
+export const sidebarMobileIdProp = {
+  type: String,
+  required: false,
+  default: 'bui-sidebar-mobile'
+}

@@ -41,6 +41,7 @@ Top header and popup component of the user profile. Contains the button that cha
 | `label-logout` | `String` | `'Logout'` | Label "logout" in the user's popup |
 | `home-link` | `String` | `'/'` | Application home link when clicking on the logo |
 | `languages` | `Array` | An array of languages `[{key: 'pt_BR', desc: 'Português (Brasil)'}, ...]` | List of available languages. You can customize this list to provide only languages that have translations. Every language must have a `key` and a `desc` |
+| `sidebar-mobile-id` | `String` | `bui-sidebar-mobile` | Related mobile sidebar ID. It must be the same in the bui-navbar and bui-sidebar. If your application has only one sidebar you don't have to worry about this property  
 
 ### Slots
 | Name | Description |

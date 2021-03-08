@@ -8,7 +8,7 @@
   >
     <div
       v-if="sidebarState != 'disabled'"
-      v-b-toggle.sidebar-mobile
+      v-b-toggle="sidebarMobileId"
       class="d-sm-none bui-toggle-icon"
     >
       <bui-icon
@@ -121,7 +121,8 @@
 import {
   userProp,
   sidebarStateProp,
-  languagesProp
+  languagesProp,
+  sidebarMobileIdProp
 } from '../../assets/js/props'
 
 export default {
@@ -183,6 +184,8 @@ export default {
       required: false,
       default: '/'
     },
+
+    sidebarMobileId: sidebarMobileIdProp,
 
     /*
      * Dataset com os idiomas suportados.

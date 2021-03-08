@@ -1,6 +1,7 @@
 <template>
   <div>
     <bui-sidebar
+      sidebar-mobile-id="example-sidebar-slots"
       sidebar-state="expanded"
       :menus="menus"
       :menus-bottom="menus_bottom"
@@ -27,6 +28,9 @@
         {{ menu.title }} <b-badge> {{ menu.icon }}</b-badge>
       </template>
     </bui-sidebar>
+
+    <b-button class="mt-3" v-b-toggle.example-sidebar-slots>Mobile</b-button>
+
   </div>
 </template>
 
