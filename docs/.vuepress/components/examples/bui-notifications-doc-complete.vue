@@ -2,7 +2,7 @@
   <div>
     <bui-navbar logo="https://booking.builderall.com/images/images/meta/logo.png">
       <template #items-right>
-        <bui-icon name="bell" v-b-toggle.bui-notifications-complete/>
+        <bui-icon name="bell" v-b-toggle.bui-notifications-complete size="18"/>
       </template>
     </bui-navbar>
 

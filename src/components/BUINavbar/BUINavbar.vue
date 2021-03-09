@@ -31,7 +31,7 @@
     <b-navbar-brand :href="homeLink">
       <img
         :src="logo"
-        class="mx-4 mb-1 d-sm-inline-block"
+        class="mx-4 d-sm-inline-block"
         :class="{ 'd-none': logoSm }"
       >
       <img
@@ -44,7 +44,12 @@
 
     <slot name="items-right" />
 
-    <div class="mx-3 mx-sm-4 d-flex align-items-center">
+    <span
+      v-if="hasItemsRightSlot"
+      class="bui-navbar-vertical-divider mx-3"
+    />
+
+    <div class="d-flex align-items-center mr-ltr-3 ml-rtl-3">
       <b-navbar-nav>
         <b-nav-item-dropdown
           :right="!$buiOptions.isRtl"
@@ -203,6 +208,10 @@ export default {
   computed: {
     burgerIconName () {
       return this.sidebarState === 'mini' ? 'menu-burger' : 'menu-burger-open'
+    },
+
+    hasItemsRightSlot () {
+      return this.$slots['items-right'] !== undefined
     }
   },
 
@@ -278,6 +287,16 @@ export default {
     .bui-icon {
       transition: $sidebar-transition;
     }
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  .bui-navbar-vertical-divider {
+    display: block;
+    height: 25px;
+    border-left: 1px solid #bed1ea;
   }
 }
 </style>
