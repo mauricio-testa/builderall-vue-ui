@@ -157,6 +157,12 @@ export default {
 </script>
 
 <style lang="scss">
+html[dir=rtl] {
+  .bui-input .bui-input-actions {
+    left: 0;
+    right: unset;
+  }
+}
 .bui-input {
   position: relative;
   .bui-input-actions {
@@ -171,6 +177,8 @@ export default {
     button {
       border: none;
       background: transparent;
+      display: flex;
+      align-items: center;
       &:focus {
         outline: none;
       }

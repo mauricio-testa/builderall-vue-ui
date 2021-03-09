@@ -5,8 +5,6 @@
     :ok-variant="options.okVariant"
     :cancel-variant="options.cancelVariant"
     :cancel-title="options.cancelTitle"
-    centered
-    no-fade
     @ok="ok"
     @cancel="cancel"
     @hide="reset"

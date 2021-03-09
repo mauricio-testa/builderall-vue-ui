@@ -5,16 +5,16 @@
 select.custom-select,
 .form-control {
   background-color: #fff;
-  border: 1px solid #DDDDDD;
+  border: 2px solid #DDDDDD;
   font-family: Lato;
   border-radius: 3px;
   line-height: 22px;
   font-size: 0.9rem;
-  height: 42px;
+  height: 2.875rem;
   color: #434343;
   &:focus {
-    box-shadow: unset;
-    border: 1px solid $primary;
+    box-shadow: unset !important;
+    border: 2px solid #adadad;
   }
   &.form-control-xl {
     box-shadow: 0px 2px 14px #0000001A;

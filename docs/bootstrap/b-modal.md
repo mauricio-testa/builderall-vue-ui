@@ -21,3 +21,16 @@
   </b-modal>
 </div>
 ```
+
+### Plugin config
+
+```js
+const BV_CONFIG = {
+  BModal: {
+    centered: true,
+    noFade: true
+  }
+}
+
+Vue.use(BootstrapVue, BV_CONFIG);
+```

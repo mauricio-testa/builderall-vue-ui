@@ -46,17 +46,31 @@
   background: #FFFFFF;
   box-shadow: 0px 2px 14px #0000001A;
   border-radius: 5px;
-  .card-header {
+  .card-header, .card-footer {
     font: normal normal bold 20px/19px Muli;
     letter-spacing: 0px;
     color: #333333;
     background: #F7F7F7;
     box-shadow: 0px 6px 3px #7E7E7E10;
-    border-radius: 4px 4px 0px 0px;
     padding: 14px 25px;
     min-height: 70px;
     display: flex;
     align-items: center;
+    &:focus {
+      outline: none;
+    }
+  }
+  .card-header {
+    border-radius: 4px 4px 0px 0px;
+    .bui-icon-arrow-right {
+      transition: .4s;
+    }
+    &.collapsed .bui-icon-arrow-right {
+      transform: rotate(90deg) !important;
+    }
+  }
+  .card-footer {
+    border-radius: 0px 0px 4px 4px;
   }
   @media screen and (min-width: 764px) {
     .card-body {

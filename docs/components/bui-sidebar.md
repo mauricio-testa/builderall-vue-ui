@@ -152,6 +152,7 @@ It is possible to customize the content of the items in the main, bottom and mob
 | `menus` | `Array` | `[]` | Array of menus to display in main sidebar area |
 | `menus-bottom` | `Array` | `[]` | Array of menus to display in bottom sidebar area |
 | `menus-mobile` | `Array` | `menus.concat(menusBottom)` | Array of menus to display in mobile sidebar. If not defined, a concatenation between `menus` e `menus-bottom` will be displayed |
+| `sidebar-mobile-id` | `String` | `bui-sidebar-mobile` | Related mobile sidebar ID. It must be the same in the bui-navbar and bui-sidebar. If your application has only one sidebar you don't have to worry about this property  
 
 
 ### Slots

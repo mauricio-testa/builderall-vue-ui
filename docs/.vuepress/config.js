@@ -56,7 +56,8 @@ module.exports = {
               ['/components/bui-icon', 'Icon'],
               ['/components/bui-form-group', 'Form group'],
               ['/components/bui-language-selector', 'Language Selector'],
-              ['/components/bui-modal-confirm', 'Confirmation modal']
+              ['/components/bui-modal-confirm', 'Confirmation modal'],
+              ['/components/bui-notifications', 'Notifications']
             ]
           },
           {

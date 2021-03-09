@@ -1,5 +1,10 @@
 <template>
+  <span
+    v-if="onlyFlag"
+    :class="`bui-flag bui-flag-${value}`"
+  />
   <v-select
+    v-else
     v-model="country"
     :dir="$buiOptions.isRtl ? 'rtl' : 'ltr'"
     style="background-color: #f2f2f2"
@@ -39,6 +44,11 @@ export default {
     value: {
       type: String,
       default: null
+    },
+
+    onlyFlag: {
+      type: Boolean,
+      default: false
     },
 
     /*

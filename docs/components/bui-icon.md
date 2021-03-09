@@ -72,6 +72,13 @@ Use the `rotate` property to rotate the icon, in degress
 </template>
 ```
 
+::: tip
+You can use the `rtl-mirror` property to automatically mirror the icon when the document is in RTL
+```html
+<bui-icon name="next" rtl-mirror />
+```
+::: 
+
 ## Dark
 
 Set the `white` property to have the icon contrast to dark backgrounds.
@@ -96,4 +103,5 @@ Set the `white` property to have the icon contrast to dark backgrounds.
 | `width` | `Number` | `22` | Icon width in px |
 | `white` | `Boolean` | `false` | Used to make the icon white and display above a dark background |
 | `rotate` | `Number` | `0` | Icon rotation |
-| `gray` | `Boolean` | `false` | Icon with disabled semantics
+| `gray` | `Boolean` | `false` | Icon with disabled semantics |
+| `rtl-mirror` | `Boolean` | `false` | If `true`, the icon will be mirrored when the document is in RTL  

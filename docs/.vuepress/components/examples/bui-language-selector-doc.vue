@@ -1,7 +1,11 @@
 <template>
   <div>
     <bui-language-selector v-model="lang" />
-    <span class="mt-3 d-block"> Model: {{ lang }} </span>
+    <span class="my-3 d-block"> Model: {{ lang }} </span>
+    <bui-language-selector
+      v-model="lang"
+      only-flag
+    />
   </div>
 </template>
 <script>

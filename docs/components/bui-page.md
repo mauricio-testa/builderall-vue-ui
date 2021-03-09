@@ -22,6 +22,14 @@ You can customize the content of the two columns. But it is preferable that you 
 <<< @/docs/.vuepress/components/examples/bui-page-doc-slots.vue
 </SourceCode>
 
+## Breadcrumbs
+<Demo componentName="examples-bui-page-doc-breadcrumbs" />
+
+### Code
+<SourceCode>
+<<< @/docs/.vuepress/components/examples/bui-page-doc-breadcrumbs.vue
+</SourceCode>
+
 ## API Reference
 
 ### Props
@@ -29,6 +37,7 @@ You can customize the content of the two columns. But it is preferable that you 
 | -------- | ---- | ------- | ----------- |
 | `title` | `String` | `null` | Page title |
 | `subtitle` | `String` | `null` | Page subtitle |
+| `breadcrumbs` | `Array` | `[]` | A array of [breadcrumb items](https://bootstrap-vue.org/docs/components/breadcrumb)
 
 
 ### Slots
@@ -37,3 +46,5 @@ You can customize the content of the two columns. But it is preferable that you 
 | `default` | Content to display below the title |
 | `page-header-right` | Content to be displayed on the reverse side of the title ("new" button goes here) |
 | `page-header-left` | Content to be displayed instead of the title and subtitle |
+| `breadcrumb-item` | Slot that customize breadcrumb items | 
+| `breadcrumb-end` | Slot after breadcrumbs | 

@@ -1,6 +1,7 @@
 export const copyToClipboard = text => {
   const tempInput = document.createElement('input')
   tempInput.style = 'position: absolute; left: -1000px; top: -1000px'
+  tempInput.classList.add('bui-clipboard-temp-input')
   tempInput.value = text
   document.body.appendChild(tempInput)
   tempInput.select()

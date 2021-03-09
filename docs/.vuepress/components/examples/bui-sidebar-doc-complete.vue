@@ -1,6 +1,7 @@
 <template>
   <div>
     <bui-sidebar
+      sidebar-mobile-id="sidebar-example-complete"
       :sidebar-state="state"
       active-menu="sites"
       :user="user"
@@ -11,7 +12,7 @@
 
     <div class="my-3">
       <b-button
-        v-b-toggle.sidebar-mobile
+        v-b-toggle.sidebar-example-complete
         class="mx-1"
       >
         mobile

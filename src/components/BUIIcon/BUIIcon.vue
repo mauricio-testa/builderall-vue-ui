@@ -3,7 +3,7 @@
   <!-- eslint-disable vue/no-v-html -->
   <div
     class="bui-icon"
-    :class="`bui-icon-${name}`"
+    :class="[`bui-icon-${name}`, {'rtl-mirror' : rtlMirror }]"
     :style="style"
     v-html="icon"
   />
@@ -68,6 +68,12 @@ export default {
       type: Number,
       required: false,
       default: 0
+    },
+
+    rtlMirror: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
@@ -79,8 +85,11 @@ export default {
     style: function () {
       const styles = {
         width: (this.width ?? this.size) + 'px',
-        height: (this.height ?? this.size) + 'px',
-        transform: `rotate(${this.rotate}deg)`
+        height: (this.height ?? this.size) + 'px'
+      }
+
+      if (this.rotate > 0) {
+        styles.transform = `rotate(${this.rotate}deg)`
       }
 
       if (this.white) {

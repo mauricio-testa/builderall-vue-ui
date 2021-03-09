@@ -1,0 +1,20 @@
+.breadcrumb {
+    background: transparent;
+	padding: 0.75rem 0;
+    li.breadcrumb-item {
+        &:not(.active) a {
+            opacity: 0.5;
+        }
+        > * {
+            font: normal normal 600 13px/20px Muli;
+			letter-spacing: 0.39px;
+			color: #434343;
+        }
+        & + .breadcrumb-item {
+            padding-left: unset;
+        }
+        & + .breadcrumb-item::before {
+            padding-left: .5rem;
+        }
+    }
+}
