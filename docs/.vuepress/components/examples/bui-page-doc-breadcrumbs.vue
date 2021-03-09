@@ -4,6 +4,11 @@
     subtitle="Welcome to a Builderall application!"
     :breadcrumbs="breadcrumbs"
   >
+    <template #breadcrumb-end>
+      <b-button variant="primary">
+        Back
+      </b-button>
+    </template>
     Content
   </bui-page>
 </template>
@@ -13,8 +18,8 @@ export default {
   data () {
     return {
       breadcrumbs: [
-        { text: 'Admin', href: '#' },
-        { text: 'Manage', href: '#' }
+        { text: 'Admin', href: 'http://www.google.com' },
+        { text: 'Manage', href: '#', active: true }
       ]
     }
   }

@@ -46,4 +46,5 @@ You can customize the content of the two columns. But it is preferable that you 
 | `default` | Content to display below the title |
 | `page-header-right` | Content to be displayed on the reverse side of the title ("new" button goes here) |
 | `page-header-left` | Content to be displayed instead of the title and subtitle |
-| `breadcrumbs` | Slot that replaces the default b-breadcrumb component | 
+| `breadcrumb-item` | Slot that customize breadcrumb items | 
+| `breadcrumb-end` | Slot after breadcrumbs | 

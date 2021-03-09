@@ -9,7 +9,10 @@
     >
       Site Manage
       <div class="d-flex align-items-center">
-        <b-button variant="success" @click.stop>
+        <b-button
+          variant="success"
+          @click.stop
+        >
           <bui-icon
             name="save"
             white

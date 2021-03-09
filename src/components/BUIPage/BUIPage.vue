@@ -1,14 +1,30 @@
 <template>
   <section>
-    <slot
-      name="breadcrumbs"
-      :items="breadcrumbs"
+    <div
+      v-if="breadcrumbs.length || hasBreadcrumbEndSlot"
+      class="d-flex justify-content-between align-items-center mb-3"
     >
       <b-breadcrumb
         v-if="breadcrumbs.length"
-        :items="breadcrumbs"
-      />
-    </slot>
+        class="mb-0"
+      >
+        <b-breadcrumb-item
+          v-for="(breadcrumb, i) in breadcrumbs"
+          v-bind="breadcrumb"
+          :key="i"
+        >
+          <slot
+            name="breadcrumb-item"
+            :item="breadcrumb"
+          >
+            {{ breadcrumb.text }}
+          </slot>
+        </b-breadcrumb-item>
+      </b-breadcrumb>
+      <div>
+        <slot name="breadcrumb-end" />
+      </div>
+    </div>
 
     <b-row
       align-v="center"
@@ -66,6 +82,12 @@ export default {
       type: Array,
       required: false,
       default: () => []
+    }
+  },
+
+  computed: {
+    hasBreadcrumbEndSlot () {
+      return this.$slots['breadcrumb-end'] !== undefined
     }
   }
 }
