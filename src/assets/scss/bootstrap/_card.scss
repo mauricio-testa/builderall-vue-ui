@@ -56,9 +56,18 @@
     min-height: 70px;
     display: flex;
     align-items: center;
+    &:focus {
+      outline: none;
+    }
   }
   .card-header {
     border-radius: 4px 4px 0px 0px;
+    .bui-icon-arrow-right {
+      transition: .4s;
+    }
+    &.collapsed .bui-icon-arrow-right {
+      transform: rotate(90deg) !important;
+    }
   }
   .card-footer {
     border-radius: 0px 0px 4px 4px;

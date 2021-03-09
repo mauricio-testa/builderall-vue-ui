@@ -29,8 +29,12 @@
       </template>
     </bui-sidebar>
 
-    <b-button class="mt-3" v-b-toggle.example-sidebar-slots>Mobile</b-button>
-
+    <b-button
+      v-b-toggle.example-sidebar-slots
+      class="mt-3"
+    >
+      Mobile
+    </b-button>
   </div>
 </template>
 
