@@ -33,8 +33,8 @@
   &.vs--open {
     @include select-arrow-up(#fafbfc);
     .vs__dropdown-toggle {
-      box-shadow: none;
-      border: 1px solid #6799ed;
+      box-shadow: 0px 0px 0px 1px var(--primary);
+      border: 1px solid var(--primary);
       border-radius: 4px;
     }
     .vs__selected {
@@ -43,7 +43,7 @@
   }
   &.is-invalid {
     .vs__dropdown-toggle {
-      border: 1px solid #dc3545;
+      border: 1px solid var(--danger);
     }
   }
   .vs__selected {
@@ -78,9 +78,6 @@
       &:hover > * {
         background-color: var(--primary) !important;
         color: #fff !important;
-      }
-      &:hover .bbi {
-        filter: contrast(1.4);
       }
     }
   }
