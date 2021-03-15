@@ -251,6 +251,7 @@ export default {
       box-shadow: 0px 0px 5px #26242459;
       border-radius: 10px;
       border: none;
+      position: absolute;
       .dropdown-item {
         display: flex;
         align-items: center;
