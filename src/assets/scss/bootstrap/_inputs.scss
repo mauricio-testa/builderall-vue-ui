@@ -31,6 +31,17 @@ select.custom-select,
   }
 }
 
+// inputs dentro do modal tem borda 2px
+.modal {
+  select.custom-select,
+  .form-control {
+    border-width: 2px;
+    &.is-invalid:focus, &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
 select.custom-select {
   @include select-arrow-down;
   &:focus {
