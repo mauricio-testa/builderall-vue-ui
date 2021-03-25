@@ -91,6 +91,18 @@ Set the `white` property to have the icon contrast to dark backgrounds.
 <<< @/docs/.vuepress/components/examples/bui-icon-doc-dark.vue
 </SourceCode>
 
+## Gray
+
+Set this property so that the icon looks blue-gray. This is normally used when the icon is in a dropdown
+
+### Demo
+<Demo componentName="examples-bui-icon-doc-gray" />
+
+### Code
+<SourceCode>
+<<< @/docs/.vuepress/components/examples/bui-icon-doc-gray.vue
+</SourceCode>
+
 ## API Reference
 
 ### Props
@@ -104,4 +116,5 @@ Set the `white` property to have the icon contrast to dark backgrounds.
 | `white` | `Boolean` | `false` | Used to make the icon white and display above a dark background |
 | `rotate` | `Number` | `0` | Icon rotation |
 | `gray` | `Boolean` | `false` | Icon with disabled semantics |
-| `rtl-mirror` | `Boolean` | `false` | If `true`, the icon will be mirrored when the document is in RTL  
+| `rtl-mirror` | `Boolean` | `false` | If `true`, the icon will be mirrored when the document is in RTL | 
+| `gray` | `Boolean` | `false` | Set this property so that the icon looks blue-gray. This is normally used when the icon is in a dropdown
