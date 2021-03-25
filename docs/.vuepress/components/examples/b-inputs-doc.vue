@@ -1,6 +1,5 @@
 <template>
   <b-card>
-
     <!-- Text inputs -->
     <bui-form-group
       label="Label with help"
@@ -49,7 +48,10 @@
       <b-form-input type="search" />
     </bui-form-group>
 
-    <bui-form-group class="my-3" label="Big input">
+    <bui-form-group
+      class="my-3"
+      label="Big input"
+    >
       <b-input
         size="xl"
         placeholder="aksdj"
@@ -89,7 +91,6 @@
       >
         <label> Switch </label>
       </b-form-checkbox>
-      
     </bui-form-group>
 
     <bui-form-group>
@@ -128,7 +129,7 @@
     </bui-form-group>
 
     <bui-form-group label="Radio box">
-       <b-form-radio-group
+      <b-form-radio-group
         :options="['Radio 1','Radio 2']"
         class="bui-radiogroup-box"
       />
@@ -136,11 +137,11 @@
 
     <!-- date time picker -->
     <bui-form-group label="Date">
-      <b-form-datepicker/>
+      <b-form-datepicker />
     </bui-form-group>
 
     <bui-form-group label="Hour">
-      <b-form-timepicker minutes-step="5"/>
+      <b-form-timepicker minutes-step="5" />
     </bui-form-group>
   </b-card>
 </template>
