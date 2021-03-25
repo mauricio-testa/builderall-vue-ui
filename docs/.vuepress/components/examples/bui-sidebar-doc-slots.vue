@@ -44,7 +44,7 @@ export default {
     return {
       menus: [
         { title: 'Dashbard', icon: 'dashboard', href: '/' },
-        { title: 'Contacts', icon: 'person', to: '/sites' },
+        { title: 'Contacts', icon: 'user', to: '/sites' },
         { title: 'Configs', icon: 'gear', href: '/' }
       ],
       menus_bottom: [

@@ -1,8 +1,10 @@
-## Documentation
+## Builderall Vue UI
 
-To check out docs, visit [http://builderall-vue-ui.netlify.app/](http://builderall-vue-ui.netlify.app/)
+VUE component library for Builderall applications based on bootstrap-vue
 
----
+* [Docs](http://builderall-vue-ui.netlify.app/)
+* [How to install](https://builderall-vue-ui.netlify.app/guide.html)
+* [Demo app](https://builderall-vue-ui-demo.netlify.app/)
 
 ## Project setup
 ``` bash
@@ -10,12 +12,8 @@ npm install
 npm run docs:dev
 ```
 
-### Build docs
+### Lint
 ``` bash
-npm run docs:build
-```
-
-### Build Package
-``` bash
-npm run build
+npm run lint
+npm run docs:lint
 ```

@@ -27,7 +27,7 @@ export default ({ Vue, options, router, siteData }) => {
       noFade: true
     }
   }
-  Vue.component('v-select', vSelect)
+  Vue.component('VSelect', vSelect)
   Vue.use(BootstrapVue, BV_CONFIG)
   Vue.use(BuilderallVueUi, BUI_CONFIG)
 }

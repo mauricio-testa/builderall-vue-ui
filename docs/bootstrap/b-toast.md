@@ -17,7 +17,8 @@ const BV_CONFIG = {
   BToast: {
     toaster: 'b-toaster-bottom-right',
     appendToast: true,
-    noCloseButton: true
+    noCloseButton: true,
+    variant: 'success'
   }
 }
 
