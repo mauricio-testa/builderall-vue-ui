@@ -1,0 +1,63 @@
+.b-calendar {
+	.btn {
+	  justify-content: center;
+	}
+	.b-calendar-grid {
+	  background: #fff;
+	  border: unset;
+	  .btn-outline-primary {
+		color: #538FFF;
+		&:hover {
+		 background: #538FFF;
+		}
+	  }
+	  .btn {
+		border-radius: 5px !important;
+		&.active {
+		  background: #538FFF;
+		  color: #fff !important;
+		}
+	  }
+	}
+	.b-calendar-grid-caption {
+	  font-size: 1rem;
+	  padding: 0.5rem 0rem 1rem 0rem;
+	}
+	.b-calendar-grid-weekdays {
+	  border-color: transparent !important;
+	  small {
+		text-transform: capitalize;
+		font-weight: 800;
+		font-family: Muli;
+		color: #9CB2CD !important;
+	  }
+	}
+	svg.bi-circle-fill.b-icon.bi {
+	  fill: #538FFF;
+	}
+	span {
+	  font-weight: 500 !important;
+	  color: #9CB2CD !important;
+	}
+	.b-calendar-header output {
+	  background: #F5F7FC;
+	  border: 1px solid #D9E3F1;
+	  border-radius: 3px;
+	  line-height: 1.6rem;
+	  height: 35px;
+	  color: #657D9A;
+	  font-size: 0.8rem;
+	  font-weight: var(--semibold);
+	  font-family: Lato;
+	  margin-bottom: 1rem;
+	}
+	footer {
+	  display: none;
+	}
+	.btn-outline-secondary {
+	  &:hover, &:active {
+		background: #f8f9fa !important;
+		color: #212529 !important;
+	  }
+	}
+}
