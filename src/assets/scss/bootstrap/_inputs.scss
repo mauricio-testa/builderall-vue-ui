@@ -162,10 +162,26 @@ label {
   }
 }
 
+// checkbox rounded
 .custom-checkbox.bui-checkbox-rounded label {
   &:after,
   &:before {
     border-radius: 100% !important;
+  }
+}
+
+// radiobox boxed
+.bui-radiogroup-box {
+  .custom-radio {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px #00000029;
+    border-radius: 5px;
+    min-height: 55px;
+    align-items: center;
+    padding: 10px 46px;
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--primary);
+    }
   }
 }
 

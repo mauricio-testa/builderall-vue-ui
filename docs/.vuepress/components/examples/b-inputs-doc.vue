@@ -111,14 +111,18 @@
       />
     </b-form-checkbox>
 
-    <b-form-group class="my-3">
-      <template #label>
-        <label class="font-weight-bold">My website name is</label>
-      </template>
+    <bui-form-group class="my-3" label="My website name is">
       <b-input
         size="xl"
         placeholder="aksdj"
       />
-    </b-form-group>
+    </bui-form-group>
+
+    <bui-form-group label="Radio box">
+       <b-form-radio-group
+        :options="['Radio 1','Radio 2']"
+        class="bui-radiogroup-box"
+      />
+    </bui-form-group>
   </b-card>
 </template>
