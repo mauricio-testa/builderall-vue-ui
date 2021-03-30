@@ -8,18 +8,13 @@
         v-if="breadcrumbs.length"
         class="mb-0"
       >
-        <b-breadcrumb-item
-          v-for="(breadcrumb, i) in breadcrumbs"
-          v-bind="breadcrumb"
-          :key="i"
+        <slot
+          v-for="breadcrumb in breadcrumbs"
+          name="breadcrumb-item"
+          :item="breadcrumb"
         >
-          <slot
-            name="breadcrumb-item"
-            :item="breadcrumb"
-          >
-            {{ breadcrumb.text }}
-          </slot>
-        </b-breadcrumb-item>
+          <b-breadcrumb-item v-bind="breadcrumb" />
+        </slot>
       </b-breadcrumb>
       <div>
         <slot name="breadcrumb-end" />
@@ -106,7 +101,7 @@ export default {
 .bui-page-subtitle {
   font-weight: 800;
   letter-spacing: 0.45px;
-  color: $secondary;
+  color: #434343;
   opacity: 0.7;
 }
 
