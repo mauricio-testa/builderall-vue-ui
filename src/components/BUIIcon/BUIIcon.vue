@@ -3,7 +3,7 @@
   <!-- eslint-disable vue/no-v-html -->
   <div
     class="bui-icon"
-    :class="[`bui-icon-${name}`, {'rtl-mirror' : rtlMirror }]"
+    :class="[`bui-icon-${name}`, {'rtl-mirror' : rtlMirror }, `bui-icon-${variant}`]"
     :style="style"
     v-html="icon"
   />
@@ -52,16 +52,10 @@ export default {
 
     width: propIconSize,
 
-    white: {
-      type: Boolean,
+    variant: {
+      type: String,
       required: false,
-      default: false
-    },
-
-    gray: {
-      type: Boolean,
-      required: false,
-      default: false
+      default: ''
     },
 
     rotate: {
@@ -92,22 +86,44 @@ export default {
         styles.transform = `rotate(${this.rotate}deg)`
       }
 
-      if (this.white) {
-        styles.filter = 'brightness(0) invert(1)'
-      }
-
-      if (this.gray) {
-        styles.filter = 'opacity(0.5) grayscale(.7)'
-      }
-
       return styles
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .bui-icon {
   display: inline-flex;
+  &.bui-icon-primary svg * {
+    fill: var(--primary);
+  }
+  &.bui-icon-secondary svg * {
+    fill: var(--secondary);
+  }
+  &.bui-icon-success svg * {
+    fill: var(--success);
+  }
+  &.bui-icon-warning svg * {
+    fill: var(--warning);
+  }
+  &.bui-icon-danger svg * {
+    fill: var(--danger);
+  }
+  &.bui-icon-info svg * {
+    fill: var(--info);
+  }
+  &.bui-icon-light svg * {
+    fill: var(--light);
+  }
+  &.bui-icon-dark svg * {
+    fill: var(--dark);
+  }
+  &.bui-icon-white svg * {
+    fill: #fff;
+  }
+  &.bui-icon-gray svg * {
+    fill: #a5b9d5;
+  }
 }
 </style>

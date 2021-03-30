@@ -6,7 +6,7 @@
     >
       <bui-icon
         name="bell"
-        white
+        variant="white"
       /> Open
     </b-button>
 

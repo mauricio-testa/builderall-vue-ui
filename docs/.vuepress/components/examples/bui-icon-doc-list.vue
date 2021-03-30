@@ -1,21 +1,31 @@
 <template>
   <div>
-    <b-form-input
-      v-model="search"
-      type="search"
-      class="my-3"
-    />
-
+    <div class="d-flex">
+      <b-form-input
+        v-model="search"
+        type="search"
+        class="my-3"
+      />
+      <b-select
+        v-model="variant"
+        :options="variants"
+        class="my-3 ml-2"
+      />
+    </div>
     <div class="icons-grid">
       <div
         v-for="(icon, name) in icons"
         :key="name"
+        :style="{ backgroundColor : ['light', 'white', 'gray'].includes(variant) ? '#343a40' : '#f9f9f9'}"
       >
         <bui-icon
+          :variant="variant"
           :name="extractIconName(name)"
           :size="30"
         />
-        {{ extractIconName(name) }}
+        <span :style="{ color : ['light', 'white', 'gray'].includes(variant) ? '#fff' : '#333'}">
+          {{ extractIconName(name) }}
+        </span>
       </div>
     </div>
 
@@ -43,7 +53,9 @@ import { kebabCase } from 'lodash'
 export default {
   data () {
     return {
-      search: null
+      search: null,
+      variants: ['natural', 'primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark', 'white', 'gray'],
+      variant: 'natural'
     }
   },
   computed: {
@@ -79,7 +91,6 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background: #f9f9f9;
   text-align: center;
 }
 .icons-grid > div .bui-icon {

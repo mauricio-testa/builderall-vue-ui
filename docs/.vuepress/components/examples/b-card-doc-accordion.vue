@@ -15,7 +15,7 @@
         >
           <bui-icon
             name="save"
-            white
+            variant="white"
             size="18"
           />
           Save
@@ -42,7 +42,7 @@
         <b-button variant="success">
           <bui-icon
             name="save"
-            white
+            variant="white"
             size="18"
           />
           Save

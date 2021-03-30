@@ -53,8 +53,6 @@ const BUIOkFill = '<svg ' + ASPECT + ' viewBox="0 0 18.602 18.602"><path id="Cam
 export default {
   BUIBackup,
   BUICart,
-  BUICircleComplete,
-  BUICircleIncomplete,
   BUICloud,
   BUIDatabase,
   BUIGlobeGear,
@@ -65,12 +63,10 @@ export default {
   BUILang,
   BUIPencil,
   BUITrash,
-  BUIUpload,
   BUIGear,
   BUIPlus,
   BUIMenuBurger,
   BUIMenuBurgerOpen,
-  BUIInfo,
   BUILink,
   BUIDashboard,
   BUIClock,
@@ -98,5 +94,9 @@ export default {
   BUIServerSettings,
   BUIOpenBlank,
   BUISiteMobile,
-  BUIOkFill
+  BUIOkFill,
+  BUICircleComplete,
+  BUICircleIncomplete,
+  BUIInfo,
+  BUIUpload,
 }

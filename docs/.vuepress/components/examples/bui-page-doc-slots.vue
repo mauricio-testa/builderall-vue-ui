@@ -16,7 +16,7 @@
       <b-button variant="primary">
         <bui-icon
           name="plus"
-          white
+          variant="white"
           :size="18"
         />
         New
