@@ -65,6 +65,10 @@
       font-size: 0.9rem !important;
       color: #656565;
       font-weight: var(--semibold);
+      &.vs__dropdown-option--disabled {
+        opacity: .8;
+        cursor: not-allowed !important;
+      }
       &.vs__dropdown-option--selected,
       &.vs__dropdown-option--selected.vs__dropdown-option--highlight {
         background: #fff;

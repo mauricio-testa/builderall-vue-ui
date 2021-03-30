@@ -1,59 +1,57 @@
 <template>
-  <div>
-    <!-- inertia link -->
-    <inertia-link
-      v-if="menu.inertia"
-      :id="`sidebar-menu-${_uid}`"
-      as="b-nav-item"
-      :href="menu.inertia"
-      :active="menu._active"
+  <!-- inertia link -->
+  <inertia-link
+    v-if="menu.inertia"
+    :id="`sidebar-menu-${_uid}`"
+    as="b-nav-item"
+    :href="menu.inertia"
+    :active="menu._active"
+  >
+    <b-tooltip
+      :disabled="!showTooltip"
+      :target="`sidebar-menu-${_uid}`"
+      placement="right"
     >
-      <b-tooltip
-        :disabled="!showTooltip"
-        :target="`sidebar-menu-${_uid}`"
-        placement="right"
-      >
-        {{ menu.title }}
-      </b-tooltip>
-      <slot />
-    </inertia-link>
+      {{ menu.title }}
+    </b-tooltip>
+    <slot />
+  </inertia-link>
 
-    <!-- router link -->
-    <b-nav-item
-      v-else-if="menu.to"
-      :id="`sidebar-menu-${_uid}`"
-      :to="menu.to"
-      :exact="exact(menu)"
-      :active="menu._active"
+  <!-- router link -->
+  <b-nav-item
+    v-else-if="menu.to"
+    :id="`sidebar-menu-${_uid}`"
+    :to="menu.to"
+    :exact="exact(menu)"
+    :active="menu._active"
+  >
+    <b-tooltip
+      :disabled="!showTooltip"
+      :target="`sidebar-menu-${_uid}`"
+      placement="right"
     >
-      <b-tooltip
-        :disabled="!showTooltip"
-        :target="`sidebar-menu-${_uid}`"
-        placement="right"
-      >
-        {{ menu.title }}
-      </b-tooltip>
-      <slot />
-    </b-nav-item>
+      {{ menu.title }}
+    </b-tooltip>
+    <slot />
+  </b-nav-item>
 
-    <!-- href common -->
-    <b-nav-item
-      v-else
-      :id="`sidebar-menu-${_uid}`"
-      :href="menu.href"
-      :active="menu._active"
-      :target="menu.target"
+  <!-- href common -->
+  <b-nav-item
+    v-else
+    :id="`sidebar-menu-${_uid}`"
+    :href="menu.href"
+    :active="menu._active"
+    :target="menu.target"
+  >
+    <b-tooltip
+      :disabled="!showTooltip"
+      :target="`sidebar-menu-${_uid}`"
+      placement="right"
     >
-      <b-tooltip
-        :disabled="!showTooltip"
-        :target="`sidebar-menu-${_uid}`"
-        placement="right"
-      >
-        {{ menu.title }}
-      </b-tooltip>
-      <slot />
-    </b-nav-item>
-  </div>
+      {{ menu.title }}
+    </b-tooltip>
+    <slot />
+  </b-nav-item>
 </template>
 
 <script>

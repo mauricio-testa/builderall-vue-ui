@@ -2,16 +2,12 @@
   <div>
     <bui-navbar logo="https://booking.builderall.com/images/images/meta/logo.png">
       <template #items-right>
-        <bui-icon
-          v-b-toggle.bui-notifications-complete
-          name="bell"
-          size="18"
-        />
+        <bui-notifications-bell bui-notifications-id="example-notifications-complete"/>
       </template>
     </bui-navbar>
 
     <bui-notifications
-      id="bui-notifications-complete"
+      id="example-notifications-complete"
       :notifications="notifications"
       label-notifications="Notificações"
       label-empty="Tem nada aqui!"

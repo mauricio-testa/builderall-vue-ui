@@ -13,7 +13,7 @@
       <bui-icon
         v-if="options.iconName"
         :name="options.iconName"
-        white
+        variant="white"
         :size="15"
       />
       {{ options.okTitle }}

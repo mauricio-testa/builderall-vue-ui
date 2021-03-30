@@ -79,7 +79,7 @@
           </div>
           <a><bui-icon
             name="gear"
-            white
+            variant="white"
           /></a>
         </div>
       </div>

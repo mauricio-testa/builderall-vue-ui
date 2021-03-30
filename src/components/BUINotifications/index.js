@@ -1,3 +1,4 @@
 import BUINotifications from './BUINotifications'
+import BUINotificationsBell from './BUINotificationsBell'
 
-export default BUINotifications
+export { BUINotifications, BUINotificationsBell }

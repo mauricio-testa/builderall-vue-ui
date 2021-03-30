@@ -10,7 +10,7 @@
         <bui-icon
           name="copy"
           size="16"
-          gray
+          variant="gray"
         />
       </button>
     </template>

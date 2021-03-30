@@ -33,6 +33,7 @@ select.custom-select,
 
 // inputs dentro do modal tem borda 2px
 .modal {
+  .v-select .vs__dropdown-toggle,
   select.custom-select,
   .form-control {
     border-width: 2px;
@@ -190,8 +191,12 @@ label {
     min-height: 55px;
     align-items: center;
     padding: 10px 46px;
+    margin-bottom: 1rem;
     &:focus-within {
       box-shadow: 0 0 0 2px var(--primary);
+    }
+    .custom-control-label::before, .custom-control-label::after {
+      top: calc(50% - 0.5rem);
     }
   }
 }
@@ -278,5 +283,8 @@ html[dir="rtl"] {
         left: unset;
       }
     }
+  }
+  .bui-radiogroup-box .custom-radio.custom-control {
+    padding: 10px 46px;
   }
 }

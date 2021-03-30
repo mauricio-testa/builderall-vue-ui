@@ -7,7 +7,7 @@
     >
       <bui-icon
         name="trash"
-        white
+        variant="white"
       />
       Delete
     </b-button>
@@ -18,7 +18,7 @@
     >
       <bui-icon
         name="submit-mail"
-        white
+        variant="white"
       />
       Send notification
     </b-button>

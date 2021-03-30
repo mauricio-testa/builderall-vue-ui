@@ -12,6 +12,7 @@
     </template>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="gear"
         :size="20"
       />
@@ -19,6 +20,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="server-settings"
         :size="20"
       />
@@ -26,6 +28,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="backup"
         :size="20"
       />
@@ -33,6 +36,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="database"
         :size="20"
       />
@@ -40,6 +44,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="globe-gear"
         :size="20"
       />
@@ -47,6 +52,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="file-transfer"
         :size="20"
       />
@@ -54,6 +60,7 @@
     </b-dropdown-item>
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="pencil"
         :size="20"
       />
@@ -62,6 +69,7 @@
     <b-dropdown-divider />
     <b-dropdown-item>
       <bui-icon
+        variant="gray"
         name="trash"
         :size="20"
       />
