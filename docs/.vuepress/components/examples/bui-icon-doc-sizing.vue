@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex align-items-end">
+    <div class="d-flex align-items-end mb-5">
       <bui-icon
         v-for="i in 8"
         :key="i"
@@ -14,7 +14,7 @@
     <b-button
       v-for="(variant, key) in variants"
       :key="key"
-      class="my-2 mx-1 border-0"
+      class="m-1 border-0"
       :variant="variant"
       @click="currentVariant = variant"
     >
