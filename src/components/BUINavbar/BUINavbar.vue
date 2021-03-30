@@ -31,10 +31,12 @@
     <b-navbar-brand :href="homeLink">
       <img
         :src="logo"
+        alt="Logo"
         class="mx-4 d-sm-inline-block"
         :class="{ 'd-none': logoSm }"
       >
       <img
+        alt="Logo"
         :src="logoSm"
         class="mx-3 mb-1 d-sm-none"
       >

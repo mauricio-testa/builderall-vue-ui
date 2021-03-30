@@ -39,7 +39,7 @@ $steps: (
 
 html[dir="rtl"] {
   .d-rtl-none {
-    display: none;
+    display: none !important;
   }
   @each $step in $steps {
     $i: index($steps, $step);
@@ -49,7 +49,7 @@ html[dir="rtl"] {
 
 html:not([dir="rtl"]) {
   .d-ltr-none {
-    display: none;
+    display: none !important;
   }
   @each $step in $steps {
     $i: index($steps, $step);

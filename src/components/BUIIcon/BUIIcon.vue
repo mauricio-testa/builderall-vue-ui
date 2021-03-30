@@ -55,7 +55,7 @@ export default {
     variant: {
       type: String,
       required: false,
-      default: ''
+      default: 'natural'
     },
 
     rotate: {
@@ -125,5 +125,11 @@ export default {
   &.bui-icon-variant-gray svg * {
     fill: #a5b9d5;
   }
+
+  /* exceptions - icons without fill */
+  &.bui-icon-variant-white.bui-icon-next * {
+    stroke: #fff;
+  }
 }
+
 </style>
