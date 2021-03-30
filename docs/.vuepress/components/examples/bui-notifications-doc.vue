@@ -1,15 +1,6 @@
 <template>
   <div>
-    <b-button
-      v-b-toggle.bui-notifications
-      variant="primary"
-    >
-      <bui-icon
-        name="bell"
-        variant="white"
-      /> Open
-    </b-button>
-
+    <bui-notifications-bell />
     <bui-notifications :notifications="notifications" />
   </div>
 </template>

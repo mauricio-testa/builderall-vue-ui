@@ -20,6 +20,19 @@ BuiNotifications is a sidebar that displays system notifications on the side opp
 <<< @/docs/.vuepress/components/examples/bui-notifications-doc-complete.vue
 </SourceCode>
 
+## BUINotificationsBell
+This is a subcomponent of BuiNotifications responsible for opening the notification popup and displaying a badge when there are unread notifications. You can use BuiNotificationsBell to insert it into your BuiNavbar.
+
+<template>
+<bui-notifications-bell/>
+<bui-notifications-bell has-notifications/>
+</template>
+
+```html
+<bui-notifications-bell />
+<bui-notifications-bell has-notifications />
+```
+
 ## API Reference
 
 ### Events

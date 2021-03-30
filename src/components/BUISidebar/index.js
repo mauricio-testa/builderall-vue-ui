@@ -1,3 +1,4 @@
 import BUISidebar from './BUISidebar'
+import BUISidebarItem from './BUISidebarItem'
 
-export default BUISidebar
+export { BUISidebar, BUISidebarItem }
