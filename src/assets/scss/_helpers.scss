@@ -38,6 +38,9 @@ $steps: (
 }
 
 html[dir="rtl"] {
+  .d-rtl-none {
+    display: none;
+  }
   @each $step in $steps {
     $i: index($steps, $step);
     @include generateSpacingClasses('rtl', $i, $step)
@@ -45,6 +48,9 @@ html[dir="rtl"] {
 }
 
 html:not([dir="rtl"]) {
+  .d-ltr-none {
+    display: none;
+  }
   @each $step in $steps {
     $i: index($steps, $step);
     @include generateSpacingClasses('ltr', $i, $step)

@@ -40,3 +40,9 @@ If you change `ltr` to` rtl` in the above classes, everything will work the same
 It is also possible to use the `rtl-mirror` class to mirror components when in rtl
 
 <img class="rtl-mirror" width="50" src="https://lh3.googleusercontent.com/qrK0D9Z0YDp4CT8C62PkMAQzoT5SUHUDBED5bRV0h_ho3_fBoTVl8zyl_G07UxF0ppNLFJGqKLm5i5xeJwMaYxPEyV5zZha2dUy0=w1064-v0">
+
+There are also exhibition helpers below:
+
+* `d-rtl-none` - to hide content in RTL dir
+
+* `d-ltr-none` - to hide content in non RTL dirs
