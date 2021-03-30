@@ -3,7 +3,7 @@
   <!-- eslint-disable vue/no-v-html -->
   <div
     class="bui-icon"
-    :class="[`bui-icon-${name}`, {'rtl-mirror' : rtlMirror }, `bui-icon-${variant}`]"
+    :class="[`bui-icon-${name}`, {'rtl-mirror' : rtlMirror }, `bui-icon-variant-${variant}`]"
     :style="style"
     v-html="icon"
   />
@@ -95,34 +95,34 @@ export default {
 <style lang="scss">
 .bui-icon {
   display: inline-flex;
-  &.bui-icon-primary svg * {
+  &.bui-icon-variant-primary svg * {
     fill: var(--primary);
   }
-  &.bui-icon-secondary svg * {
+  &.bui-icon-variant-secondary svg * {
     fill: var(--secondary);
   }
-  &.bui-icon-success svg * {
+  &.bui-icon-variant-success svg * {
     fill: var(--success);
   }
-  &.bui-icon-warning svg * {
+  &.bui-icon-variant-warning svg * {
     fill: var(--warning);
   }
-  &.bui-icon-danger svg * {
+  &.bui-icon-variant-danger svg * {
     fill: var(--danger);
   }
-  &.bui-icon-info svg * {
+  &.bui-icon-variant-info svg * {
     fill: var(--info);
   }
-  &.bui-icon-light svg * {
+  &.bui-icon-variant-light svg * {
     fill: var(--light);
   }
-  &.bui-icon-dark svg * {
+  &.bui-icon-variant-dark svg * {
     fill: var(--dark);
   }
-  &.bui-icon-white svg * {
+  &.bui-icon-variant-white svg * {
     fill: #fff;
   }
-  &.bui-icon-gray svg * {
+  &.bui-icon-variant-gray svg * {
     fill: #a5b9d5;
   }
 }
