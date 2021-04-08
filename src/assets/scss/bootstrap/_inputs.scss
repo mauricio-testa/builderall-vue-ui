@@ -24,7 +24,7 @@ select.custom-select,
     border-radius: 10px;
     font-size: 25px;
     font-weight: bold;
-    padding: 50px;
+    padding: 3.125rem;
   }
   &::placeholder {
     opacity: 0.51;
@@ -93,6 +93,14 @@ label {
   .bui-icon {
     display: flex !important;
   }
+}
+
+// checkbox icon
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath id='Caminho_3111' data-name='Caminho 3111' d='M13.5,4A9.5,9.5,0,1,0,23,13.5,9.5,9.5,0,0,0,13.5,4Zm4.709,8.635-5,5a1.357,1.357,0,0,1-1.92,0l-2.5-2.5a1.357,1.357,0,0,1,.221-2.1,1.381,1.381,0,0,1,1.724.207l.5.5a.75.75,0,0,1,0,1.062h0a.339.339,0,0,0,0,.478h0a.339.339,0,0,0,.478,0l.536-.536h0l4.017-4.014a1.381,1.381,0,0,1,1.724-.207,1.357,1.357,0,0,1,.221,2.1Z' transform='translate(-4 -4)' fill='%230080fc'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 // switch
