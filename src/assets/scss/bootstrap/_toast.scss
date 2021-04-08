@@ -16,6 +16,7 @@
   .toast {
     border: unset;
     color: #080d3acc;
+    border-radius: 6px;
   }
   .toast-header {
     display: none;
@@ -34,5 +35,12 @@
     background-position: 15px;
     background-size: 21px;
     font-size: 15px;
+  }
+}
+
+html[dir=rtl] {
+  .b-toast {
+    left: 1rem;
+    right: unset;
   }
 }
