@@ -8,6 +8,7 @@
       :menus="menus"
       :menus-bottom="menus_bottom"
       :menus-mobile="menus_mobile"
+      settings-href="/settings"
     />
 
     <div class="my-3">

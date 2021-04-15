@@ -6,6 +6,7 @@
     as="b-nav-item"
     :href="menu.inertia"
     :active="menu._active"
+    :link-attrs="{'aria-label' : menu.title}"
   >
     <b-tooltip
       :disabled="!showTooltip"
@@ -24,6 +25,7 @@
     :to="menu.to"
     :exact="exact(menu)"
     :active="menu._active"
+    :link-attrs="{'aria-label' : menu.title}"
   >
     <b-tooltip
       :disabled="!showTooltip"
@@ -42,6 +44,7 @@
     :href="menu.href"
     :active="menu._active"
     :target="menu.target"
+    :link-attrs="{'aria-label' : menu.title}"
   >
     <b-tooltip
       :disabled="!showTooltip"

@@ -77,10 +77,15 @@
             /> <br>
             <small v-text="user.email" />
           </div>
-          <a><bui-icon
-            name="gear"
-            variant="white"
-          /></a>
+          <a
+            v-if="settingsHref"
+            :href="settingsHref"
+          >
+            <bui-icon
+              name="gear"
+              variant="white"
+            />
+          </a>
         </div>
       </div>
 
@@ -159,7 +164,19 @@ export default {
      */
     menusMobile: menusProp,
 
-    sidebarMobileId: sidebarMobileIdProp
+    /*
+     * ID do sidebar mobile
+     * para o caso de ter vários sidebar
+     */
+    sidebarMobileId: sidebarMobileIdProp,
+
+    /*
+     * Link atribuído ao ícone de configurações do sidebar mobile
+     */
+    settingsHref: {
+      type: String,
+      default: undefined
+    }
   },
 
   computed: {

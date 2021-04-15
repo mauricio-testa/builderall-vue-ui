@@ -217,6 +217,7 @@ export default {
           line-height: 18px;
           color: #323C47;
           font-size: 14px;
+          word-break: break-word;
         }
         .notification-time {
           display: block;

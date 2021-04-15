@@ -9,6 +9,7 @@
     :dir="$buiOptions.isRtl ? 'rtl' : 'ltr'"
     style="background-color: #f2f2f2"
     :clearable="false"
+    :searchable="false"
     :options="options"
     label="desc"
     :reduce="(value) => value.key"
