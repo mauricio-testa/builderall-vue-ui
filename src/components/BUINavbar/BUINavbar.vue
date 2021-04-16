@@ -36,6 +36,7 @@
         :class="{ 'd-none': logoSm }"
       >
       <img
+        v-if="logoSm"
         alt="Logo"
         :src="logoSm"
         class="mx-3 mb-1 d-sm-none"
@@ -54,6 +55,7 @@
     <div class="d-flex align-items-center mr-ltr-3 ml-rtl-3">
       <b-navbar-nav>
         <b-nav-item-dropdown
+          id="dropdown-user"
           :right="!$buiOptions.isRtl"
           no-caret
           class="bui-dropdown-user"
@@ -96,12 +98,12 @@
 
           <bui-language-selector
             v-model="internalUser.locale"
+            :label-favorite-lang="labelFavoriteLang"
             class="mt-1 mx-3 mb-3"
-            :rtl="$buiOptions.isRtl"
+            dropdown-id="language-selector-profile"
             :options="languages"
             @input="changeLanguage()"
           />
-
           <b-dropdown-divider />
 
           <slot name="dropdown-item-after" />
@@ -203,7 +205,8 @@ export default {
 
   data () {
     return {
-      internalUser: this.user
+      internalUser: this.user,
+      languageSelectorIsOpen: false
     }
   },
 
@@ -215,6 +218,25 @@ export default {
     hasItemsRightSlot () {
       return this.$slots['items-right'] !== undefined
     }
+  },
+
+  mounted () {
+    /*
+     * Ajuste para permitir Bootstrap Vue dropdowns aninhados
+     */
+    this.$root.$on('bv::dropdown::show', bvEvent => {
+      if (bvEvent.componentId === 'language-selector-profile') {
+        this.languageSelectorIsOpen = true
+      }
+    })
+    this.$root.$on('bv::dropdown::hide', bvEvent => {
+      if (bvEvent.componentId === 'language-selector-profile') {
+        this.languageSelectorIsOpen = false
+      }
+      if (this.languageSelectorIsOpen) {
+        bvEvent.preventDefault()
+      }
+    })
   },
 
   methods: {

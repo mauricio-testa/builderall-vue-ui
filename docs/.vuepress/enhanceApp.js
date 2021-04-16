@@ -1,7 +1,6 @@
 // Permite usar bootstrap vue nos componentes
 
 import { BootstrapVue } from 'bootstrap-vue'
-import vSelect from 'vue-select'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './styles.scss'
@@ -27,7 +26,6 @@ export default ({ Vue, options, router, siteData }) => {
       noFade: true
     }
   }
-  Vue.component('VSelect', vSelect)
   Vue.use(BootstrapVue, BV_CONFIG)
   Vue.use(BuilderallVueUi, BUI_CONFIG)
 }

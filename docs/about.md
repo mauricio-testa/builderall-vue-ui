@@ -12,7 +12,6 @@ Native BootstrapVue components are prefixed by `b-`<br>
 
 ## Dependencies
 - [BootstrapVue](https://bootstrap-vue.org/) - Because it would be a lot of work to have to make all the components from scratch
-- [VueSelect](https://vue-select.org/) - Because bootstrap-vue uses the browser's native select and it doesn't allow customizations
 
 ## What's included in the package
 
