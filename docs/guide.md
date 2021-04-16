@@ -4,7 +4,7 @@
 ## Step 1: Install dependencies
 
 ```bash
-npm i builderall-vue-ui bootstrap-vue vue-select
+npm i builderall-vue-ui bootstrap-vue
 ```
 
 ## Step 2: Theming bootstrap
