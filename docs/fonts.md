@@ -7,7 +7,7 @@ If you have followed the instructions in the [Starter Guide](/guide) and is usin
 import 'builderall-vue-ui/src/assets/fonts/fonts.css';
 ```
 
-If you don't use Builderall Vue UI, there are still 3 options to use Builderall fonts in your project
+If you don't use Builderall Vue UI, there are still 2 options to use Builderall fonts in your project
 
 ## Option 1: Installing the package
 
@@ -16,14 +16,7 @@ Install the package and add the import **only the fonts** to your SCSS or JS mai
 import 'builderall-vue-ui/src/assets/fonts/fonts.css';
 ```
 
-## Option 2: Import without self hosting
-In case you want to import the fonts without installing any packages
-
-``` html
-<link rel="stylesheet" href="https://wordpress.builderall.com/css/fonts.css">
-```
-
-## Option 3: Download zip
+## Option 2: Download zip
 Do it yourself! [Download fonts.zip](https://github.com/mauricio-testa/builderall-vue-ui/raw/develop/src/assets/fonts/fonts.zip) with the fonts and just import the file `fonts.css`.
 
 
