@@ -9,6 +9,7 @@ import './styles.scss'
 
 import { BuilderallVueUi } from './../../src/main.js'
 import '../../src/main.scss'
+import '../../src/assets/fonts/fonts.css'
 
 export default ({ Vue, options, router, siteData }) => {
   const BUI_CONFIG = {

@@ -1,7 +1,5 @@
 import './main.scss'
 
-import './assets/fonts/fonts.css'
-
 import * as components from './components'
 
 const defaultOptions = {
