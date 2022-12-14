@@ -158,6 +158,9 @@ $flags: ar_AR, bm_ML, bn_BN, cz_CZ, da_DA, de_DE, el_EL, en_US, es_ES, fa_FA,
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         padding: 0.65rem 10px 0.65rem 0rem;
+        &:hover {
+          background-color: #EDEDED;
+        }
       }
       &.active {
         a.dropdown-item {
