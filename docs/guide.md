@@ -12,7 +12,6 @@ npm i builderall-vue-ui bootstrap-vue
 In your main sass file (`/src/sass/app.scss`) perform the import of the following scss files, in this order:
 
 ```scss
-@import 'node_modules/builderall-vue-ui/src/assets/fonts/fonts.css';
 @import 'node_modules/builderall-vue-ui/src/assets/scss/variables.scss';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
@@ -29,6 +28,7 @@ import { BootstrapVue } from 'bootstrap-vue';
 import { BuilderallVueUi } from 'builderall-vue-ui';
 import '@/sass/app.scss'; // (the same file as in step 2)
 import 'builderall-vue-ui/dist/builderall-vue-ui.css';
+import 'builderall-vue-ui/src/assets/fonts/fonts.css';
 Vue.use(BootstrapVue);
 Vue.use(BuilderallVueUi);
 ```
