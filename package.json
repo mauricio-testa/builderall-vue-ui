@@ -1,6 +1,6 @@
 {
   "name": "builderall-vue-ui",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "main": "dist/builderall-vue-ui.umd.min.js",
   "author": "Builderall",
