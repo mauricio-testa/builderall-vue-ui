@@ -1,6 +1,6 @@
 import './main.scss'
 
-import './assets/css/fonts.css'
+import './assets/fonts/fonts.css'
 
 import * as components from './components'
 
