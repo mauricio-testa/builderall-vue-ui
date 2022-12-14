@@ -14,3 +14,4 @@ dist
 *.png
 *.jpg
 src/assets/js/icons**
+src/assets/fonts**
