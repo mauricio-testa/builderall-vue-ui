@@ -41,6 +41,7 @@ module.exports = {
               ['/guide', 'Getting Started'],
               ['/layout', 'Layout'],
               ['/rtl', 'RTL Support'],
+			  ['/fonts', 'Fonts'],
               ['/about', 'About']
             ]
           },
