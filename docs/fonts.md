@@ -24,7 +24,7 @@ In case you want to import the fonts without installing any packages
 ```
 
 ## Option 3: Download zip
-Do it yourself! [Download fonts.zip](https://github.com/mauricio-testa/builderall-vue-ui/tree/develop/src/assets/fonts) with the fonts and just import the file `fonts.css`.
+Do it yourself! [Download fonts.zip](https://github.com/mauricio-testa/builderall-vue-ui/raw/develop/src/assets/fonts/fonts.zip) with the fonts and just import the file `fonts.css`.
 
 
 ## Additional: You don't use both fonts? 
